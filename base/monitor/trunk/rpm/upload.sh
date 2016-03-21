@@ -1,0 +1,1 @@
+ls ./x86_64/* |xargs yum_upload -f

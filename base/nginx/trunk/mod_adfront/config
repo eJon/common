@@ -1,0 +1,5 @@
+ngx_addon_name=ngx_http_adhandler_module
+HTTP_MODULES="$HTTP_MODULES ngx_http_adhandler_module"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS  $ngx_addon_dir/ngx_http_handler_module.c $ngx_addon_dir/ngx_handler_interface.cc $ngx_addon_dir/ngx_handler.cc"
+CORE_INCS="$CORE_INCS $ngx_addon_dir /home/w/include/spio/ /home/w/include/ /usr/local/include/"
+CORE_LIBS="$CORE_LIBS -L/home/w/lib64/ -L/usr/local/lib/ -L/usr/lib/ -L/home/w/lib64/ -ldl -lstdc++ -lssl -lpthread -lbidfeed-sharelib"

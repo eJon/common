@@ -1,0 +1,4057 @@
+2011-09-16 07:47  lisen01
+
+	* COMAKE, Makefile: +add COMAKE file to include app/ecom/nova/dep
+	  
+	  ISSUE=6115
+	  TESTED=UT
+
+2011-09-16 06:19  gejun
+
+	* Makefile, OWNER, base_cow_hash_map.cpp, dyn_index.h,
+	  dyn_table.cpp, dyn_table.h, dyn_tuple.cpp, dyn_tuple.h,
+	  dyn_tuple_inl.h, dyn_unique_index.cpp, dyn_unique_index.h,
+	  fun/hash.hpp, named_tuple.hpp, string_reader.hpp,
+	  string_reader_inl.hpp, test/test_bitmap_index.cpp,
+	  test/test_dyn_table.cpp, test/test_dyn_tuple.cpp,
+	  test/test_dyn_unique_index.cpp, test/test_st_bit_map.cpp: -
+	  NamedTuple::compute_hash() does not overflow
+	  - DynUniqueIndex::copy_from() works correctly
+	  - Leverage DynTupleSchema::Entry to DynTupleAccess
+	  - Rename DynTupleSchema::tuple_size() to
+	  DynTupleSchema::byte_size()
+	  - DynTupleSchema::at_n() and at() return &DynTupleAccess::EMPTY
+	  instead NULL, so that
+	  DynTupleAccess* in ConstDynField and DynField are never NULL
+	  - Repalce strcmp with manual for iteration in
+	  DynTupleSchema::at() and find_name() to boost
+	  performance
+	  - Greatly refine DynTuple which handles signed integers,
+	  structure size, bitwise layout, hashing
+	  code correctly, its performance is also improved
+	  - copy-constructor and operator= of DynTable work correctly
+	  TESTED=ut
+	  ISSUE=6277
+
+2011-09-15 08:31  lisen01
+
+	* COMAKE, Makefile, bitmap_index.hpp, index_traits.hpp,
+	  st_bit_map.hpp, test/COMAKE, test/Makefile,
+	  test/test_bitmap_index.cpp, test/test_st_bit_map.cpp:
+	  FEA=SMALLTABLE
+	  introduced Bitmap index.
+	  
+	  
+	  ISSUE=6115
+	  TESTED=UT
+
+2011-09-07 13:16  gejun
+
+	* base_cow_hash_map.cpp, base_cow_hash_map.h, base_cowbass4.cpp,
+	  base_cowbass4.h, coalesced_hash_map.hpp,
+	  cow_hash_cluster_map.hpp, cow_table.hpp, cow_table_inl.hpp,
+	  cowbass4.hpp, dodge_hash_map.hpp, dyn_index.h, dyn_table.cpp,
+	  dyn_table.h, dyn_tuple.cpp, dyn_tuple.h, dyn_unique_index.cpp,
+	  dyn_unique_index.h, fixed_deque.hpp, linear_hash_map.hpp,
+	  observer.hpp, st_errno.h, string_reader.hpp, string_writer.hpp,
+	  table_stack.hpp, test/test_cowbass.cpp, test/test_cowbass4.cpp,
+	  test/test_dyn_table.cpp, test/test_dyn_tuple.cpp,
+	  test/test_hash_cluster.cpp, test/test_offset_list.cpp,
+	  test/test_version_manager.cpp, unused/cow1_hash_map.hpp,
+	  unused/cowbass2.hpp, unused/cowbass3.hpp,
+	  unused/index_manager.hpp, unused/mat_view.hpp,
+	  unused/monitor.hpp, unused/non_primary_hash_index.hpp,
+	  unused/primary_hash_index.hpp, unused/selector.hpp,
+	  unused/table.hpp, version_manager.cpp: Unify errno
+	  TESTED=ut
+	  ISSUE=6072
+
+2011-09-07 07:03  gejun
+
+	* dyn_table.cpp, dyn_table.h, dyn_tuple.cpp, dyn_tuple.h,
+	  dyn_unique_index.cpp, test/test_dyn_table.cpp: - Rename
+	  DynTable::Eraser::erase_tuple to erase_key,
+	  DynTable::Seeker::seek_tuple to seek_key, add
+	  operator const void*() in both classes. Eraser works correctly.
+	  - Add DynTable::add_index_format(const char*, ...) to accept
+	  formatted input
+	  - Returning type of Dyntable::all() changed from DynIterator* to
+	  DynNormalIterator and the function
+	  works correctly
+	  - DynTuple::set_by_string(2) adds a "const size_t*" to translate
+	  parameter positions to attribute
+	  positions
+	  - Improve test/test_dyn_table.cpp
+	  TESTED=ut
+	  ISSUE=6072
+
+2011-09-07 05:18  yanlin
+
+	* cow_table_inl.hpp: Fix compiler warning which cause by printing
+	  value with size_t type
+	  
+	  TESTED=compiling
+	  ISSUE=6058
+	  FEA=n/a
+
+2011-09-07 05:05  yanlin
+
+	* cow_table.hpp, cow_table_inl.hpp, test/test_cow_table.cpp: Add
+	  max lines param for insert_by_file
+	  
+	  TESTED=unittest
+	  ISSUE=6058
+	  FEA=n/a
+
+2011-09-06 08:05  gejun
+
+	* Makefile, OWNER, dyn_index.h, dyn_table.cpp, dyn_table.h,
+	  dyn_tuple.cpp, dyn_tuple.h, dyn_tuple_inl.h,
+	  dyn_unique_index.cpp, dyn_unique_index.h, string_reader.hpp,
+	  string_reader_inl.hpp, test/COMAKE, test/Makefile,
+	  test/test_dyn_table.cpp, test/test_dyn_tuple.cpp,
+	  test/test_dyn_unique_index.cpp, test/test_string_reader.cpp: -
+	  DynIndex::unique_seek_info() renamed to DynIndex::uniqueness()
+	  - DynTable::Seeker returns DynNormalIterator instead of
+	  DynIterator*
+	  - DynTable internal changes: replace find_index(2) with
+	  find_exact_index(2); add
+	  check_uniqueness(1), try_as_unique_index(2),
+	  add_index_and_update_info(2),
+	  insert_into_index_into_list(1); add_index(1) is implemented.
+	  - Add sanity check in test/test_dyn_table.cpp
+	  - DynNormalIterator handles NULL input correctly
+	  - Remove DynTuple::is_null(), add DynTuple::operator void*()
+	  - Add aux::CopyCharsStr, aux::NotP, IncValue<1> in
+	  string_reader.hpp; remove ReadUntil; implement
+	  read_until1(...) with ReadIf
+	  - Rewrite DynTuple::set_by_string(2) with StringReader
+	  TESTED=ut
+	  ISSUE=6032
+
+2011-09-01 13:10  gejun
+
+	* Makefile, dyn_table.h, dyn_tuple.cpp, string_reader.hpp,
+	  string_reader_inl.hpp, test/COMAKE, test/Makefile,
+	  test/test_dyn_tuple.cpp, test/test_string_reader.cpp: - A lot of
+	  interface improvements in string_reader.hpp and rewrite
+	  DynTupleSchema::add_fields_by_string(1) by StringReader
+	  TESTED=ut
+	  ISSUE=5943
+
+2011-08-31 14:05  gejun
+
+	* Makefile, c_connector.hpp, cow_table.hpp, cow_table_inl.hpp,
+	  dyn_index.h, dyn_table.cpp, dyn_table.h, dyn_tuple.cpp,
+	  dyn_tuple.h, dyn_unique_index.cpp, dyn_unique_index.h,
+	  fun/is_base_of.hpp, fun/list.hpp, fun/map.hpp, index_traits.hpp,
+	  named_tuple.hpp, string_reader.cpp, string_reader.hpp,
+	  string_reader_inl.hpp, test/COMAKE, test/Makefile,
+	  test/test_cow_table.cpp, test/test_dyn_table.cpp,
+	  test/test_hd_map.cpp, test/test_string_reader.cpp,
+	  unique_cluster_index.hpp, unique_index.hpp: - Add UniqueInfo in
+	  index_traits.hpp
+	  - A couple of renamings in cow_table.hpp
+	  - Add index constraints in CowTable and generate ModifySeqL
+	  correctly
+	  - Add copy_from(1) and clone() in DynIndex, and consequently in
+	  DynUniqueIndex
+	  - Rewrite StringReader which is a simple parser combinator
+	  - Replace UNIQUE_SEEK_INFO with Uniqueness in unique_index.hpp
+	  and unique_cluster_index.hpp
+	  - Add DynTable
+	  - Correct dependancies in test/COMAKE
+	  - Add list_fold1 in fun/list.hpp, set_intersect in fun/map.hpp
+	  TESTED=bs-ut
+	  ISSUE=5777
+
+2011-08-30 02:59  tanzilong
+
+	* testfile: PROJECT=smalltable
+	  
+	  revert r29591, which is the ci that tests the permission
+	  
+	  TESTED=unittest
+	  ISSUE=0
+	  #BUG=no
+	  FEA=NONE
+
+2011-08-30 02:56  tanzilong
+
+	* Makefile, test/Makefile, testfile: PROJECT=budget
+	  
+	  fix comake
+	  
+	  TESTED=unittest
+	  ISSUE=0
+	  #BUG=no
+	  FEA=NONE
+
+2011-08-14 10:00  gejun
+
+	* Makefile, base_cow_hash_map.cpp, base_cow_hash_map.h,
+	  c_connector.hpp, c_selector.hpp, cow_hash_map.hpp, cow_table.hpp,
+	  cow_table_inl.hpp, dyn_index.h, dyn_tuple.cpp, dyn_tuple.h,
+	  dyn_tuple_inl.h, dyn_unique_index.cpp, dyn_unique_index.h,
+	  fun/c_common.hpp, named_tuple.hpp, rc_memory_pool.h, test/COMAKE,
+	  test/Makefile, test/test_dyn_tuple.cpp,
+	  test/test_dyn_unique_index.cpp,
+	  test/test_override_and_specialize.cpp: - Rename some internal
+	  classes in cow_table.hpp
+	  - Add dyn_index.h which is interfaces of a dynamic index
+	  - Add dyn_unique_index.cpp, dyn_unique_index.h,
+	  test/test_dyn_unique_index.cpp to implement
+	  DynUniqueIndex which is runnable but complete.
+	  - Add ConstDynField::operator==(1) and DynTuple::hash_code() in
+	  dyn_tuple_inl.h
+	  - Add macro SCOPED_DYN_TUPLE(2), ConstDynField::operator==(1),
+	  ConstDynField::operator!=(1),
+	  DynTuple::set_schema(1), DynTuple::set_buf(1), DynTuple::buf(),
+	  DynTuple::hash_code() in
+	  dyn_tuple.h
+	  - Replace function pointers with an object of
+	  CowHashMapItemHandler so that the function could
+	  access context
+	  - Add a "const void* key" to BaseCowHashMap::insert to remove
+	  eq_item_fn_
+	  - Change parameters to RCMemoryPool::dec_ref(3)
+	  - Add test/test_override_and_specialize.cpp to compare function
+	  overriden and template
+	  specialization
+	  TESTED=ut
+	  ISSUE=5407
+
+2011-08-04 12:16  gejun
+
+	* Makefile, base_cow_hash_map.cpp, base_cow_hash_map.h,
+	  c_connector.hpp, c_selector.hpp, c_selector_inl.hpp,
+	  cow_hash_cluster_map.hpp, cow_hash_map.hpp, cow_table.hpp,
+	  cow_table_inl.hpp, group_view.hpp, index_traits.hpp,
+	  maybe_iterator.hpp, partial_iterator.hpp,
+	  test/test_cow_table.cpp, test/test_group_view.cpp,
+	  unique_cluster_index.hpp, unique_index.hpp: - Modularize indexes
+	  of CowTable, new types of indexes could be added easily. Current
+	  indexes are
+	  UniqueIndex(unique_index.hpp) and
+	  UniqueClusterIndex(unique_cluster_index.hpp).
+	  - Serialize CowHashClusterSet, CowHashSet, UniqueIndex,
+	  UniqueClusterIndex to ostream
+	  - MaybeIterator is renamed to PartialIterator
+	  TESTED=ut
+	  ISSUE=5176
+
+2011-08-04 11:51  jiangrujie
+
+	* test/test_group_view.cpp: + Add sanity test for GroupView
+	  
+	  TESTED=UT
+	  ISSUE=5190
+
+2011-07-20 06:10  gejun
+
+	* Makefile, cow_hash_map.hpp, fun/hash.hpp, test/COMAKE,
+	  test/Makefile, test/adt_perf, test/test_adt.cpp,
+	  test/test_cow_hash_map.cpp, test/test_dyn_tuple.cpp,
+	  test/test_memory_ref.cpp, test/test_offset_list.cpp,
+	  test/test_shared_mmap_wr.cpp, test/test_shared_shm_wr.cpp: -
+	  Remove directory test/perf_adt
+	  - Add some tests into COMAKE, some of them are commented due to
+	  slow completion
+	  TESTED=ut
+	  ISSUE=0
+
+2011-07-14 03:44  jiangrujie
+
+	* test/test_cowbass4.cpp, test/test_offset_list.cpp: + Add seek
+	  performance code in test/test_cowbass4.cpp
+	  
+	  + Add test/test_offset_list.cpp to test some simple
+	  behavior of a list connected by offsets.
+	  
+	  TESTED=UT
+	  ISSUE=4518
+
+2011-07-11 09:40  zhangkailin01
+
+	* test/test_shared_memory_server.cpp: mmap and shm testing
+	  
+	  TESTED=manual
+	  ISSUE=4390
+
+2011-07-11 09:39  zhangkailin01
+
+	* test/test_shared_memory_client.cpp: mmap and shm testing
+	  
+	  TESTED=manual
+	  ISSUE=4390
+
+2011-07-11 09:38  zhangkailin01
+
+	* test/test_shared_mmap_wr.cpp: mmap and shm testing
+	  
+	  TESTED=manual
+	  ISSUE=4390
+
+2011-07-11 09:36  zhangkailin01
+
+	* test/test_shared_shm_wr.cpp: mmap and shm testing
+	  
+	  TESTED=manual
+	  ISSUE=4390
+
+2011-07-07 07:42  jiangrujie
+
+	* test/COMAKE, test/Makefile: + Remove local google perf contents
+	  in test/COMAKE
+	  
+	  TESTED=UT
+	  ISSUE=4211
+
+2011-07-07 07:37  jiangrujie
+
+	* Makefile, array_op.cpp, array_op.h, base_cowbass4.cpp,
+	  base_cowbass4.h, cowbass4.hpp, test/COMAKE, test/Makefile,
+	  test/test_cowbass4.cpp, test/test_memory_ref.cpp,
+	  test/test_void_array_op.cpp: + Add BaseCowbass4 which is the base
+	  implementation for Cowbass4.
+	  In BaseCowbass4, all data operations are betweeen void* so that
+	  it can work with all kinds of data dynamically.
+	  
+	  + Add void* array operations which are used by BaseCowbass4 in
+	  array_op.cpp.
+	  
+	  + Change Cowbass4 to rely on BaseCowbass4 in the cost of a little
+	  performance loss. Turn it on using compile switch _ST3.
+	  
+	  + Add test/test_memory_ref.cpp.
+	  
+	  TESTED=UT
+	  ISSUE=4211
+
+2011-06-30 09:15  gejun
+
+	* Makefile, c_selector.hpp, c_selector_inl.hpp, dyn_tuple_inl.h,
+	  fun/base_function_object.hpp, fun/base_function_object_inl.hpp,
+	  join_iterator.hpp, join_iterator_inl.hpp, test/Makefile: - Split
+	  inline implementations into separate files
+	  TESTED=ut
+	  ISSUE=0
+
+2011-06-30 08:52  gejun
+
+	* rebuild_bs, rebuild_mock: - Remove unused scripts
+	  TESTED=0
+	  ISSUE=0
+
+2011-06-30 08:51  gejun
+
+	* Makefile, base_hash_index.hpp, base_table.h, cowbass3.hpp,
+	  dep_manager.cpp, dep_manager.hpp, easy_deque.hpp,
+	  ext_hash_map.hpp, ext_hash_set.hpp, header.hpp,
+	  index_manager.hpp, non_primary_hash_index.hpp, predicate.hpp,
+	  primary_hash_index.hpp, selector.hpp, smalltable.hpp, table.hpp,
+	  test/COMAKE, test/Makefile, test/test_cowbass.cpp,
+	  test/test_dep_manager.cpp, test/test_hash_map.cpp,
+	  test/test_load.cpp, test/test_named_tuple.cpp,
+	  test/test_perf.cpp, test/test_stack.cpp, test/test_table.cpp,
+	  test/test_tuple.cpp, tuple.hpp, unused/base_hash_index.hpp,
+	  unused/base_table.h, unused/cowbass3.hpp, unused/dep_manager.cpp,
+	  unused/dep_manager.hpp, unused/easy_deque.hpp,
+	  unused/ext_hash_map.hpp, unused/ext_hash_set.hpp,
+	  unused/header.hpp, unused/index_manager.hpp,
+	  unused/non_primary_hash_index.hpp, unused/predicate.hpp,
+	  unused/primary_hash_index.hpp, unused/selector.hpp,
+	  unused/smalltable.hpp, unused/table.hpp, unused/tuple.hpp: - Move
+	  unused code into directory `unused'
+	  TESTED=ut
+	  ISSUE=0
+
+2011-06-30 05:57  gejun
+
+	* cow_table_inl.hpp, test/test_cow_table.cpp: - Fix a bug of
+	  CowTable::insert_by_file that it incorrectly drops last line if
+	  it's not ended with
+	  newline
+	  TESTED=ut
+	  ISSUE=4172
+
+2011-06-30 04:07  gejun
+
+	* Makefile, cow_table.hpp, cow_table_inl.hpp, dyn_tuple.cpp,
+	  dyn_tuple.h, dyn_tuple_inl.h, test/COMAKE, test/Makefile,
+	  test/test_cow_table.cpp, test/test_dyn_tuple.cpp: - Add float
+	  type to DynTuple
+	  - Add DynTuple::add_fields_by_string to parse fields from string
+	  - Changed alignment method to work correctly with little endian
+	  - Add comparison operators for DynTuple
+	  - Split implementations of CowTable into cow_table_inl.hpp
+	  TESTED=ut
+	  ISSUE=0
+
+2011-06-21 16:28  gejun
+
+	* dyn_tuple.cpp, dyn_tuple.h, test/test_dyn_tuple.cpp: - Slightly
+	  improve performance of DynTuple
+	  - More cases and better comments
+	  TESTED=0
+	  ISSUE=0
+
+2011-06-21 10:08  gejun
+
+	* Makefile: - Remove dummy 1.h
+	  TESTED=0
+	  ISSUE=0
+
+2011-06-21 10:06  gejun
+
+	* Makefile, cow_hash_map.hpp, dyn_tuple.cpp, dyn_tuple.h,
+	  test/COMAKE, test/Makefile, test/test_dyn_tuple.cpp: - Add
+	  preview version of dyn_tuple.h/cpp
+	  TESTED=0
+	  ISSUE=0
+
+2011-06-17 10:29  gejun
+
+	* cow_table.hpp, test/test_cow_table.cpp: - Add
+	  CowTable::insert_file(3) to get tuples from a file
+	  TESTED=0
+	  ISSUE=0
+
+2011-06-17 07:47  yufan
+
+	* table_stack.hpp: fix copy constructor
+	  ISSUE=0
+	  TESTED=ut
+
+2011-06-17 07:14  yufan
+
+	* test/COMAKE, test/Makefile, test/test_stack.cpp: fix copy
+	  constructor bug
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 10:12  yufan
+
+	* table_stack.hpp: add copy constructor and operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 09:53  yanlin
+
+	* smalltable2.hpp, table_stack.hpp, test/test_stack.cpp: Add more
+	  methods for table stack
+	  - rename size to count to return the number of tables in the
+	  stack
+	  - add size function to return the total size of tables in the
+	  stack
+	  - remove unnecessary field in table_desc
+	  - append header file to smalltable2.hpp
+	  - add resize method for table stack
+	  
+	  TESTED=unittest
+	  ISSUE=3743
+	  FEA=0
+
+2011-06-15 09:27  yufan
+
+	* table_stack.hpp, test/test_stack.cpp: add copy constructor and
+	  operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 09:16  yufan
+
+	* table_stack.hpp, test/test_stack.cpp: add copy constructor and
+	  operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 08:47  gejun
+
+	* COMAKE, Makefile, config.scm, local_build.sh, test/COMAKE,
+	  test/Makefile, test/test_string_writer.cpp: - Add local build for
+	  smalltable
+	  - Remove a piece of deprecated failing code from
+	  test/test_string_writer.cpp
+	  TESTED=0
+	  ISSUE=0
+
+2011-06-15 08:29  yufan
+
+	* fun/c_common.hpp, table_stack.hpp, test/test_stack.cpp: add copy
+	  constructor and operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 07:50  yufan
+
+	* table_stack.hpp: add copy constructor and operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 07:42  yufan
+
+	* table_stack.hpp: add copy constructor and operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 07:41  yufan
+
+	* table_stack.hpp: add copy constructor and operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 07:38  yufan
+
+	* table_stack.hpp: add copy constructor and operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 07:37  yufan
+
+	* table_stack.hpp: add copy constructor and operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 07:35  yufan
+
+	* table_stack.hpp: add copy constructor and operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 07:31  yufan
+
+	* table_stack.hpp: add copy constructor and operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 06:48  yufan
+
+	* table_stack.hpp: add copy constructor and operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-15 06:24  yufan
+
+	* table_stack.hpp: add copy constructor and operator ==
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-14 03:55  yufan
+
+	* fun/c_common.hpp, table_stack.hpp, test/test_stack.cpp: add t2t
+	  mode that join tables within groups, instead of intercept each
+	  table
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-09 11:25  yufan
+
+	* COMAKE, Makefile, c_connector.hpp, fun/c_common.hpp,
+	  table_stack.hpp, test/COMAKE, test/Makefile, test/test_stack.cpp:
+	  add table stack
+	  ISSUE=3572
+	  TESTED=ut
+
+2011-06-03 08:02  gejun
+
+	* array_op.hpp, cow_hash_cluster_map.hpp: - Tiny fixes
+	  TESTED=ut
+	  ISSUE=0
+
+2011-05-19 10:24  gejun
+
+	* CHANGELOG, Makefile, TODO, c_connector.hpp, c_predicate.hpp,
+	  c_selector.hpp, cow_hash_cluster_map.hpp, cow_table.hpp,
+	  cowbass4.hpp, fun/hash.hpp, group_view.hpp, hd_map.hpp,
+	  join_iterator.hpp, maybe_iterator.hpp, test/COMAKE,
+	  test/Makefile, test/test_cow_hash_map.cpp,
+	  test/test_cow_table.cpp, test/test_hd_map.cpp,
+	  test/test_selector.cpp: - Rename
+	  replace_old_event/replace_new_event to
+	  pre_replace_event/post_replace_event respectively
+	  - A temporary hack in cow_table.hpp to force the chain contain
+	  one element before sending last
+	  erase_event
+	  - Remove macro SHOW_JOIN_STEPS in join_iterator.hpp
+	  - Fix a bug of init_join_iterator that last iterator is not set
+	  to end if prior iterators cannot be
+	  initialized (typically caused by empty tables)
+	  - Support Maybe modifier on hash-cluster index, the semantic is
+	  that if the hashing-key does not
+	  have a cluster, selection returns a tuple whose cluster-part
+	  attributes are filled with default
+	  values; otherwise the selection returns regular tuples. Exclude
+	  modifier are supported as well.
+	  - Support Exclude modifier in InsertMaybeObserver and
+	  EraseMaybeObserver of c_connector.hpp
+	  - Add hd_map.hpp and test/test_hd_map.cpp which is a simple
+	  implementation of writing values to
+	  harddisk
+	  - Add MurmurHash2 in fun/hash.hpp, it's not used.
+	  - More cases
+	  - Update changelog
+	  TESTED=ut
+	  ISSUE=0
+
+2011-04-15 05:41  gejun
+
+	* basic_tuple.hpp, c_connector.hpp, c_predicate.hpp,
+	  c_selector.hpp, cow_table.hpp, cowbass4.hpp, default_value.h,
+	  fun/list.hpp, group_view.hpp, join_iterator.hpp: - Add
+	  JoinIterator::var() to get variables
+	  - init_join_iterator and fowward_join_iterator works for
+	  _TSL=void
+	  - forward_join_iterator checks filtering predicates correctly
+	  - Add "Exclude" marker which excludes a hash-mapping index in
+	  joinning
+	  - alloc_creator_ and n_all_ of Cowbass4 are bitwisely laid
+	  - Specialize default_value_of for generic pointers
+	  - Change _POS of list_at from unsigned to signed
+	  - Add type_at_n and at_n in BasicTuple<void>
+	  TESTED=ut
+	  ISSUE=0
+
+2011-04-11 07:30  gejun
+
+	* CHANGELOG, Makefile, combined_tuple.hpp, cow_table.hpp,
+	  cycled_hash_map.hpp, dodge_hash_map.hpp, linear_hash_map.hpp,
+	  test/COMAKE, test/Makefile, test/test_cow_table.cpp,
+	  test/test_dodge_hash_map.cpp, test/test_hash_map.cpp: - Reference
+	  of hash_cluster index in CowTable inherits CombinedTup
+	  - SeekIterator is consistent with Selector/Connector on iterators
+	  - Fix the bug of LinearHashMap::erase(1) which is similar with
+	  the one in public/util/im_open_hash.h
+	  - Replace CycledHashMap with DodgeHashMap
+	  - Update changelog
+	  TESTED=ut
+	  ISSUE=none
+
+2011-04-06 06:52  gejun
+
+	* pointer_iterator.hpp: - Replace NULL with Pointer() in
+	  pointer_iterator.hpp so that it works with both real and abstract
+	  pointers
+	  TESTED=works
+	  ISSUE=none
+
+2011-04-05 14:25  gejun
+
+	* base_cow_hash_map.cpp, base_cow_hash_map.h,
+	  cow_hash_cluster_map.hpp, cow_hash_map.hpp, cowbass4.hpp,
+	  rc_memory_pool.h, version_manager.cpp, version_manager.hpp: -
+	  Slightly changed caculations in mem()
+	  - Rename alloc_creator() to alloc_owner() and the function
+	  returns true additionally if the
+	  container uniquely owns the allocator
+	  - Add VersionManager::drop_oldest_read_only(), slightly fix
+	  drop_version(1)
+	  - Not count untouched memory(virtual but resident) in
+	  TRCMemoryPool::mem(), Change default chunk
+	  size to 4M
+	  - Complement BaseCowHashMap::desc() and CowHashMap::desc()
+	  TESTED=ut
+	  ISSUE=none
+
+2011-04-04 15:21  gejun
+
+	* combined_tuple.hpp: - Add missed combined_tuple.hpp
+	  TESTED=none
+	  ISSUE=none
+
+2011-04-04 15:08  gejun
+
+	* COMAKE, Makefile, base_hash_index.hpp, c_connector.hpp,
+	  c_selector.hpp, common.h, cow_hash_cluster_map.hpp,
+	  cow_hash_map.hpp, cow_table.hpp, cowbass3.hpp, cowbass4.hpp,
+	  group_view.hpp, index_manager.hpp, join_iterator.hpp,
+	  maybe_iterator.hpp, named_tuple.hpp, non_primary_hash_index.hpp,
+	  pointer_iterator.hpp, primary_hash_index.hpp, test/COMAKE,
+	  test/Makefile, test/test_cow_hash_map.cpp,
+	  test/test_cow_table.cpp, test/test_cowbass4.cpp,
+	  test/test_fun.cpp, test/test_group_view.cpp,
+	  test/test_hash_cluster.cpp, test/test_named_tuple.cpp,
+	  test/test_selector.cpp, test/test_table.cpp, utility.hpp: -
+	  Greatly improved CowHashClusterSet/Map to not store hkey in
+	  clusters
+	  - Add HashOneClusterIterator and find(1) in CowHashClusterSet
+	  - CowHashClusterMap has better interfaces
+	  - Many templates in cow_table.hpp are grouped in namespace
+	  ct_helper, and code are improved to work
+	  with the new CowHashClusterSet
+	  - `bool not_end() const' in iterators are generally replaced by
+	  `operator bool() const'
+	  - `iterator' is generally renamed to `Iterator', `const_iterator'
+	  to `ConstIterator',
+	  `seek_iterator' to `SeekIterator'
+	  - Add `sanity' cases in test/test_cow_hash_map.cpp,
+	  test/test_hash_cluster.cpp,
+	  test/test_cow_table.cpp
+	  TESTED=ut
+	  ISSUE=none
+
+2011-04-02 02:06  yanlin
+
+	* table.hpp: Do not recycle when insert tuple, which may cause
+	  wierd bugs
+	  
+	  TESTED=""
+	  ISSUE="1462"
+
+2011-03-29 13:07  gejun
+
+	* c_connector.hpp, c_predicate.hpp, c_selector.hpp,
+	  test/test_selector.cpp: - Minor changes
+	  TESTED=smalltable-ut
+	  ISSUE=none
+
+2011-03-29 12:33  jiangrujie
+
+	* c_connector.hpp, c_predicate.hpp, c_selector.hpp: + Add Index_Pos
+	  parameter to Maybe
+	  
+	  ISSUE="none"
+	  TESTED="st2"
+
+2011-03-29 04:05  gejun
+
+	* c_connector.hpp, c_selector.hpp, cow_table.hpp, group_view.hpp,
+	  join_iterator.hpp, test/test_cow_table.cpp,
+	  test/test_selector.cpp: - Add change_source_table<1> in Connector
+	  - Change most events of cow_table from Event<const Tup*> to
+	  Event<const Tup&>
+	  TESTED=fclib-mock
+	  ISSUE=none
+
+2011-03-17 11:50  gejun
+
+	* version_manager.cpp: - Change two ST_WARN to ST_TRACE
+	  TESTED=fclib-mock
+	  ISSUE=none
+
+2011-03-17 06:48  gejun
+
+	* Makefile, base_cow_hash_map.cpp, c_connector.hpp,
+	  coalesced_hash_map.hpp, cow_hash_cluster_map.hpp,
+	  cow_hash_map.hpp, cow_table.hpp, debug.h, default_value.h,
+	  group_view.hpp, named_tuple.hpp, observer.hpp, rc_memory_pool.h,
+	  string_writer.hpp, version_manager.cpp: - Back to 15011
+	  TESTED=bs-ut
+	  ISSUE=none
+
+2011-03-17 05:17  zengyunfeng
+
+	* Makefile, base_cow_hash_map.cpp, c_connector.hpp,
+	  coalesced_hash_map.hpp, cow_hash_cluster_map.hpp,
+	  cow_hash_map.hpp, cow_table.hpp, debug.h, default_value.h,
+	  group_view.hpp, named_tuple.hpp, observer.hpp, rc_memory_pool.h,
+	  string_writer.hpp, test/COMAKE, test/Makefile,
+	  version_manager.cpp: »Ø¹öci:r15008, r15011
+	  TESTED="none"
+	  ISSUE=""
+
+2011-03-17 04:08  gejun
+
+	* Makefile, base_cow_hash_map.cpp, c_connector.hpp,
+	  coalesced_hash_map.hpp, cow_hash_cluster_map.hpp,
+	  cow_hash_map.hpp, cow_table.hpp, debug.h, default_value.h,
+	  group_view.hpp, named_tuple.hpp, observer.hpp, rc_memory_pool.h,
+	  string_writer.hpp, test/COMAKE, test/Makefile,
+	  version_manager.cpp: - Change c_to_string of CowHashSet and
+	  CowHashClusterSet
+	  - Remove __attribute__((const)) in default_value_of<NamedTuple>,
+	  ST_DEFINE_DEFAULT_VALUE,
+	  ST_INSIDE_DEFINE_DEFAULT_VALUE
+	  - Add CowTable::index_tup()
+	  - Replace ST_NOTICE with ST_TRACE and change some warning logs to
+	  trace
+	  - Fix BaseVersionManager::~BaseVersionManager()
+	  - Add enable_replace_event/disable_replace_event in GroupView
+	  TESTED=fclib-mock
+	  ISSUE=none
+
+2011-03-17 03:42  jiangrujie
+
+	* group_view.hpp: + Add shortcut to on_event in observers in
+	  GroupView
+	  
+	  TESTED=compile
+	  ISSUE=none
+
+2011-03-14 03:14  gejun
+
+	* cow_table.hpp, fun/c_show.hpp: - Add namespace in macro c_show*
+	  TESTED=none
+	  ISSUE=none
+
+2011-03-13 07:00  gejun
+
+	* cow_hash_cluster_map.hpp, join_iterator.hpp: - Tiny changes
+	  TESTED=ut
+	  ISSUE=none
+
+2011-03-12 06:06  gejun
+
+	* base_cow_hash_map.cpp, c_connector.hpp, cow_hash_cluster_map.hpp,
+	  cow_table.hpp, debug.h, fun/hash.hpp, rc_memory_pool.h,
+	  version_manager.hpp: - Slightly change to_string formatting of
+	  CowHashClusterMap and CowHashMap
+	  - Fix overflow in CowTable::mem()
+	  - Add VersionManagerIterator in version_manager.hpp so that users
+	  may iterate existing versions
+	  - Add begin(), end(), at(1) in VersionManager<1>
+	  - Exchange positions of __FILE__ and __FUNCTION__ of logging
+	  macros in debug.h
+	  - Add refresh(), disable_observers(), enable_observers() in
+	  Connector
+	  TESTED=ut
+	  ISSUE=none
+
+2011-03-11 09:42  jiangrujie
+
+	* array_op.hpp, cow_table.hpp, cowbass4.hpp, fun/c_common.hpp,
+	  test/test_array_op.cpp, test/test_cow_table.cpp: + add template
+	  parameter MaxFanout<u_int> in ClusterKey and ReversedClusterKey
+	  in cow_table.hpp
+	  + change COWBASS_DEFAULT_FANOUT to 32 in cowbass4.hpp
+	  + add MAX_FANOUT parameter to array_binary_search for
+	  optimiazation in array_op.hpp
+	  
+	  TESTED="smalltable2"
+	  ISSUE="981"
+
+2011-03-11 02:52  yufan
+
+	* base_hash_index.hpp: fix a missing function, maybe not used
+	  ISSUE=948
+	  TESTED=ut
+
+2011-03-10 13:53  gejun
+
+	* c_connector.hpp: - Make disable_observers/enable_observers
+	  correct
+	  TESTED=ut
+	  ISSUE=none
+
+2011-03-10 12:07  gejun
+
+	* c_connector.hpp, group_view.hpp, version_manager.cpp: - Simplify
+	  group_view
+	  - add disable_observers() and enable_observers() in Connector
+	  TESTED=compiled
+	  ISSUE=none
+
+2011-03-10 07:36  gejun
+
+	* COMAKE, Makefile, base_cow_hash_map.cpp, base_cow_hash_map.h,
+	  c_connector.hpp, cow_hash_cluster_map.hpp, cow_hash_map.hpp,
+	  cow_table.hpp, cowbass4.hpp, test/test_version_manager.cpp,
+	  version_manager.cpp, version_manager.hpp: - Add resize/reserve in
+	  CowHashClusterSet
+	  - Change type of n_bucket from u_int to size_t in CowTable
+	  - Add `desc' to VersionManager
+	  - Watch clear_event in Connector
+	  - Fail directly instead of destruction if user initializes an
+	  initialized CowXXX
+	  - Change COMAKE slightly
+	  TESTED=ut
+	  ISSUE=none
+
+2011-03-09 08:55  gejun
+
+	* CHANGELOG: - Update CHANGELOG
+	  TESTED=none
+	  ISSUE=none
+
+2011-03-09 08:54  gejun
+
+	* svn2cl.sh, svn2cl.xsl: - Remove svn2cl
+	  TESTED=none
+	  ISSUE=none
+
+2011-03-09 05:22  gejun
+
+	* index_manager.hpp, table.hpp, test/test_table.cpp: - Fix
+	  Table::mem()
+	  TESTED=compiled
+	  ISSUE=none
+
+2011-03-08 06:45  gejun
+
+	* Makefile, base_cow_hash_map.h, boost, cowbass4.hpp, st_boost,
+	  st_boost/detail/shared_count.hpp,
+	  st_boost/detail/sp_counted_base.hpp,
+	  st_boost/detail/sp_counted_base_gcc_x86.hpp,
+	  st_boost/detail/sp_counted_impl.hpp,
+	  st_boost/detail/st_shared_count.hpp,
+	  st_boost/detail/st_sp_counted_base.hpp,
+	  st_boost/detail/st_sp_counted_base_gcc_x86.hpp,
+	  st_boost/detail/st_sp_counted_impl.hpp,
+	  st_boost/shared_array.hpp, st_boost/shared_ptr.hpp,
+	  st_boost/st_shared_array.hpp, st_boost/st_shared_ptr.hpp: - Add
+	  st prefixes to boost subdirectory
+	  TESTED=compiled
+	  ISSUE=none
+
+2011-03-07 14:21  gejun
+
+	* debug.h: - Include "st_timer.h" in common.h
+	  TESTED=none
+	  ISSUE=none
+
+2011-03-07 09:05  gejun
+
+	* c_selector.hpp, pointer_iterator.hpp: - Add implicit casting in
+	  PointerIterator
+	  TESTED=none
+	  ISSUE=none
+
+2011-03-05 13:27  gejun
+
+	* cow_table.hpp: - Remove unused variable(so that BS may compile)
+	  TESTED=compiled
+	  ISSUE=none
+
+2011-03-05 12:52  gejun
+
+	* linear_hash_map.hpp: - Add missed default constructor
+	  TESTED=compiled
+	  ISSUE=none
+
+2011-03-05 12:30  gejun
+
+	* Makefile, c_connector.hpp, c_predicate.hpp, c_selector.hpp,
+	  cow_table.hpp, fun/list.hpp, linear_hash_map.hpp,
+	  smalltable2.hpp, test/Makefile, test/test_version_manager.cpp,
+	  version_manager.cpp, version_manager.hpp: - Add const modifier to
+	  CowTable::seek(...)
+	  - Split implementation of VersionManager to VersionManager.cpp
+	  and make version_manager.hpp thin
+	  - Rename get_table_from_mtable to unmark_maybe, Where to
+	  WhereClause, From to FromClause, is_maybe
+	  to is_marked_maybe.
+	  - Support `Silent' marker to modify a table in ST_FROM so that
+	  Connector does not subscribe events
+	  of the table
+	  - A couple of changes on internal interfaces/implementations of
+	  Connector
+	  - Format linear_hash_map.hpp
+	  TESTED=ut
+	  ISSUE=none
+
+2011-03-05 06:34  gejun
+
+	* Makefile, base_cow_hash_map.cpp, base_cow_hash_map.h,
+	  cow_hash_cluster_map.hpp, cow_hash_map.hpp, cow_table.hpp,
+	  ext_hash_map.hpp, rc_memory_pool.h, st_timer.h, test/COMAKE,
+	  test/Makefile, test/test_cow_hash_map.cpp,
+	  test/test_hash_map.cpp, unused/cow1_hash_map.hpp: - Split most
+	  implementations of CowHashSet/Map into base_cow_hash_map.cpp/h,
+	  CowHashSet/Map in
+	  cow_hash_map.hpp are thin template wrappers over BaseCowHashMap.
+	  This is done by converting
+	  function objects/constructor/destructor of template parameters
+	  into function pointers, while seek(1)
+	  is still directly implemented in CowHashSet/Map for full
+	  performance. Since external probing
+	  hash_map is memory bound, other methods like insert/erase do not
+	  show obvious performance degrade in
+	  my tests. This technique can help to avoid code bloat and improve
+	  compilation speed of
+	  CowHashSet/Map related code. I will do similar changes to
+	  Cowbass4 later which may improve
+	  compilation speed much more.
+	  - Change types of n_bucket/n_item of CowHashSet/Map from u_int to
+	  size_t
+	  - Add TIME_SCOPE_IN_NS/TIME_SCOPE_IN_NS_NO_NL in st_timer.h
+	  - Add dec_ref(3) in rc_memory_pool.h, this variant invokes a
+	  `destruct_fn' on the memroy before
+	  adding to free_list
+	  - Add unused/cow1_hash_map.hpp which is previous implementation
+	  of CowHashSet/Map
+	  - Improve test/test_hash_map.cpp, test/test_cow_hash_map.cpp
+	  TESTED=ut
+	  ISSUE=none
+
+2011-03-03 09:02  gejun
+
+	* CHANGELOG, c_connector.hpp, c_predicate.hpp, fun/c_common.hpp,
+	  fun/list.hpp, maybe_iterator.hpp: - Add more ST_DEFINE_TBL(8/9),
+	  DEFINE_CONNECTOR_VARIADIC_CONSTRUCTOR(7/8), ST_SYMBOLL12,
+	  ST_SYMBOLLD12, ST_APPL12, ST_PARAML11/12, ST_MAKE_LIST_10/11/12
+	  - Rename MaybeInsertObserver/MaybeEraseObserver to
+	  InsertMaybeObserver/EraseMaybeObserver
+	  - Include default_value.h in maybe_iterator
+	  - Update CHANGELOG
+	  TESTED=UT
+	  ISSUE=none
+
+2011-03-01 15:18  gejun
+
+	* Makefile, TODO, array_op.hpp, attribute.h, base_hash_index.hpp,
+	  base_table.h, basic_tuple.hpp, bit_tree.h, c_connector.hpp,
+	  c_predicate.hpp, c_selector.hpp, coalesced_hash_map.hpp,
+	  common.h, cow_hash_cluster_map.hpp, cow_hash_map.hpp,
+	  cow_table.hpp, cowbass3.hpp, cowbass4.hpp, cycled_hash_map.hpp,
+	  default_value.h, dep_manager.cpp, dep_manager.hpp,
+	  easy_deque.hpp, ext_hash_map.hpp, ext_hash_set.hpp,
+	  fixed_array.hpp, fixed_deque.hpp, fun/base_function_object.hpp,
+	  fun/c_common.hpp, fun/c_math.hpp, fun/c_show.hpp,
+	  fun/choose_variadic.h, fun/common_function_objects.hpp,
+	  fun/compare.hpp, fun/compile_time_assert.h, fun/hash.hpp,
+	  fun/is_base_of.hpp, fun/list.hpp, fun/map.hpp, graph.hpp,
+	  group_view.hpp, header.hpp, index_manager.hpp, join_iterator.hpp,
+	  linear_hash_map.hpp, maybe_iterator.hpp, named_tuple.hpp,
+	  non_primary_hash_index.hpp, object_hanger.h, object_pool.hpp,
+	  observer.hpp, pointer_iterator.hpp, predicate.hpp,
+	  primary_hash_index.hpp, rc_memory_pool.h, selector.hpp,
+	  st_errno.h, st_timer.h, string_reader.cpp, string_reader.hpp,
+	  string_writer.hpp, table.hpp, test/COMAKE, test/Makefile,
+	  test/foo.h, test/test_array_op.cpp, test/test_bit_tree.cpp,
+	  test/test_cow_hash_map.cpp, test/test_cow_table.cpp,
+	  test/test_cowbass.cpp, test/test_cowbass4.cpp,
+	  test/test_dep_manager.cpp, test/test_fixed_deque.cpp,
+	  test/test_fun.cpp, test/test_graph.cpp, test/test_group_view.cpp,
+	  test/test_hash_cluster.cpp, test/test_hash_map.cpp,
+	  test/test_index_perf.cpp, test/test_load.cpp,
+	  test/test_named_tuple.cpp, test/test_perf.cpp,
+	  test/test_pool.cpp, test/test_selector.cpp,
+	  test/test_string_reader.cpp, test/test_string_writer.cpp,
+	  test/test_table.cpp, test/test_template_folding.cpp,
+	  test/test_tuple.cpp, test/test_version_manager.cpp, tuple.hpp,
+	  unused/allocators.hpp, unused/cowbass0.hpp, unused/cowbass1.hpp,
+	  unused/cowbass2.hpp, unused/ext_hash_set2.hpp,
+	  unused/mat_view.hpp, unused/monitee.hpp, unused/monitor.hpp,
+	  unused/op_list.hpp, unused/shared_object.h,
+	  unused/tb_hashmap.hpp, unused/test/test_allocators.cpp,
+	  unused/test/test_op_list.cpp, unused/test/test_tb_hashmap.cpp,
+	  unused/tuple1.hpp, utility.hpp, version_manager.hpp: - Rename
+	  namespace from smalltable to st
+	  - Macrofy many functions
+	  - Split JoinIterator and related templates into join_iterator.hpp
+	  from c_selector.hpp
+	  - Add tuple_of_sub_iterators() and set_sub_iterator(1) in
+	  JoinIterator
+	  - c_predicate renames: st_equal to eq, st_true to always_true,
+	  st_false to always_false, st_greater
+	  to gt, st_greater_equal to ge, st_less to lt, st_less_equal to
+	  le, st_not_equal to ne, st_where to
+	  ST_WHERE, st_from to ST_FROM, st_pick to ST_PICK
+	  - SYMBOL_LISTn and PARAM_LISTn are moved from common.h to
+	  fun/c_common.hpp, and renamed to
+	  ST_SYMBOLLn and ST_PARAMLn respectively
+	  - Add ST_SYMBOLLDn and ST_APPLn in fun/c_common.hpp
+	  - Add ST_MAKE_LIST(...) in fun/list.hpp
+	  - Add fun/choose_variadic.h
+	  - Add test/test_template_folding.cpp
+	  - Add is_tagged_cow_hash in cow_hash_map.hpp
+	  - UniqueKey/ClusterKey/ReversedClusterKey/CowTable use a list as
+	  parameter rather than (fake)
+	  variadic arguments. Users should call
+	  ST_UNIQUE_KEY/ST_CLUSTER_KEY/ST_REVERSED_CLUSTER_KEY/ST_TABLE
+	  instead of actual types.
+	  - Specialize c_show_impl for
+	  UniqueKey/ClusterKey/ReversedClusterKey/CowTable
+	  - Separate interfaces and implementations of version_manager.hpp,
+	  and simplify some methods.
+	  - Better printing TableSelection
+	  - Rename get_iterator_by_tag in c_selector.hpp to
+	  get_sub_iterator_type
+	  - Specialize default_value_of<NamedTuple>
+	  - Add maybe_iterator.hpp
+	  - Add MAYBE_..._SCORE and get_maybe_score. If Score(Table1) <
+	  Score(Table2), then
+	  Score(Maybe<Table1>) < Score(Table1) < Score(Maybe<Table2>) <
+	  Score(Table2)
+	  - Interfaces of try_table/arrange_tables are changed to support
+	  partial join
+	  - Selector2 supports partial join. User can wrap any table in
+	  ST_FROM(...) with Maybe<> to let
+	  Selector2 know that the table will be partially joined.
+	  - Move iterator_of_the_table_except and
+	  iter_maker_of_the_table_except from c_selector.hpp and
+	  c_connector.hpp
+	  - User may user ST_SELECTOR and ST_CONNECTOR instead of writing
+	  st::Selector2 and st::Connector
+	  - Connector supports partial join and its interfaces on
+	  observations are simplified
+	  - Rename DEFINE_VALUE_OF to ST_DEFAULT_VALUE_OF,
+	  DEFINE_DEFAULT_VALUE to ST_DEFINE_DEFAULT_VALUE,
+	  Add ST_INSIDE_DEFINE_DEFAULT_VALUE
+	  - Fix warnings in test cases
+	  - Add test cases maybe_selection and maybe_connection in
+	  test/test_selector.cpp
+	  - Rearrange order of template specializations
+	  - Rename Maybe in selector.hpp(smalltable1) to Mayby1 to avoid
+	  conflict
+	  - Update TODO
+	  TESTED=UT
+	  ISSUE=NONE
+
+2011-03-01 11:09  jiangrujie
+
+	* cow_table.hpp, group_view.hpp, test/test_group_view.cpp,
+	  test/test_selector.cpp: + fix a bug that ret has the wrong
+	  initial value in TableIndexEraser<CowHashCluster1Tag> in
+	  cow_table.hpp.
+	  + fix a bug that multi_index_erase<> has the wrong template
+	  parameter in cow_table.hpp.
+	  + fix a bug that p_node may be null after p_map_->seek(hkey) in
+	  GroupViewIterator in group_view.hpp.
+	  + add testcase for Selector2 and Connector in
+	  test/test_selector.cpp.
+	  + add testcase for GroupView in test/test_group_view.cpp.
+	  
+	  TESTED="all ut in smalltable"
+	  ISSUE="758"
+
+2011-02-26 09:55  gejun
+
+	* basic_tuple.hpp, c_connector.hpp, c_predicate.hpp, cow_table.hpp,
+	  group_view.hpp, named_tuple.hpp, test/test_selector.cpp: - Remove
+	  _Base in template parameters of BasicTuple and NamedTuple, the
+	  unnecessary parameter made
+	  error log harder to read
+	  - Add two function objects in cow_table.hpp:
+	  insert_tuple_into_cow_table and
+	  erase_tuple_from_cow_table, they're currently used by tup_maker_
+	  of Connector
+	  - Add `smalltable::' for st_where/st_from/st_pick
+	  - expose TBLn/st_* outside smalltable
+	  - Simplify SelectResult
+	  - Macrofy constructor and connect(...) of Connector
+	  - Rename private init_dest_table() to init_dst_table()
+	  - Tuple makers of Connector are improved, they have state and can
+	  pick more than one tuple once.
+	  This is important to satisfy various cases in our applications,
+	  like local id translation(require
+	  stateful) and TPC->Plsi(one TPC maps to many inverted tuples).
+	  User can easily customize tuple
+	  generation by defining a function object. Since state of the
+	  function object is kept in Connector,
+	  users should guarantee exactly same output tuples for the exactly
+	  same input.
+	  - Add non_empty_cluster and empty_cluster in group_view.hpp,
+	  they're very likely to be used together
+	  with GroupView
+	  TESTED=UT
+	  ISSUE=NONE
+
+2011-02-26 06:37  gejun
+
+	* group_view.hpp: - Set _INDEX_POS of GroupView to 0 as default
+	  TESTED=NONE
+	  ISSUE=NONE
+
+2011-02-26 06:35  gejun
+
+	* Makefile, c_connector.hpp, c_trigger.hpp, cow_hash_map.hpp,
+	  cow_table.hpp, group_view.hpp, smalltable2.hpp, test/COMAKE,
+	  test/Makefile, test/test_group_view.cpp, test/test_selector.cpp:
+	  - Rename Trigger to Connector to avoid potential confusion
+	  TESTED=UT
+	  ISSUE=NONE
+
+2011-02-25 09:19  gejun
+
+	* cow_table.hpp, index_manager.hpp, test/COMAKE, test/Makefile,
+	  test/test_group_view.cpp: - multi_index_erase::call returns bool
+	  instead of void
+	  - Add operator== and operator!= in IndexManager::iterator
+	  - Remove -DDEBUG(to enable assert) in test/COMAKE
+	  TESTED=UT
+	  ISSUE=NONE
+
+2011-02-24 10:31  yufan
+
+	* table.hpp: load adq with multiple thread
+	  ISSUE=664
+	  TESTED=ut
+
+2011-02-24 07:57  gejun
+
+	* test/test_group_view.cpp: - Remove unused definitions in
+	  test/test_group_view.cpp
+	  TESTED=NONE
+	  ISSUE=NONE
+
+2011-02-24 07:53  gejun
+
+	* Makefile, c_predicate.hpp, c_selector.hpp, common.h,
+	  cow_hash_map.hpp, cow_table.hpp, default_value.h, group_view.hpp,
+	  named_tuple.hpp, smalltable.hpp, smalltable2.hpp, test/Makefile:
+	  - Add PARAM_LISTn in common.h, and change some variadic templates
+	  on that
+	  - Rerun comake2
+	  - Add smalltable2.hpp which is a entry header for using
+	  smalltable2
+	  - Minor changes in group_view.hpp
+	  TESTED=UT
+	  ISSUE=NONE
+
+2011-02-24 07:29  jiangrujie
+
+	* Makefile, c_trigger.hpp, cow_table.hpp, group_view.hpp,
+	  test/COMAKE, test/Makefile, test/test_cow_table.cpp,
+	  test/test_group_view.cpp: + cow_table.hpp
+	  + split insert_event into pre_insert_event and insert_event.
+	  + split replace_event into replace_old_event and
+	  replace_new_event.
+	  + split erase_event into erase_event and post_erase_event.
+	  + seperate replace_event from insert_event, now insert_event can
+	  only be triggered
+	  by the insertion of a new tuple.
+	  
+	  + notify new events in functions: table_insert_tuple,
+	  table_erase_tuple, and TableIndexEraser.
+	  + subscribe new events according to cow_table in c_trigger.hpp.
+	  + implementation of GroupView in group_view.hpp.
+	  + testcase for GroupView in test/test_group_view.hpp.
+	  
+	  TESTED="All ut of smalltable"
+	  ISSUE="501"
+
+2011-02-20 13:13  gejun
+
+	* CHANGELOG, attribute.h, test/test_cow_table.cpp: - Add
+	  `smalltable::' before c_show_base in DEFINE_* of attribute.h
+	  - Update CHANGELOG
+	  TESTED=UT
+	  ISSUE=NONE
+
+2011-02-20 12:48  gejun
+
+	* TODO, attribute.h, basic_tuple.hpp, c_predicate.hpp,
+	  c_selector.hpp, c_trigger.hpp, cow_hash_cluster_map.hpp,
+	  cow_hash_map.hpp, cow_table.hpp, cowbass4.hpp, fun/compare.hpp,
+	  fun/compile_time_assert.h, fun/list.hpp, named_tuple.hpp,
+	  observer.hpp, test/test_cow_table.cpp,
+	  test/test_hash_cluster.cpp, test/test_selector.cpp:
+	  - Rename internal_map to hash_map_ptr in cow_hash_cluster_map.hpp
+	  - Print type of keys and items in to_string of data structures
+	  - Complement Default constructor/destructor/copy
+	  constructor/operator= in basic_tuple.hpp,
+	  named_tuple.hpp, cow_table.hpp
+	  - Add C_ASSERT_SAME, C_ASSERT_NON_VOID, C_ASSERT_VOID in
+	  compile_time_assert.h
+	  - Add at<TBLn, Attribute> and at<TBLn<Attribute> > in
+	  JoinIterator
+	  - Add SelectResult<2> in c_trigger.hpp to represent result of a
+	  selection inside Trigger so that
+	  users are able customize picking of attributes
+	  - Add VAR1~VAR7 in c_predicate.hpp to represent a variable in
+	  using SelectResult
+	  - Reorder inner types of Trigger
+	  - Support passing a function object as _ProjDecl converting
+	  corresponding SelectResult to tuple of
+	  the destination table in Trigger
+	  - Add ReversedClusterKey in cow_table.hpp and support reversed
+	  order clusters.
+	  - Rename case `random_insert_and_erase' to
+	  `randomly_insert_erase_clear_while_copy' and greatly
+	  improve the case in test/test_cow_table.cpp
+	  - Use user_pick in test/test_selector.cpp
+	  - Add is_make_non_void_list in fun/list.hpp to test if input is
+	  an instance of make_non_void_list
+	  - Let attributes defined by DEFINE_* inherit c_show_base to show
+	  type name accurately
+	  - Update TODO
+	  TESTED=UT
+	  ISSUE=NONE
+
+2011-02-18 08:05  gejun
+
+	* CHANGELOG, TODO, c_selector.hpp, common.h, debug.h,
+	  fun/c_common.hpp, fun/compile_time_assert.h, fun/list.hpp,
+	  fun/map.hpp, string_reader.cpp, test/test_cow_table.cpp,
+	  test/test_fun.cpp, utility.hpp:
+	  - Remove _1, _2..._9 and True/False from c_common.hpp
+	  - Simplify c_common.hpp, add value_of
+	  - Reindent string_reader.cpp
+	  - Refine debug.h
+	  - Fix set_equal in fun/map.hpp
+	  - Simplify C_ASSERT in fun/compile_time_assert.h
+	  - Add ARRAY_SIZE in common.h
+	  TESTED=UT
+	  ISSUE=NONE
+
+2011-02-17 07:39  gejun
+
+	* c_trigger.hpp, test/test_selector.cpp: - Rename initial_select to
+	  connect
+	  TESTED=NONE
+	  ISSUE=NONE
+
+2011-02-17 06:56  gejun
+
+	* c_trigger.hpp: - Fix void VarTup issue in Trigger
+	  TESTED=NONE
+	  ISSUE=NONE
+
+2011-02-17 03:59  gejun
+
+	* basic_tuple.hpp, c_predicate.hpp, c_selector.hpp, c_trigger.hpp,
+	  cow_table.hpp, fun/base_function_object.hpp, fun/c_common.hpp,
+	  fun/list.hpp, fun/map.hpp, header.hpp, index_manager.hpp,
+	  named_tuple.hpp, non_primary_hash_index.hpp, observer.hpp,
+	  selector.hpp, string_reader.hpp, string_writer.hpp, table.hpp,
+	  test/test_fun.cpp, test/test_named_tuple.cpp,
+	  test/test_tuple.cpp, tuple.hpp, unused/cowbass0.hpp,
+	  unused/cowbass1.hpp, unused/cowbass2.hpp, unused/mat_view.hpp,
+	  unused/tuple1.hpp: - Replace Nil by void and related renamings
+	  TESTED=UT
+	  ISSUE=NONE
+
+2011-02-15 12:15  gejun
+
+	* CHANGELOG, TODO, c_trigger.hpp, test/test_selector.cpp: + Rename
+	  init(...) to initial_select(...) in Trigger
+	  + Update TODO and CHANGELOG
+	  TESTED=UT
+	  ISSUE=NONE
+
+2011-02-14 06:38  gejun
+
+	* TODO, c_predicate.hpp, c_selector.hpp, c_trigger.hpp,
+	  cow_table.hpp, default_value.h, fun/c_common.hpp,
+	  named_tuple.hpp, pointer_iterator.hpp, test/test_cow_table.cpp,
+	  test/test_fun.cpp:
+	  + Add TableIndexSeeker in cow_table.hpp, support `seek-by-keys'
+	  feature in CowTable
+	  + Rename const_pointer_of to const_pointer_type_of, add
+	  pointer_type_of, content_type_of,
+	  content_type_ref_of in c_common.hpp
+	  + Add TB6/TB7 in c_predicate.hpp
+	  + Add default_value.h to define and get default value from types
+	  + Move Nil and Cons outside namespace of smalltable because
+	  they're so often used that the prefix
+	  'smalltable::' was overwhelming in compiling errors
+	  TESTED=UT
+	  ISSUE=NONE
+
+2011-02-11 11:13  gejun
+
+	* CHANGELOG, TODO, c_predicate.hpp, c_selector.hpp,
+	  cow_hash_cluster_map.hpp, cow_hash_map.hpp, cow_table.hpp,
+	  cowbass4.hpp, easy_deque.hpp, fun/c_common.hpp, fun/list.hpp,
+	  fun/map.hpp, named_tuple.hpp, rc_memory_pool.h, st_errno.h,
+	  st_timer.h, test/test_cow_hash_map.cpp, test/test_cow_table.cpp,
+	  test/test_cowbass4.cpp, test/test_fun.cpp,
+	  test/test_selector.cpp, version_manager.hpp:
+	  + Add is_tagged_cow_hash_cluster in cow_hash_cluster_map.hpp to
+	  check if input is CowHashClusterSet
+	  or CowHashClusterMap
+	  + Rename table_index_insert/erase in cow_table.hpp to
+	  table_insert/erase_tuple
+	  + Add TableIndexEraser in cow_table.hpp to prepare keys for an
+	  index of a table and erase related
+	  tuples from multiple indexes of the table
+	  + Change `_IndexTup& index_tup' to `_IndexTup* p_index_tup' to
+	  comply coding style
+	  + Remove CowTable::build_cow_hash_set and
+	  CowTable::build_cow_hash_cluster_set, and replace them
+	  with hash_set_type<2> and and hash_cluster_set_type<3> outside
+	  CowTable
+	  + Add is_tagged_with in fun/c_common.hpp, replace several
+	  `is_tagged_Foo` with `THAP(is_tagged_with,
+	  Foo)'
+	  + Rename CowTable::SeqL to CowTable::ModifySeqL to avoid
+	  confusion with SeqL elsewhere.
+	  + Make CowTable::IndexTup private
+	  + Replace CowTable::FirstIndex with CowTable::TraversalIndex and
+	  related stuff, implying usages more
+	  clearly
+	  + Make to_string(1) and operator<<(2) of CowTable consistent
+	  + Replace erase(...) with erase<...>(...) in CowTable. Previously
+	  erase(...) are just wrappers over
+	  erase_tuple(1), for a table with N attributes, user should pass N
+	  values to erase(...) to delete the
+	  tuple exactly matching the input from the table. Now they're
+	  re-designed to erase tuples matching
+	  key of an index in the table. The method matches an attribute set
+	  designated by user with keys of
+	  indexes, if none of indexes is matched, a C_ASSERT fails; if one
+	  of the indexes matches, the method
+	  erases tuples with the key in the index and consequently updating
+	  other indexes in the same table.
+	  This design should feel intuitive to users and generally avoid
+	  potential mis-designations of
+	  attribute set.
+	  + Add const modifiers to JoinIterator::sub_iter() in
+	  c_selector.hpp
+	  + Rename get_iter_maker_by_tag to IteratorMaker in
+	  c_selector.hpp; modify visibilities of inner
+	  types; rename ::make_iter(3) to ::make(3)
+	  + Move CowbassReq into CowbassReqList again in cowbass4.hpp
+	  + Separate interface/implemenation of Cowbass4::seek_leaf(4)
+	  + Move make_non_nil_list from c_predicate.hpp to fun/list.hpp
+	  + fun/list.hpp changes: Rename list_find_first to
+	  list_seek_first; Add list_find_first and
+	  list_seek_first_true. The differences between list_seek* and
+	  list_find* are returning position or
+	  returning matched object.
+	  + Add set_equal in fun/map.hpp to test equivalence of two sets.
+	  + Add n_elapsed() in NaiveTimer
+	  + Slightly change formatting in ScopedPrintTimer
+	  + Replace RCMemoryPool with TRCMemoryPool<class _RC> where _RC is
+	  type of the reference counter.
+	  RCMemoryPool is a typedef of TRCMemoryPool<DefaultRefCounter>
+	  now. TRCMemoryPool<> is designed to
+	  support customizations of precious bits of the reference counter.
+	  The template parameter _RC is a
+	  class that should implement a set of interfaces to record number
+	  of references. Interfaces on
+	  references are greatly changed to adapt this new feature.
+	  Interfaces and implementations of
+	  TRCMemoryPool are also separated to be more clear
+	  + Fix a bug in destructor of CowHashSet that mis-using ST_DELETE
+	  to delete an array
+	  + Separate interfaces/implementations of swap(1) and seek(1) in
+	  CowHashSet.
+	  + Update TODO
+	  TESTED="UT"
+	  ISSUE=""
+
+2011-02-08 15:15  gejun
+
+	* Makefile, TODO, boost/shared_array.hpp, boost/shared_ptr.hpp,
+	  cow_hash_cluster_map.hpp, naive_timer.h, object_hanger.h,
+	  pointer_iterator.hpp, st_timer.h, test/adt_perf/adt.cpp,
+	  test/test_bit_tree.cpp, test/test_cow_hash_map.cpp,
+	  test/test_cow_table.cpp, test/test_cowbass.cpp,
+	  test/test_cowbass4.cpp, test/test_fun.cpp,
+	  test/test_hash_cluster.cpp, test/test_hash_map.cpp,
+	  test/test_index_perf.cpp, test/test_named_tuple.cpp,
+	  test/test_perf.cpp, test/test_pool.cpp, test/test_shared_ptr.cpp,
+	  test/test_string_writer.cpp, test/test_table.cpp,
+	  test/test_tuple.cpp, test/test_version_manager.cpp,
+	  unused/test/test_op_list.cpp, utility.hpp:
+	  + Rename naive_timer.h to st_timer.h
+	  + Add ScopedPrintTimer and helper macros in st_timer.h which
+	  eases timings in test cases.
+	  + Change some timings by NaiveTimer to ScopedPrintTimer.
+	  + sort TODO by priorities
+	  TESTED="ut"
+	  ISSUE=""
+
+2011-02-08 10:48  gejun
+
+	* TODO, cow_hash_cluster_map.hpp, cow_table.hpp,
+	  test/test_cow_table.cpp:
+	  + Separate interfaces and implementations of
+	  cow_hash_cluster_map.hpp
+	  + Refine and add comments in cow_hash_cluster_map.hpp
+	  + Update TODO
+	  TESTED="unittest"
+	  ISSUE=""
+
+2011-02-08 09:48  gejun
+
+	* TODO, attribute.h, basic_tuple.hpp, c_selector.hpp,
+	  c_trigger.hpp, cow_hash_cluster_map.hpp, cow_hash_map.hpp,
+	  cow_table.hpp, cowbass4.hpp, debug.h, fun/c_common.hpp,
+	  named_tuple.hpp, string_writer.hpp, test/COMAKE, test/Makefile,
+	  test/test_cow_table.cpp, test/test_fun.cpp,
+	  test/test_hash_cluster.cpp, test/test_perf.cpp,
+	  test/test_selector.cpp, test/test_table.cpp, utility.hpp:
+	  + Use Cowbass4::iterator to check boundary instead of
+	  CowHashSet::iterator in CowHashClusterSet
+	  + Add c_to_string in CowHashClusterSet::ClusterNode
+	  + Complement template parameters in
+	  c_show_impl<CowHashClusterSet> and c_show_impl<CowHashSet>
+	  + Fix a bug that CowHashClusterSet::clear() did not set n_item_
+	  to zero
+	  + Re-format to_string(1) of CowHashClusterSet, CowHashSet,
+	  CowTable
+	  + Add CowTable::index_type<int>
+	  + Correct spell of `separate'
+	  + Add leaf_alloc_use_count(), branch_alloc_use_count(),
+	  alloc_creator() in Cowbass4
+	  + Add alloc_use_count(), alloc_creator() in CowHashSet
+	  + Use a litter smaller grow ratio in
+	  CowHashSet::resize_if_necessary() so that primes are not
+	  skipped.
+	  + Slightly changed CowHashIterator
+	  + Specialize c_show_impl<Cowbass4>, c_show_impl<BasicTuple>
+	  + Add a case in test/test_cow_table.cpp
+	  + Closed several cases in test/test_table.cpp, move some
+	  performance related cases to
+	  test/test_perf.cpp
+	  + Add shows_attr_list_with_sep<2> and show_tuple_type<1> in
+	  named_tuple.hpp
+	  + Move get_attr_type<1> from named_tuple.hpp to attribute.h
+	  + Update TODO
+	  TESTED="unittest"
+	  ISSUE=""
+
+2011-02-07 09:03  gejun
+
+	* CHANGELOG, Makefile, TODO, array_op.hpp, attribute.h,
+	  base_hash_index.hpp, base_table.h, basic_tuple.hpp, bit_tree.h,
+	  c_predicate.hpp, c_selector.hpp, c_trigger.hpp,
+	  coalesced_hash_map.hpp, common.h, cow_hash_cluster_map.hpp,
+	  cow_hash_map.hpp, cow_table.hpp, cowbass3.hpp, cowbass4.hpp,
+	  cycled_hash_map.hpp, debug.h, easy_deque.hpp, ext_hash_map.hpp,
+	  ext_hash_set.hpp, fixed_array.hpp, fixed_deque.hpp,
+	  fun/base_function_object.hpp, fun/c_common.hpp, fun/c_math.hpp,
+	  fun/c_show.hpp, fun/common_function_objects.hpp, fun/compare.hpp,
+	  fun/compile_time_assert.h, fun/hash.hpp, fun/is_base_of.hpp,
+	  fun/list.hpp, fun/map.hpp, functional.hpp, get_proc_stat.h,
+	  index_manager.hpp, linear_hash_map.hpp, mat_view.hpp,
+	  naive_timer.h, named_tuple.hpp, non_primary_hash_index.hpp,
+	  object_hanger.h, object_pool.hpp, observer.hpp,
+	  observer_list.hpp, pointer_iterator.hpp, predicate.hpp,
+	  primary_hash_index.hpp, rc_memory_pool.h, selector.hpp,
+	  st_errno.h, string_writer.hpp, table.hpp, test/COMAKE,
+	  test/Makefile, test/foo.h, test/sf_list2.h,
+	  test/test_cow_hash_map.cpp, test/test_cow_table.cpp,
+	  test/test_cowbass.cpp, test/test_cowbass4.cpp, test/test_fun.cpp,
+	  test/test_hash_cluster.cpp, test/test_hash_map.cpp,
+	  test/test_perf.cpp, test/test_selector.cpp,
+	  test/test_shared_ptr.cpp, test/test_string_writer.cpp,
+	  test/test_table.cpp, test/test_version_manager.cpp, tuple.hpp,
+	  unused/cowbass0.hpp, unused/cowbass1.hpp, unused/cowbass2.hpp,
+	  unused/ext_hash_set2.hpp, unused/mat_view.hpp,
+	  unused/memory_pool.h, unused/shared_object.h,
+	  unused/tb_hashmap.hpp, utility.hpp, version_manager.hpp:
+	  + add usages after included headers
+	  + change `struct FooTag' to `class FooTag'
+	  + change some `typename' which can't be primitive types to
+	  `class'
+	  + remove `typename _F' in template parameters of
+	  CowHashClusterIterator,CowHashIterator
+	  + CowHashSet/CowHashClusterSet/Cowbass4 do not accept allocators
+	  as parameters of init() because the
+	  method always creates local allocators. If two data structures
+	  both get initialized separately,
+	  assignment betweeen them does not share any thing. To share
+	  allocators between data structures,
+	  assign an initialized data structure to an uninitialized one,
+	  then the internal allocators are
+	  shared between the two data structures.
+	  + change
+	  test/{test_cow_hash_map.cpp,test_hash_cluster.cpp,test_cowbass4.cpp}
+	  to adapt changed
+	  init()
+	  + CowHashClusterSet interface changes: add clear(), map_alloc(),
+	  leaf_alloc(), branch_alloc(),
+	  removed create_map_alloc(), create_leaf_alloc(),
+	  create_branch_alloc()
+	  + rename multi_index_insert/erase to table_index_insert/erase;
+	  rename
+	  multi_index_simply_insert/erase to multi_index_insert/erase
+	  + table_index_insert sends replace_event and insert_event;
+	  table_index_erase sends erase_event
+	  + CowTable interface changes: add init(2), clear(), mem(), add 5
+	  events(insert/erase/replace/clear/clear_erase)
+	  + CowTable::erase_tuple(1) removes exactly matched tuple, rather
+	  than key matched
+	  + re-indent cycled_hash_map.hpp, version_manager.hpp
+	  + move predicate normalizing stuff from c_selector.hpp to
+	  c_predicate.hpp, move
+	  DEFINE_COLUMN/DEFINE_ATTR to new added attribute.h
+	  + rename instantiate_key to instantiate_tuple in c_selector.hpp
+	  + first template parameter of Selector2 changed from _TableL to
+	  _FromDecl
+	  + observer_list.hpp is replaced by observer.hpp which is more
+	  generic and pure at observer pattern.
+	  Check observer.hpp for detail. table.hpp and cow_table.hpp
+	  consequently replace ObserverList with
+	  Event/Observer provided by observer.hpp
+	  + c_predicate.hpp changes: rename Conjunction to
+	  make_non_nil_list; rename st_and to st_where; add
+	  st_from(...), st_pick(...)
+	  + add const version of foldl and foldr in RBasicTuple
+	  + c_trigger.hpp changes: template parameters changed from
+	  <_TableL, _Conj> to <_DestTable,
+	  _ProjDecl, _FromDecl, _Conj>; constructors add p_dest_table as
+	  first parameters; removed
+	  set_var(...); add init(...) to do an initial selection and setup
+	  observers on source tables.
+	  + Trigger works as a connector that observes several tables for
+	  changes and modifies the destination
+	  table with minimum joined tuples according to predicates given by
+	  users. This design does not
+	  require an additional container, and the destination table may
+	  receive tuples from more than one
+	  trigger. materialized view in smalltable2 is a logical entity
+	  rather than a real container: any
+	  CowTable as the destination of a trigger is as effective as a
+	  materialized view.
+	  + move mat_view.hpp into unused/
+	  + a couple of dependancy changes in test/COMAKE
+	  + improve test/test_selector.cpp
+	  + miscellaneous minor changes in string_writer.hpp
+	  + add TODO file to track and share major todo items
+	  TESTED="unittest of smalltable and se-bs"
+	  ISSUE=""
+
+2011-01-30 10:11  gejun
+
+	* COMAKE, Makefile, c_predicate.hpp, c_selector.hpp, c_trigger.hpp,
+	  cow_hash_cluster_map.hpp, cow_hash_map.hpp, cow_table.hpp,
+	  cowbass4.hpp, fixed_deque.hpp, fun/base_function_object.hpp,
+	  fun/hash.cpp, fun/hash.hpp, fun/list.hpp, fun/map.hpp,
+	  named_tuple.hpp, pointer_iterator.hpp, test/COMAKE,
+	  test/Makefile, test/test_fun.cpp, test/test_named_tuple.cpp,
+	  test/test_selector.cpp:
+	  + add set_end() to all kinds of iterators, to set the iterator as
+	  ending
+	  iterator
+	  + rename foldl_hash_value in named_tuple.hpp to hash_value_folder
+	  + renames in cow_table.hpp: is_attribute to is_tagged_attr,
+	  is_unique_key
+	  to is_tagged_unique_key, is_cluster_key to is_tagged_cluster_key
+	  + move the impl in fun/hash.cpp to fun/hash.hpp and fun/hash.cpp
+	  is removed
+	  + split predicates related structures from c_selector.hpp into
+	  c_predicate.hpp
+	  + split PointerIterator from c_selector.hpp into
+	  pointer_iterator.hpp
+	  + split TrigSelector and Trigger from c_selector.hpp into
+	  c_trigger.hpp
+	  + add instantiate_attr, instantiate_var, instantiate_pos in
+	  c_selector.hpp,
+	  change instantiate_key to use these new templates
+	  + add check_filter, check_filter_list in c_selector.hpp to
+	  instantiate
+	  filtering predicates
+	  + seperate_domers is replaced by seperate_key_domers and
+	  seperate_non_key_domers
+	  in c_selector.hpp to fix a bug that position order of DomerL is
+	  not
+	  consistent with Key in TableSelection
+	  + better namings of internal types in c_selector.hpp and
+	  c_trigger.hpp
+	  + first template parameters of
+	  init_join_iterator/forward_init_iterator are
+	  changed from _TablePosL to _TSL because TableSelection::FPredL is
+	  required
+	  to instantiate a filtering function object. init_join_iterator
+	  and
+	  forward_init_iterator add check_filter_list to skip invalid
+	  tuples implied
+	  by FPredL
+	  + second template parameters of Selector2 and Trigger are changed
+	  from _PredL
+	  to _Conj which is an instance of Conjunction in c_predicate.hpp;
+	  definition
+	  of st_and is also changed from make_list to Conjunction
+	  + add _PreFPredL in parameters of JoinIterator, these filtering
+	  predicates are
+	  checked before initializing internal iterators.
+	  + test/COMAKE is re-formatted
+	  TESTED="unittest of smalltable and se-bs"
+	  ISSUE=""
+
+2011-01-28 10:51  gejun
+
+	* basic_tuple.hpp, c_selector.hpp, cow_table.hpp, fun/c_common.hpp,
+	  fun/list.hpp, fun/map.hpp, named_tuple.hpp, test/COMAKE,
+	  test/Makefile, test/test_fun.cpp, test/test_named_tuple.cpp,
+	  test/test_selector.cpp:
+	  + add RBasicTuple in basic_tuple.hpp, which is a simplification
+	  of previous BasicTuple. BasicTuple
+	  inherits RBasicTuple to have consistent storage layout with
+	  _TypeL
+	  + NamedTuple is changed to adapt new BasicTuple
+	  + Improve test cases in test/test_named_tuple.cpp, namely replace
+	  fixed number with sizeof or
+	  offsetof
+	  + add if_nil in fun/c_common.hpp which chooses branch by Nil-ness
+	  of first parameter, some callsites
+	  of if_ are changed to use the new template.
+	  + add THAP in fun/c_common.hpp to apply a template that produces
+	  another template
+	  + several long internal classes are moved out from the host class
+	  in c_selector.hpp, many classes
+	  are polished
+	  + add default constructor and init(2) in JoinIterator
+	  + add const modifiers to Selector2::select
+	  + add TrigSelector and Trigger in c_selector.hpp to select tuples
+	  which are triggered by one tuple
+	  change of one table.
+	  + add a section for trigger in test/test_selector.cpp
+	  + let test/test_named_tuple.cpp depend on basic_tuple.hpp in
+	  test/COMAKE
+	  + renames on paritial application macros/helpers in
+	  fun/c_common.hpp
+	  TESTED="unittest of smalltable"
+	  ISSUE=""
+
+2011-01-27 12:05  gejun
+
+	* c_selector.hpp, cow_hash_map.hpp, test/test_cow_hash_map.cpp:
+	  + Improve test cases in test/test_cow_hash_map.cpp
+	  + Fix a bug in cow_hash_map.hpp that ap_entry2 is not cleared
+	  after allocation
+	  TESTED="unit-test"
+	  ISSUE=""
+
+2011-01-27 09:06  jiangrujie
+
+	* test/test_cow_hash_map.cpp: + Rewrite the test case copy_on_write
+	  in test/test_cow_hash_map.cpp
+	  
+	  TESTED="unit test of test_cow_hash_map"
+	  ISSUE="352"
+
+2011-01-27 08:47  gejun
+
+	* test/sf_list2.h, test/test_op_list.cpp, unused/allocators.hpp,
+	  unused/cowbass0.hpp, unused/cowbass1.hpp, unused/cowbass2.hpp,
+	  unused/ext_hash_set2.hpp, unused/memory_pool.h,
+	  unused/monitee.hpp, unused/monitor.hpp, unused/op_list.hpp,
+	  unused/rc_object_pool.hpp, unused/shared_object.h,
+	  unused/tb_hashmap.hpp, unused/test/test_op_list.cpp:
+	  + move test/test_op_list.cpp to unused/test/test_op_list.cpp
+	  + remove excutable property from serveral files
+	  TESTED="unittest"
+	  ISSUE=""
+
+2011-01-27 08:30  gejun
+
+	* CHANGELOG, coalesced_hash_map.hpp, cow_hash_map.hpp,
+	  ext_hash_map.hpp, ext_hash_set.hpp, object_pool.hpp,
+	  rc_memory_pool.h:
+	  + update CHANGELOG
+	  + remove excutable properties from several files
+	  TESTED=""
+	  ISSUE=""
+
+2011-01-27 08:23  gejun
+
+	* Makefile, README, array_op.hpp, base_hash_index.hpp,
+	  base_table.h, basic_tuple.hpp, bit_tree.h, c_selector.hpp,
+	  coalesced_hash_map.hpp, common.h, cow_hash_cluster_map.hpp,
+	  cow_hash_map.hpp, cow_table.hpp, cowbass3.hpp, cowbass4.hpp,
+	  cycled_hash_map.hpp, debug.h, dep_manager.cpp, dep_manager.hpp,
+	  easy_deque.hpp, ext_hash_map.hpp, ext_hash_set.hpp,
+	  fixed_array.hpp, fixed_deque.hpp, fun/base_function_object.hpp,
+	  fun/c_common.hpp, fun/c_math.hpp, fun/c_show.hpp,
+	  fun/common_function_objects.hpp, fun/compare.hpp,
+	  fun/compile_time_assert.h, fun/hash.cpp, fun/hash.hpp,
+	  fun/is_base_of.hpp, fun/list.hpp, fun/map.hpp, functional.hpp,
+	  get_proc_stat.h, graph.hpp, header.hpp, index_manager.hpp,
+	  linear_hash_map.hpp, mat_view.hpp, naive_timer.h,
+	  named_tuple.hpp, non_primary_hash_index.hpp, object_hanger.h,
+	  object_pool.hpp, observer_list.hpp, predicate.hpp,
+	  primary_hash_index.hpp, rc_memory_pool.h, selector.hpp,
+	  smalltable.hpp, st_errno.h, string_reader.cpp, string_reader.hpp,
+	  string_writer.hpp, table.hpp, test/Makefile, test/foo.h,
+	  test/sf_list2.h, test/test_array_op.cpp, test/test_bit_tree.cpp,
+	  test/test_cow_hash_map.cpp, test/test_cow_table.cpp,
+	  test/test_cowbass.cpp, test/test_cowbass4.cpp,
+	  test/test_dep_manager.cpp, test/test_fixed_deque.cpp,
+	  test/test_fun.cpp, test/test_graph.cpp,
+	  test/test_hash_cluster.cpp, test/test_hash_map.cpp,
+	  test/test_index_perf.cpp, test/test_load.cpp,
+	  test/test_named_tuple.cpp, test/test_op_list.cpp,
+	  test/test_perf.cpp, test/test_pool.cpp, test/test_selector.cpp,
+	  test/test_shared_ptr.cpp, test/test_string_reader.cpp,
+	  test/test_string_writer.cpp, test/test_table.cpp,
+	  test/test_tuple.cpp, test/test_version_manager.cpp, tuple.hpp,
+	  unused/allocators.hpp, unused/ext_hash_set2.hpp,
+	  unused/memory_pool.h, unused/monitee.hpp, unused/monitor.hpp,
+	  unused/op_list.hpp, unused/rc_object_pool.hpp,
+	  unused/shared_object.h, unused/test/test_allocators.cpp,
+	  unused/test/test_tb_hashmap.cpp, unused/tuple1.hpp, utility.hpp,
+	  version_manager.hpp:
+	  + add copyright to source files
+	  + unify comment style
+	  + add a bunch of constructors exclusively on different number of
+	  parameters in NamedTuple so that
+	  initialization of tuples are more convenient
+	  + rename CowTable::insert(1) to CowTable::insert_tuple(1)
+	  + add CowTable::insert(1..9) to make insertion into CowTable more
+	  convenient
+	  + rename CowTable::erase(1) to CowTable::erase_tuple(1)
+	  + add CowTable::erase(1..9) to make erasure from CowTable more
+	  convenient
+	  + fix a typo bug in c_selector.hpp/propagate_domination<1> which
+	  caused query plans to be incorrect
+	  + rename JoinIterator::iterator<1>() to
+	  JoinIterator::sub_iter<1>()
+	  + add 4 constructors in Selector2 to initialize Selector2 more
+	  conveniently
+	  + add Selector2::select(0..4) to avoid creation and pass-in of
+	  variable tuple\
+	  + better case in test/test_selector.cpp
+	  + change Cowbass4::end() to be static method
+	  + add init_tuple(2..10) in basic_tuple.hpp to ease initialization
+	  of tuples
+	  + fix incorrect CowHashClusterSet::seek(1)
+	  + fix incorrect get_iter_maker_by_tag<CowHashCluster1SeekTag,
+	  ...>::make_iter(3)
+	  TESTED="unittest of smalltable"
+	  ISSUE=""
+
+2011-01-27 05:52  jiangrujie
+
+	* array_op.hpp, cowbass4.hpp, test/COMAKE, test/Makefile,
+	  test/test_array_op.cpp, test/test_cow_hash_map.cpp,
+	  test/test_cowbass4.cpp: + Add no inline attribute to function
+	  seek_leaf in cowbass4.hpp.
+	  
+	  + Changes in array_op.hpp:
+	  Change previous function array_binary_search to backup version
+	  arrary_binary_search_1.
+	  
+	  Expand the loop in previous function array_binary_search so that
+	  we gain a speadup.
+	  
+	  Add an incomplete function array_binary_search_2.
+	  
+	  Add an incomplete function array_binary_search_3.
+	  
+	  + Test function arrary_binary_search with various size each time
+	  in test/test_array_op.cpp.
+	  
+	  + Add new test "test_cow_hash_map" to COMAKE.
+	  
+	  + Add a new file test/test_cow_hash_map.cpp
+	  
+	  TESTED="unit test of test_cow_hash_map and test_array_op"
+	  ISSUE="312"
+
+2011-01-26 12:23  gejun
+
+	* CHANGELOG, Makefile, README, base_hash_index.hpp,
+	  basic_tuple.hpp, c_selector.hpp, common.h,
+	  cow_hash_cluster_map.hpp, cow_hash_map.hpp, cow_table.hpp,
+	  cowbass4.hpp, fun/c_common.hpp, fun/c_math.hpp, fun/c_show.hpp,
+	  fun/common_function_objects.hpp, fun/compare.hpp, fun/hash.hpp,
+	  fun/is_base_of.hpp, fun/list.hpp, fun/map.hpp, get_proc_stat.cpp,
+	  get_proc_stat.h, header.hpp, index_manager.hpp, named_tuple.hpp,
+	  non_primary_hash_index.hpp, predicate.hpp,
+	  primary_hash_index.hpp, rc_memory_pool.h, selector.hpp,
+	  st_errno.h, string_writer.hpp, table.hpp, test/COMAKE,
+	  test/Makefile, test/foo.h, test/test_cow_table.cpp,
+	  test/test_fun.cpp, test/test_named_tuple.cpp,
+	  test/test_selector.cpp, test/test_table.cpp, test/test_tuple.cpp,
+	  test/test_tuple3.cpp, tuple.hpp, tuple3.hpp:
+	  + Pick selective_iterator out from CowHashClusterSet to be
+	  CowHashClusterIterator
+	  + split tuple3.hpp into basic_tuple.hpp and named_tuple.hpp.
+	  basic_tuple.hpp implements BasicTuple
+	  and name_tuple.hpp implements NamedTuple which is renamed from
+	  Tuple3
+	  + column_copier originally in tuple3.hpp is renamed to
+	  copy_attr_list in named_tuple.hpp
+	  + stateful_show originally in tuple3.hpp is replaced by more
+	  generic show_with_pos<1> in
+	  string_writer.hpp
+	  + BasicTuple changes: at_pos<1>() is renamed to at_n<1>();
+	  do_map/foldl/foldr changes application
+	  order; add to_string; add default constructor/copy
+	  constructor/operator= to make the class work
+	  correctly in BasicTuple::sub<1>
+	  + NamedTuple changes: position<1> is renamed to attr_pos<1>;
+	  AttrL is renamed AttrS; type_at<1> is
+	  renamed to type_at_n; at_pos<1>() is renamed to at_n<1>()
+	  + test/test_tuple3.cpp is renamed to test/test_named_tuple.hpp
+	  + cow_table.hpp changes: get_attr_list is renamed to get_AttrS;
+	  interfaces and implementations are
+	  seperated; pkey_to_attrlist is renamed to extract_unique_key,
+	  extract_pkey is renamed to
+	  extract_key, and their returning types are changed from Vector3
+	  to IndexInfo;
+	  + CowTable changes: AttrL is renamed to AttrS; KeyL is renamed to
+	  KeyDeclL; VKeyL is renamed to
+	  IndexInfoL;
+	  + c_selector.hpp is fully re-written and still under heavy
+	  development. It abstracts relations
+	  between attributes and variables as domination which is mainly
+	  implied by equi predicates defined by
+	  users and stores dominating relations in a directed graph called
+	  dominating graph. Selector2 which
+	  is the generic selector in smalltable2, uses dominating graph to
+	  find out a suitable query sequence
+	  and indexes of multiple tables. Selector2 returns JoinIterator as
+	  result of a selection and users
+	  go through the iterator to get all joined tuples.
+	  + add test/test_selector.cpp
+	  + add to_string in Cowbass4::const_iterator
+	  + change comment style in get_proce_stat.h
+	  + generally rename Tuple to Tup to avoid potential name conflict
+	  + change name() and id() in macro DEFINE_COLUMN to static methods
+	  + remove all __restrict identifier
+	  + re-indent string_writer.hpp and add show_with_pos<1>
+	  + re-indent tuple.hpp
+	  + re-indent st_errno.h
+	  + change comment style of non_primary_hash_index.hpp and
+	  primary_hash_index.hpp
+	  + add fun/is_base_of.hpp/is_base_of<2> to know if one class
+	  inherits another
+	  + seperate interfaces and implementations of fun/c_common.hpp;
+	  add Char<1>; add const_pointer_of<1>
+	  + add list_head<1>, list_tail<1>, list_last<1>, list_split<2>,
+	  list_index<2>, list_append_non_nil<2>
+	  in fun/list.hpp; rename list_mapcat to list_map_cat
+	  + seperate interfaces and implementations of fun/c_math.hpp
+	  + fun/map.hpp is extended to support set operations where
+	  set_find<3>, set_find_pos<3>,
+	  set_erase<3>, set_insert<3>, set_concat<3>, set_include<2> are
+	  added; most set_* templates support
+	  a default parameter called eq_ to do customized comparisions, so
+	  some map_* templates are
+	  re-implemented by this feature.
+	  + add fun/c_show.hpp which is a systematic replacement of
+	  previous c_show, compile-time structures
+	  have several ways to print their information more conveniently.
+	  Specialization of c_show_impl<1> is
+	  the approximate replacement for previous specializations of
+	  c_show<1>
+	  + add more descriptions in README
+	  + make_end() of CowHashIterator in cow_hash_map.hpp is replaced
+	  by not_end()
+	  TESTED="unittest of smalltable of se-bs"
+	  ISSUE=""
+
+2011-01-14 10:12  gejun
+
+	* array_op.hpp, base_hash_index.hpp, c_selector.hpp, common.h,
+	  cow_hash_cluster_map.hpp, cow_hash_map.hpp, cow_table.hpp,
+	  cowbass3.hpp, cowbass4.hpp, debug.h, easy_deque.hpp,
+	  fixed_deque.hpp, fun/c_common.hpp, fun/list.hpp, fun/map.hpp,
+	  header.hpp, index_manager.hpp, naive_timer.h, object_hanger.h,
+	  observer_list.hpp, predicate.hpp, primary_hash_index.hpp,
+	  rc_memory_pool.h, selector.hpp, st_errno.h, table.hpp: + reindent
+	  and reformatting
+	  TESTED="unittest of smalltable"
+	  ISSUE=""
+
+2011-01-14 07:38  gejun
+
+	* fun/base_function_object.hpp, fun/c_common.hpp, fun/c_math.hpp,
+	  fun/common_function_objects.hpp, fun/compare.hpp, fun/hash.cpp,
+	  fun/hash.hpp, fun/list.hpp, fun/map.hpp: + reindent files under
+	  fun/
+	  + seperate interfaces and implementations of fun/list.hpp and
+	  fun/map.hpp
+	  TESTED="unit-test of smalltable"
+	  ISSUE=""
+
+2011-01-14 06:17  gejun
+
+	* CHANGELOG, Makefile, README, array_op.hpp, base_table.h,
+	  bit_tree.h, c_selector.hpp, coalesced_hash_map.hpp, common.h,
+	  cow_hash_cluster_map.hpp, cow_hash_map.hpp, cow_table.hpp,
+	  cowbass3.hpp, cowbass4.hpp, ext_hash_map.hpp, ext_hash_set.hpp,
+	  fixed_array.hpp, fun/base_function_object.hpp, fun/bit_op.hpp,
+	  fun/c_common.hpp, fun/c_math.hpp,
+	  fun/common_function_objects.hpp, fun/compare.hpp,
+	  fun/control.hpp, fun/hash.cpp, fun/hash.hpp, fun/list.hpp,
+	  fun/map.hpp, functional.hpp, header.hpp, linear_hash_map.hpp,
+	  non_primary_hash_index.hpp, predicate.hpp,
+	  primary_hash_index.hpp, rc_memory_pool.h, string_reader.hpp,
+	  test/COMAKE, test/Makefile, test/test_array_op.cpp,
+	  test/test_cow_table.cpp, test/test_cowbass.cpp,
+	  test/test_cowbass4.cpp, test/test_fun.cpp, test/test_table.cpp,
+	  test/test_tuple.cpp, test/test_tuple3.cpp, tuple.hpp, tuple3.hpp,
+	  unused/cowbass0.hpp, unused/cowbass1.hpp, unused/cowbass2.hpp,
+	  utility.hpp, version_manager.hpp:
+	  + rename hash_value to compute_hash, hash to f_hash
+	  + rename value_cmp to valcmp(to be more consistent with strcmp)
+	  + rename is_same to c_same
+	  + rename identity to f_identity
+	  + rename is_equal to f_equal, rename compare to f_compare
+	  + add c_show for CowHashClusterSet
+	  + add cow_table.hpp and test/test_cow_table.cpp which combines
+	  tuple3/cow_hash_map/cow_hash_cluster_map
+	  + replace fun/bit_op.hpp with fun/c_math.hpp
+	  + list.hpp and map.hpp are better written, previously some if_
+	  are not lazy and may exhaust both
+	  branches, now they move forward until get what they want and
+	  quit.
+	  + tuple3.hpp is better written. Now BasicTuple only knows a list
+	  of types rather than attributes. It
+	  has more generic interfaces like do_map/foldl/foldr for mapping
+	  and reducing operations, as a
+	  correspondence, compute_hash_value() is removed. at_pos<1>() is
+	  added to get the value at a position
+	  and type_at<1>::R to get the type at a position. Tuple3 adds
+	  at_pos and rewrites compute_hash() and
+	  to_string()/operator<<(2) with new interfaces provided by
+	  BasicTuple.
+	  + seperate interfaces and implementations of cow_hash_map.hpp and
+	  cowbass4.hpp, cowbass4.hpp needs
+	  more seperation later.
+	  + reindent couple of files
+	  TESTED="UTs of smalltable and bs"
+	  ISSUE=""
+
+2011-01-07 10:19  gejun
+
+	* array_op.hpp, base_hash_index.hpp, utility.hpp: + eighty line
+	  rules fix up
+	  TESTED="unit-test"
+	  ISSUE=""
+
+2011-01-07 05:07  gejun
+
+	* Makefile: * remove cow_table.hpp from Makefile which is not done
+	  yet
+	  TESTED="compile"
+	  ISSUE=""
+
+2011-01-07 04:06  gejun
+
+	* Makefile, base_table.h, bit_tree.h, c_selector.hpp, common.h,
+	  cow_hash_map.hpp, cowbass4.hpp, fun/base_function_object.hpp,
+	  fun/bit_op.hpp, fun/c_common.hpp,
+	  fun/common_function_objects.hpp, fun/compare.hpp,
+	  fun/compile_time_assert.h, fun/control.hpp, fun/fo_wrappers.hpp,
+	  fun/hash.cpp, fun/hash.hpp, fun/list.hpp, fun/map.hpp,
+	  functional.hpp, linear_hash_map.hpp, naive_timer.h,
+	  non_primary_hash_index.hpp, observer_list.hpp, string_writer.hpp,
+	  test/COMAKE, test/Makefile, test/foo.h, test/test_fun.cpp,
+	  test/test_tuple.cpp, test/test_tuple3.cpp, tuple3.hpp,
+	  unused/cowbass2.hpp, unused/monitee.hpp, version_manager.hpp:
+	  * rename fun/fo_wrappers.hpp to fun/common_function_objects.hpp
+	  * change some never-break FATAL in cowbass4.hpp to assert
+	  * use "Prefixes inside Sources" in test/COMAKE to make it work as
+	  intended
+	  * move some CT assertions from fun/bit_op.hpp to
+	  test/test_fun.cpp
+	  * remame map_find_idx to map_find_pos in fun/map.hpp
+	  * remove NewTuple in test/test_fun.cpp and formalize it as
+	  tuple3.hpp which is a pretty cool and elegant implementation of
+	  tuple. it is the tuple of smalltable2
+	  * port test cases from test/test_tuple.cpp to
+	  test/test_tuple3.hpp
+	  * add header guard in test/foo.h
+	  * change some "static const" to enum under fun
+	  * refine coding styles of files under fun/
+	  TESTED="unit-test"
+	  ISSUE=""
+
+2011-01-05 09:13  gejun
+
+	* Doxyfile, Makefile, allocators.hpp, array_op.hpp, base_table.h,
+	  bit_tree.h, boost, boost/detail, boost/detail/shared_count.hpp,
+	  boost/detail/sp_counted_base.hpp,
+	  boost/detail/sp_counted_base_gcc_x86.hpp,
+	  boost/detail/sp_counted_impl.hpp, boost/shared_array.hpp,
+	  boost/shared_ptr.hpp, c_selector.hpp, coalesced_hash_map.hpp,
+	  common.h, cow_hash_cluster_map.hpp, cow_hash_map.hpp,
+	  cowbass0.hpp, cowbass1.hpp, cowbass2.hpp, cowbass3.hpp,
+	  cowbass4.hpp, cycled_hash_map.hpp, debug.h, easy_deque.hpp,
+	  ext_hash_map.hpp, ext_hash_set.hpp, ext_hash_set2.hpp,
+	  fixed_deque.hpp, fun/compare.hpp, fun/fo_wrappers.hpp,
+	  functional.hpp, header.hpp, index_manager.hpp,
+	  linear_hash_map.hpp, mat_view.hpp, memory_pool.h, monitor.hpp,
+	  non_primary_hash_index.hpp, object_hanger.h, object_pool.hpp,
+	  observer_list.hpp, op_list.hpp, predicate.hpp,
+	  primary_hash_index.hpp, rc_memory_pool.h, return_code.h,
+	  selector.hpp, shared_object.h, st_errno.h, string_writer.hpp,
+	  table.hpp, tb_hashmap.hpp, test/COMAKE, test/Makefile,
+	  test/sf_list2.h, test/test_allocators.cpp,
+	  test/test_array_op.cpp, test/test_bit_tree.cpp,
+	  test/test_cowbass.cpp, test/test_cowbass4.cpp, test/test_fun.cpp,
+	  test/test_hash_cluster.cpp, test/test_hash_map.cpp,
+	  test/test_hashmap.cpp, test/test_indexPerf.cpp,
+	  test/test_index_perf.cpp, test/test_pool.cpp,
+	  test/test_shared_ptr.cpp, test/test_table.cpp,
+	  test/test_tb_hashmap.cpp, test/test_tuple.cpp,
+	  test/test_version_manager.cpp, tuple1.hpp, unused,
+	  unused/allocators.hpp, unused/cowbass0.hpp, unused/cowbass1.hpp,
+	  unused/cowbass2.hpp, unused/ext_hash_set2.hpp,
+	  unused/memory_pool.h, unused/monitor.hpp, unused/op_list.hpp,
+	  unused/rc_object_pool.hpp, unused/shared_object.h,
+	  unused/tb_hashmap.hpp, unused/test,
+	  unused/test/test_allocators.cpp, unused/test/test_tb_hashmap.cpp,
+	  unused/tuple1.hpp, utility.hpp, version_manager.hpp:
+	  * this is a huge CI with 26K lines of changes
+	  * add cowbass4 which is a reference counting B+ tree, featuring
+	  as-fast-as-array traversal, fast search and normal insertions and
+	  erasures. It supports reference-counting-copy-on-write to share
+	  significant memory between different instances. cowbass4 is used
+	  as the cluster in cow_hash_cluster_map.hpp
+	  * add test/test_cowbass4.cpp
+	  * add array_op which is used by Cowbass4 to search array,
+	  copy/insert/erase array in-place or not-in-place
+	  * add test/test_array_op.cpp
+	  * add cow_hash_map.hpp which features external probing set and
+	  map supportting reference-counting copy-on-write. Different
+	  instances have the ability to shared chaining nodes to save
+	  considerable memory
+	  * rename test/test_hashmap.cpp to test/test_hash_map.cpp and add
+	  cases on CowHashMap
+	  * add cow_hash_cluster_map.hpp which maps a key to a cluster: a
+	  group of items ordered by another
+	  * key, it's based on CowHashSet and Cowbass4 and naturally being
+	  reference-counting copy-on-write
+	  * add test/test_hash_cluster.cpp
+	  * add version_manager.hpp which is a simplification of monitor,
+	  it's designed to used with the reference-counting-copy-on-write
+	  data structures, as a plausible solution to memory-wise
+	  implementation of MVCC.
+	  * add test/test_version_manager.cpp
+	  * add rc_memory_pool.h which is a reference counting memory pool.
+	  A memory block is explicitly referenced, if reference counter of
+	  the memory block hits zero, the the block is deallocated.
+	  * add cases on RCMemoryPool in test/test_pool.cpp
+	  * refine coding styles of object_pool.hpp, cycled_hash_map.hpp,
+	  cowbass3.hpp, table.hpp, object_hanger.h, ext_hash_map.hpp,
+	  index_manager.hpp, string_writer.hpp, ext_hash_set.hpp,
+	  base_table.h, observer_list.hpp, predicate.hpp, mat_view.hpp,
+	  fixed_deque.hpp, non_primary_hash_index.hpp, linear_hash_map.hpp,
+	  primary_hash_index.hpp, selector.hpp, easy_deque.hpp
+	  * rename test/test_indexPerf.cpp to test/test_index_perf.cpp
+	  * rename return_code.h to st_errno.h
+	  * some code is not used or deprecated now, however some piece of
+	  the code may be utilized later, so I created a directory "unused"
+	  to have these files. It now contains op_list.hpp, cowbass0.hpp,
+	  cowbass1.hpp, cowbass2.hpp, monitor.hpp, allocators.hpp,
+	  tuple1.hpp, ext_hash_set2, memory_pool.h, shared_object.h,
+	  tb_hashmap.hpp
+	  * move test/test_tb_hashmap.hpp, test/test_allocators.cpp to
+	  "unused/test"
+	  * add ST_NEW, ST_NEW_ON, ST_NEW_ARRAY, ST_DELETE, ST_DELETE_ARRAY
+	  in debug.h to unify new and delete.
+	  * remove smalltable::obj_construct and class SourcePoint in
+	  common.h
+	  * add utility.hpp to have commonly used functions and function
+	  objects, common.h should only have constants and very short
+	  definitions.
+	  * add bit_tree.h which is a full tree specialized for storing
+	  bits and finding first zero, its performance does not reach
+	  smalltable's requirement as in a memory pool, so the class is not
+	  used now but may be useful in another scene later.
+	  * add test/test_bit_tree.cpp
+	  * copy shared_ptr of boost from app/ecom/nova/public/util in the
+	  boost directory, not used now
+	  * copy test/test_shared_ptr.cpp from
+	  app/ecom/nova/public/util/test
+	  * add f_true/f_false/f_return_type in fun/fo_wrappers.hpp
+	  * add Doxyfile to configure generation of doxygen documentations
+	  TESTED="unit-test of smalltable and se-bs"
+	  ISSUE=""
+
+2010-12-14 08:07  gejun
+
+	* CHANGELOG, Makefile, c_predicate.hpp, c_selector.hpp, debug.h,
+	  fun/array.hpp, fun/c_common.hpp, fun/compile_time_assert.h,
+	  fun/list.hpp, fun/map.hpp, fun/pair.hpp, functional.hpp,
+	  index_manager.hpp, table.hpp, test/COMAKE, test/Makefile,
+	  test/test_fun.cpp, test/test_perf.cpp, tuple.hpp:
+	  * fun/array.hpp is removed since it can be perfectly replaced by
+	  Map<Int<N>,typename>
+	  * add c_selector.hpp which contains a lot of compile-time code
+	  for selections, I'll explain in detail later
+	  * re-add !! for likely and unlikely in debug.h
+	  * more cases in test/test_fun.cpp on compile-time code
+	  * TCALL is renamed to CAP, and TTCALL is renamed to TCAP
+	  * add macro c_string to wrap c_show invocation
+	  * add KeyList in IndexManager which is sorted keys of indexes
+	  * NumType is renamed to Int, add Vector2I, Vector3
+	  * Pair is moved from removed fun/pair.hpp to fun/c_common.hpp,
+	  pair_first/pair_second are added for mapping
+	  * fun/list.hpp: concat is renamed to list_concat, size is renamed
+	  to list_size, find_at is renamed to list_at, find_first is
+	  renamed to list_find_first, add list_find_first_true, has_dup is
+	  renamed to list_dup, erase_first is renamed to list_erase_first,
+	  add list_erase_first_true, filter is renamed to list_filter, map
+	  is renamed to list_map, filter_map is renamed to list_filter_map,
+	  categorize is renamed to list_partition, removed inclusive_minus,
+	  make_list supports up-to-10 parameters, order of first two
+	  parameters of list_foldl/list_foldr are swapped, add
+	  list_stable_sort, list_all, list_zip2, list_seq
+	  * C_ASSERT does not complain about 'unused variable' when being
+	  used inside a function, it becomes very handy and being
+	  extensively used now.
+	  TESTED="unit-test"
+	  ISSUE=""
+
+2010-12-08 14:12  gejun
+
+	* Makefile, get_proc_stat.cpp, get_proc_stat.h, test/COMAKE,
+	  test/Makefile, test/test_perf.cpp: * add get_proc_stat.cpp and
+	  get_proc_stat.h to get statistics of processes
+	  * add test/test_perf.cpp to study performance in detail, its
+	  tests are intended to guide later design of smalltable.
+	  * add 'CopyUsingHardLink(True)' in test/COMAKE although it does
+	  not improve compilation speed since the hotspot is compiling
+	  test/test_table.cpp
+	  TESTED="unit-test"
+	  ISSUE=""
+
+2010-12-07 15:05  gejun
+
+	* c_predicate.hpp, fun/array.hpp, fun/c_common.hpp, fun/list.hpp,
+	  fun/pair.hpp, test/COMAKE, test/Makefile, test/test_fun.cpp,
+	  tuple.hpp: * THIS IS AN INCOMPELTE CI WHOSE ONLY PURPOSE IS TO
+	  SYNC UP WITH MY OS ON VM. IT DOES NOT BREAK ANYTHING (IN
+	  PRINCIPLE) BUT YOU SHOULD NOT DO ANY DEVELOPMENT BASED ON THIS
+	  REVESION, IF YOU DO, GO BACK.
+	  TESTED="unit-test"
+	  ISSUE=""
+
+2010-12-06 16:27  gejun
+
+	* COMAKE, Makefile, fun/array.hpp, fun/c_common.hpp, fun/list.hpp,
+	  fun/map.hpp, header.hpp, test/Makefile, test/test_fun.cpp,
+	  tuple.hpp: * rename Dea in tuple.hpp to de_a
+	  * add fun/array.hpp
+	  * add make_list in fun/list.hpp to create list easier
+	  * remove output directory after 'make clean'
+	  TESTED="unit-test"
+	  ISSUE=""
+
+2010-12-06 14:35  gejun
+
+	* fun/base_function_object.hpp, fun/c_common.hpp,
+	  fun/compile_time_assert.h, fun/list.hpp, fun/map.hpp,
+	  functional.hpp, test/COMAKE, test/Makefile, test/test_fun.cpp,
+	  tuple.hpp: * let test_fun.cpp depend on fun/*.hpp
+	  * add fun/map.hpp, a compile-time key/value map
+	  * add TCALL/TTCALL in fun/c_common.hpp to partially erase typing
+	  * complement test/test_fun.cpp
+	  TESTED="unit-test"
+	  ISSUE=""
+
+2010-12-06 04:43  yanlin
+
+	* COMAKE, Makefile: update COMAKE to ensure 'output' target
+	  depending on 'libsmalltable.a' target
+	  
+	  TESTED="compiling"
+	  ISSUE=""
+
+2010-12-04 11:59  gejun
+
+	* CHANGELOG, COMAKE, Makefile, coalesced_hash_map.hpp, common.h,
+	  cowbass0.hpp, cowbass1.hpp, cowbass2.hpp, cowbass3.hpp,
+	  cycled_hash_map.hpp, easy_deque.hpp, ext_hash_map.hpp,
+	  ext_hash_set.hpp, ext_hash_set2.hpp, fixed_array.hpp, fun,
+	  fun/base_function_object.hpp, fun/bit_op.hpp, fun/c_common.hpp,
+	  fun/compare.hpp, fun/compile_time_assert.h, fun/control.hpp,
+	  fun/fo_wrappers.hpp, fun/hash.cpp, fun/hash.hpp, fun/list.hpp,
+	  fun/pair.hpp, functional.hpp, functors.hpp, header.hpp,
+	  index_manager.hpp, linear_hash_map.hpp, mat_view.hpp,
+	  monitor.hpp, non_primary_hash_index.hpp, object_pool.hpp,
+	  predicate.hpp, primary_hash_index.hpp, selector.hpp,
+	  smalltable.hpp, string_reader.hpp, table.hpp, tb_hashmap.hpp,
+	  test/COMAKE, test/Makefile, test/test_cowbass.cpp,
+	  test/test_fun.cpp, test/test_functors.cpp,
+	  test/test_indexPerf.cpp, test/test_op_list.cpp,
+	  test/test_table.cpp, test/test_tb_hashmap.cpp,
+	  test/test_tuple.cpp, tuple.hpp, tuple1.hpp:
+	  * functors.hpp is replaced by a seperate directory 'fun':
+	  1) base_function_object.hpp defines previouly called Function<1>;
+	  2) bit_op.hpp has bit_num<1> and bit_shift<1>;
+	  3) c_common.hpp defines compile-time common stuff;
+	  4) compare.hpp has previously called compare/Compare which are
+	  called value_cmp/compare now respectively;
+	  5) control.hpp has compile-time controlling metas like if_ which
+	  is called Either before;
+	  6) fo_wrappers.hpp have some regular function objects;
+	  7) hash.hpp defines hashing functions;
+	  8) list.hpp defines a compile-time list and related meta
+	  templates;
+	  9) pair.hpp has a compile-time pair;
+	  10) compile_time_assert.h has a macro to do compile-time
+	  assertion with readable error
+	  All these files are included by functional.hpp. This directory is
+	  still under heavy constructions and will play an important role
+	  in implementing predicates/selectors at compile-time
+	  * hashing is renamed to hash_value while Hash is renamed to hash
+	  * compare is renamed to value_cmp while Compare is renamed to
+	  compare
+	  * null_t is renamed to Nil
+	  * added smalltable.hpp which is intended as the inclusion entry
+	  to use smalltable
+	  * add test/test_fun.cpp which has experimental code to implement
+	  selectors at compile-time
+	  * LessEqual is renamed to less_equal_than, Less is renamed to
+	  less_than, GreaterEqual is renamed to greater_equal_than, Greater
+	  is renamed to greater_than, Equal is renamed to is_equal,
+	  NotEqual is renamed to is_not_equal
+	  * Dot is renamed to connect
+	  * GuardNumber is renamed to guard_num
+	  * hashing(2) is renamed to hash_buffer(2) and put into
+	  fun/hash.cpp
+	  * BitShift<1> does not produce intended value, e.g.
+	  BitShift<33>::VALUE should be 6 rather than 5, bit_shift<1> fixed
+	  that
+	  TESTED="unit-test"
+	  ISSUE=""
+
+2010-12-02 12:02  gejun
+
+	* coalesced_hash_map.hpp, cycled_hash_map.hpp, functors.hpp: * tiny
+	  fixes in functors.hpp
+	  TESTED="unit-test"
+	  ISSUE=""
+
+2010-12-01 14:54  gejun
+
+	* COMAKE, Makefile, base_hash_index.hpp, base_table.h, common.h,
+	  ext_hash_set.hpp, ext_hash_set2.hpp, index_manager.hpp,
+	  non_primary_hash_index.hpp, object_hanger.h, predicate.hpp,
+	  primary_hash_index.hpp, selector.hpp, table.hpp, test/Makefile,
+	  test/test_table.cpp, test/test_tuple.cpp, tuple.hpp: * add
+	  object_hanger.h to store tuples addressed by selectors, also
+	  replacing previous primitive implementation which is Fixture
+	  * rename tuple_t::get() to tuple_t::at() const, tuple_t::get_at()
+	  to tuple_t::at_idx() const; add tuple_t::at() (non const version)
+	  and tuple_t::at_idx() (non const version); remove tuple_t::set(2)
+	  and tuple_t::set_(2) which are already replaced by previous
+	  non-const versions of 'at', e.g. 'tup.set<LABLE>(value)' is
+	  replaced by 'tup.at<LABLE>() = value'
+	  TESTED="unittest"
+	  ISSUE=""
+
+2010-12-01 06:30  gejun
+
+	* base_table.h, common.h, cowbass2.hpp, fixed_array.hpp,
+	  naive_timer.h, string_writer.hpp, table.hpp, test/test_table.cpp:
+	  * FixedArray::set_all is more clear
+	  * rename monitee_t to Monitee
+	  * fix some comments
+	  * make test/test_table.cpp/test_table loop less (so that the test
+	  ends faster)
+	  * add seek_ref_v/all_v which are virtual versions of
+	  corresponding functions
+	  TESTED="unittest"
+	  ISSUE=""
+
+2010-11-30 13:50  gejun
+
+	* coalesced_hash_map.hpp, cycled_hash_map.hpp,
+	  test/test_hashmap.cpp: * add cycled_hash_map.hpp which is not
+	  done yet and disabled
+	  TESTED="compiled"
+	  ISSUE=""
+
+2010-11-30 09:31  gejun
+
+	* Makefile, base_hash_index.hpp, cellar_hashmap.hpp,
+	  closed_hashmap.hpp, coalesced_hash_map.hpp, common.h,
+	  cowbass3.hpp, el_hashmap.hpp, el_hashset.hpp, el_hashset2.hpp,
+	  ext_hash_map.hpp, ext_hash_set.hpp, ext_hash_set2.hpp,
+	  hash_index.hpp, index_manager.hpp, linear_hash_map.hpp,
+	  non_primary_hash_index.hpp, primary_hash_index.hpp, table.hpp,
+	  tb_hashmap.hpp, test/COMAKE, test/Makefile,
+	  test/test_cowbass.cpp, test/test_hashmap.cpp,
+	  test/test_table.cpp:
+	  * el_hashmap.hpp/el_hashset.hpp/el_hashset2.hpp are renamed to
+	  ext_hash_map.hpp/ext_hash_set.hpp/ext_hash_set2.hpp respectively,
+	  ELHashmap/ELHashset/ELHashset2 are renamed to
+	  ExtHashMap/ExtHashSet/ExtHashSet2 respectively
+	  * replace hash_index.hpp with 4 files: base_hash_index.hpp,
+	  primary_hash_index.hpp, non_primary_hash_index.hpp,
+	  index_manager.hpp. HashIndex is renamed to BaseHashIndex.
+	  * closed_hashmap.hpp is renamed to linear_hash_map.hpp and
+	  ClosedHashmap is renamed to LinearHashMap
+	  * enum ModType is moved from cowbass3.hpp to common.h
+	  * cellar_hashmap.hpp is renamed to coalesced_hash_map.hpp and
+	  CellarHashmap is renamed to CoalescedHashMap. I thought about the
+	  nameing and decided the original name is more precise.
+	  * add more stuff into test/test_hashmap.cpp/perf_hashmap
+	  TESTED="unittest"
+	  ISSUE=""
+
+2010-11-30 05:37  gejun
+
+	* cellar_hashmap.hpp, el_hashmap.hpp, test/COMAKE, test/Makefile,
+	  test/test_hashmap.cpp: * slightly adjust cellar_hashmap.hpp and
+	  related test cases
+	  * worked around dependency issues of test_hashmap.cpp on
+	  ../*_hashmap.hpp by adding a phony target so that each time
+	  cellar_hashmap.hpp got updated, test_hashmap.cpp would re-make
+	  TESTED="compiled"
+	  ISSUE=""
+
+2010-11-29 14:03  gejun
+
+	* Makefile, cellar_hashmap.hpp, cowbass1.hpp, cowbass2.hpp,
+	  easy_deque.hpp, fixed_array.hpp, functors.hpp, object_pool.hpp,
+	  test/Makefile, test/test_hashmap.cpp:
+	  * rename FooLevel or FOO_LEVEL to FooShift or FOO_SHIFT
+	  respectively
+	  * add cellar_hashmap.hpp which is called coalesced hashmap
+	  formally, I thought that the name is likely to be spelled
+	  incorrectly, so I name it with an important concept in it. The
+	  hashmap is a mixture of internal and external probing and stores
+	  chains in a area called cellar which is in the same continous
+	  array with buckets. cellar_hashmap is the fastest hashmap in
+	  general because it has the cache-friendly characteristic as in
+	  internal probing(closed_hashmap.hpp) as well as avoids clustering
+	  by chains as in external probing (el_hashmap.hpp), and could be
+	  heavy loaded to save space. It's also a critical component to
+	  improve cowbass which I'll explain later.
+	  TESTED="unittest"
+	  ISSUE="TBR"
+
+2010-11-29 05:28  yanlin
+
+	* Makefile, test/Makefile: update makefile to ensure compiling
+	  succeed.
+	  
+	  TESTED="manual"
+	  ISSUE=""
+
+2010-11-28 09:45  gejun
+
+	* test/COMAKE, test/Makefile: * change version of local bsl and
+	  re-comake2 so that dailybuild should pass
+	  TESTED="compiled"
+	  ISSUE=""
+
+2010-11-28 09:06  gejun
+
+	* CHANGELOG, Makefile, smalltable.prj, test/test.prj: * remove
+	  unused .prj files
+	  * remove unmanaged internal_hashmap.hpp from Makefile
+	  TESTED="compiled"
+	  ISSUE=""
+
+2010-11-27 06:26  gejun
+
+	* COMAKE, Makefile, test/COMAKE, test/Makefile: * add missed
+	  compilation options
+	  TESTED="compiled"
+	  ISSUE=""
+
+2010-11-26 13:50  gejun
+
+	* test/Makefile.32, test/Makefile.64: * remove unused files
+	  TESTED="compiled"
+	  ISSUE=""
+
+2010-11-26 13:49  gejun
+
+	* COMAKE, Makefile, test/COMAKE, test/Makefile: * compile
+	  smalltable with comake2
+	  TESTED='compiled"
+	  ISSUE=""
+
+2010-11-26 07:59  yanlin
+
+	* predicate.hpp, selector.hpp: Add wordaround for ccover compiler
+	  error
+	  
+	  TESTED=""
+	  ISSUE="12993"
+
+2010-11-25 12:32  gejun
+
+	* CHANGELOG, debug.h: * trivial change, and also test checking in
+	  from VM
+	  TESTED="compiled"
+	  ISSUE=""
+
+2010-11-22 06:42  gejun
+
+	* allocators.hpp, closed_hashmap.hpp, common.h, cowbass0.hpp,
+	  cowbass1.hpp, cowbass2.hpp, easy_deque.hpp, el_hashset.hpp,
+	  el_hashset2.hpp, hash_index.hpp, memory_pool.h, object_pool.hpp,
+	  table.hpp, test/sf_list2.h, test/test_allocators.cpp,
+	  test/test_cowbass.cpp, test/test_pool.cpp: * rename MP_ID in
+	  object_pool.hpp to OP_ID, rename MP_ID in memory_poo.h to MP0_ID
+	  * rename "xx_mem" to "xx_sz" to help log reader to focus on
+	  "mem=" more easily
+	  * adjust code around macro USE_HASHSET2 so that the macro works
+	  being either on or off.
+	  * save pNext before deleting the node in ELHashset2 which may
+	  core when destroying the set; also change to_string in the class
+	  * replace type of NonPrimaryHashIndex::s_mod_key_ from
+	  ELHashset<Key> to ClosedHashmap<Key,u_int>, this saves memory
+	  significantly; print more detailed memory distribution in
+	  to_string of the class
+	  * add a default parameter 'hash_size' in ClosedHashmap::rehash()
+	  where if the parameter is zero, rehash works regularly; otherwise
+	  rehash recreates internal array to that size. This is used in
+	  ClosedHashmap::clear to reduce the array size if the array
+	  occupies more than ~50M memory.
+	  * adjust prime numbers of internal_prime_list in common.h so that
+	  hash_size does 1.5 times growth in size rather than doubling when
+	  hash_size is roughly 10M~20M, this is a quick hack for reducing
+	  adq memory.
+	  TESTED="unittest"
+	  ISSUE="TBR"
+
+2010-11-21 10:30  gejun
+
+	* base_table.h, closed_hashmap.hpp, common.h, cowbass3.hpp,
+	  easy_deque.hpp, el_hashmap.hpp, el_hashset.hpp, el_hashset2.hpp,
+	  fixed_array.hpp, functors.hpp, hash_index.hpp, object_pool.h,
+	  object_pool.hpp, rebuild_mock, selector.hpp, string_writer.hpp,
+	  table.hpp, test/test_hashmap.cpp, test/test_pool.cpp:
+	  * rename ELHashmap::mem_size() to mem(), ELHashset::mem_size() to
+	  mem()
+	  * mem() is accurate
+	  * add Cowbass3::mem_without_node(), EasyDeque::mem_without_node()
+	  * add HashIndex::mem() and Table::mem()
+	  * split FixedArray from easy_deque.hpp into a single file, add
+	  num_of_one(1)
+	  * rename shows(4) in string_writer.hpp to shows_range(4), add
+	  shows_range_compact(5), move MAX_PRINTING_ITEMS from common.h to
+	  string_writer.hpp
+	  * add GuardNumber<3> in functors.hpp
+	  * add el_hashset2.hpp which contains a re-written hashset, it's
+	  intended to have better memory utilization although it's still
+	  disabled now.
+	  * ObjectPool is greatly changed to support an additional
+	  bitvector inside each chunk, each bit of the bitvector represents
+	  that corresponding slot in the chunk is allocated or free. if all
+	  slots are free, the chunk is deleted to cut down occupied memory.
+	  This is useful since modification may occupy significant amount
+	  of memory and then release them after modification. since a chunk
+	  in the chunk array is possibly NULL, related allocation and
+	  deallocation logic are changed a lot.
+	  * change some to_string output
+	  TESTED="unittest"
+	  ISSUE="TBR"
+
+2010-11-18 07:20  yanlin
+
+	* dep_manager.cpp: remove unnecessary log in dep manager
+	  
+	  TESTED=""
+	  ISSUE=""
+
+2010-11-15 13:59  gejun
+
+	* closed_hashmap.hpp, hash_index.hpp, im_ohashmap.hpp,
+	  test/Makefile, test/Makefile.32, test/Makefile.64, test/test.prj,
+	  test/test_el_hashmap.cpp, test/test_hashmap.cpp,
+	  test/test_im_ohashmap.cpp, test/test_table.cpp: * rename
+	  im_ohashmap_t in im_ohashmap.hpp to ClosedHashmap in
+	  closed_hashmap.hpp
+	  * replace test/test_im_ohashmap.cpp and test/test_el_hashmap.cpp
+	  with test/test_hashmap.cpp
+
+2010-11-15 10:35  gejun
+
+	* common.h, debug.h, fixed_deque.hpp, functors.hpp, selector.hpp,
+	  string_writer.hpp: * adjust code styles
+
+2010-11-14 10:22  gejun
+
+	* CHANGELOG, easy_deque.hpp, functors.hpp, test/test_cowbass.cpp:
+	  * add FixedArray in easy_deque.hpp
+	  * fix incorrect comments on BitNum and BitLevel
+
+2010-11-14 08:19  gejun
+
+	* Makefile, allocators.hpp, cowbass1.hpp, cowbass2.hpp,
+	  cowbass3.hpp, debug.h, easy_deque.hpp, hash_index.hpp,
+	  memory_pool.h, object_pool.h, rebuild_bs, smalltable.prj,
+	  string_reader.hpp, test/Makefile, test/Makefile.32,
+	  test/Makefile.64, test/sf_list2.h, test/test.prj,
+	  test/test_cowbass.cpp, test/test_indexPerf.cpp,
+	  test/test_load.cpp, test/test_mat_view.cpp, test/test_pool.cpp,
+	  test/test_table.cpp:
+	  * move el_memorypool.h from app/ecom/elib/ecommon-lib into
+	  smalltable and rename to memory_pool.h, it's temporarily added
+	  into smalltable to adjust some interfaces and compare with
+	  object_pool.h, the class memory_pool_t inside the file is renamed
+	  to MemoryPool to avoid redefinition from its source. classes in
+	  smalltable that depend on memory_pool_t are redirected to
+	  MemoryPool
+	  * compilation dependancy on ellib is replaced by ullib since only
+	  ul_log is used now.
+	  * ObjectPool is a typed pool that allocates and deallocates
+	  same-size objects. Since it's typed, allocated objects and
+	  deallocted objects are automatically called with constructor and
+	  destructor respectively. The allocation speed is faster than
+	  MemoryPool for roughly 20%.
+	  * move Cowbass3::EasyDeque to a seperate class inside
+	  easy_deque.hpp
+	  * Use NaiveSet to replace std::set in Cowbass3, std::set caused
+	  serious performance issue: although it's not directly used during
+	  searching, it probably hurt hit rate of CPU cache. (It must have
+	  something to do with frequent allocations brought by insertions
+	  into std::set, so I watched minor and major page faults which
+	  showed no corresondence. I will do a deep profiling later). The
+	  NaiveSet is previously a vector that sorts itself before using,
+	  while currently a deque that sorts unordered part and merges with
+	  ordered part before using. NaiveSet is enabled by defining macro
+	  USE_NAIVE_SET
+	  * temporarily replace EasyDeque::traverse_iterator with
+	  EasyDeque::const_iterator, which enables EasyDeque to deallocate
+	  all Nodes after cleared which saves about 1G memory in bdbs. this
+	  feature is enabled by defining macro USE_CONST_IT
+	  * change info printed by NonPrimaryHashIndex::to_string
+
+2010-11-11 05:13  gejun
+
+	* allocators.hpp, base_table.cpp, base_table.h, common.h,
+	  cowbass0.hpp, cowbass1.hpp, cowbass2.hpp, cowbass3.hpp, debug.h,
+	  dep_manager.cpp, el_hashmap.hpp, el_hashset.hpp, fixed_deque.hpp,
+	  graph.hpp, hash_index.hpp, header.hpp, mat_view.hpp, monitor.hpp,
+	  observer_list.hpp, op_list.hpp, predicate.hpp, selector.hpp,
+	  string_writer.hpp, table.hpp, tb_hashmap.hpp, test/sf_list2.h,
+	  test/test_cowbass.cpp, test/test_dep_manager.cpp,
+	  test/test_load.cpp, test/test_table.cpp:
+	  * rename FATAL_LOG to ST_FATAL, WARNING_LOG to ST_WARN,
+	  NOTICE_LOG to ST_NOTICE, LOG to ST_SAY, to avoid redefinitions
+	  with those in app/ecom/nova/public/util
+	  * remove base_table.cpp and change the global instance of
+	  SimpleVersion to be a static variable of the class which is
+	  written as smalltable::SimpleVersion::global()
+
+2010-11-10 09:09  gejun
+
+	* smalltable.prj, test/Makefile.32, test/Makefile.64,
+	  test/test.prj: * remove dependancy on ccode
+
+2010-11-10 08:58  gejun
+
+	* Makefile, smalltable.prj, test/Makefile.32, test/Makefile.64,
+	  test/test.prj: * remove dependancy on app/ecom/nova/public/util
+
+2010-11-10 08:44  gejun
+
+	* test/sf_list2.h, test/test_cowbass.cpp: * copy sf_list2 from
+	  afs-include and change dependancy on sf_list2.h in
+	  test_cowbass.cpp to local
+
+2010-11-10 08:35  gejun
+
+	* debug.h: * remove inclusion of "utils.h"
+
+2010-11-10 08:25  gejun
+
+	* test/test_table.cpp: * enable test_table.cpp::test_table
+
+2010-11-08 18:32  gejun
+
+	* hash_index.hpp, test/test_table.cpp: * mod_iterator of
+	  NonPrimaryHashIndex iterates changed keys rather than tuples now
+	  (because changed tuples are stored distributely in cowbasses and
+	  are cleared after end_update, which caused a serious bug that
+	  indexes "unit->keyword" and "unit->idea" did not show their
+	  modified tuples correctly). Iterating keys are not consistent
+	  with PrimaryHashIndex which gives tuples, but are unlikely to
+	  bring potential issues, because MatView will make mod_iterator
+	  useless soon.
+
+2010-11-08 13:21  gejun
+
+	* dep_manager.cpp: * change two DEBUG_LOG to WARNING_LOG to know
+	  elapse costed on a single table
+
+2010-11-07 14:27  gejun
+
+	* CHANGELOG, hash_index.hpp, mat_view.hpp, observer_list.hpp,
+	  old_tuple.hpp, return_code.h, selector.hpp, table.hpp,
+	  test/Makefile, test/Makefile.32, test/Makefile.64, test/test.prj,
+	  test/test_mat_view.cpp, test/test_tuple.cpp, tuple1.hpp:
+	  * add Table::enable_update/Table::disable_update to let tables
+	  ignore modifications silently. This is request from yufan.
+	  * implement materialized view on a single table, the filenname is
+	  mat_view.hpp and the classname is
+	  MatView<Table,MappingFunc,SrcTable>, the testing filename is
+	  test_mat_view.cpp.
+	  * rename old_tuple_t to Tuple1. I also would like to rename
+	  currently using tuple_t to Tuple2, but to make bdlib stable the
+	  renaming is suspended.
+	  * fix a bug in hash_indexes that filtering predicates did not
+	  work correctly.
+
+2010-11-05 04:05  gejun
+
+	* hash_index.hpp: * detailed warning
+
+2010-11-05 03:04  yanlin
+
+	* Makefile, base_table.cpp, smalltable.prj, test/Makefile.64,
+	  test/test.prj, test/test_smalltable.prj: * Define global var
+	  g_sv_ in base_table.cpp to fix compiler error
+	  
+	  * Add make test support in makefile
+
+2010-11-04 08:11  gejun
+
+	* CHANGELOG, base_table.h, common.h, cowbass.hpp, cowbass0.hpp,
+	  cowbass1.hpp, cowbass3.hpp, debug.h, el_hashmap.hpp,
+	  el_hashset.hpp, hash_index.hpp, im_ohashmap.hpp, old_cowbass.hpp,
+	  selector.hpp, string_writer.hpp, table.hpp, test/Makefile.32,
+	  test/Makefile.64, test/test_cowbass.cpp, test/test_load.cpp,
+	  test/test_smalltable.prj, test/test_table.cpp, tuple.hpp:
+	  * this is a huge changelist with 12k diffs. There will be a
+	  changelist on afs-bdlib to adapt this new smalltable soon.
+	  * code style adjustment, write one-liner function as:
+	  foo (...)
+	  { .... }
+	  This code style is borrowed from STL to effectively compress
+	  routine get/set/wrappers and emphasize
+	  other code.
+	  * add insert2 for el_hashset_t to return pair of pointers that
+	  are possibly delayed_erased and inserted
+	  * rename old_cowbass_t to Cowbass0, cowbass_t to Cowbass1,
+	  cowbass3_t to Cowbass3
+	  * rename OP_ADD/OP_DEL to MOD_INSERT/MOD_ERASE
+	  * add mod_percent_ in Cowbass3 to roughly show modified
+	  percentage of last COW
+	  * Cowbass3::erase and Cowbass3::insert are more efficient.
+	  * add Cowbass3::bg_empty and Cowbass3::bg_size that gives
+	  accurate background info in ad-hoc manner, bg_empty() is much
+	  faster than bg_size()!=0
+	  * Cowbass3::erase_by returns a vector of to-be-erased values,
+	  Cowbass3::update_by returns a vector of to-be-updated values
+	  * add Cowbass3::EasyDeque::swap to fix a serious bug of directly
+	  assigning new created deque to deque_ (use "deque_.swap(bg);" to
+	  replace "deque_ = bg;")
+	  * restore Cowbass3::change_other again, make
+	  Cowbass3::change_deque_(EasyDeque*) const
+	  * add Cowbass3::mod_begin(), Cowbass3::mod_end(),
+	  Cowbass3::mod_size to know modified values
+	  * Table is re-written to adapt Cowbass3, it also puts types of
+	  indexes on template parameters now.
+	  * We previously create a table as following:
+	  Table<UNIT_ID, SITE_ID, BID> t;
+	  t.create_primary_index<UNIT_ID,SITE_ID> (hash_size);
+	  t.create_non_primary_index<UNIT_ID> (another_hash_size);
+	  t.ready_indices();
+	  now it's created in one line and one type:
+	  Table<tuple_t<UNIT_ID, SITE_ID, BID>, Primary<UNIT_ID,SITE_ID>,
+	  NonPrimary<UNIT_ID> > t;
+	  (hash_size is absent because smalltable supports safe and
+	  automatic resizing of indexes)
+	  This is more consistent and clear to present the full properties
+	  of a table, and since we have very limited number of indexes in
+	  real applications and don't create or remove index at runtime,
+	  this approach is really handy for users. Within the
+	  implementation, since we know the accurate types of indexes at
+	  compile-time inside a table, virtual functions are manually
+	  inlined by switch-case, seek/traversing are probably more
+	  efficient.
+	  * Table::Table(SimpleVersion*), the pointer to object of
+	  SimpleVersion is for atomic table swapping. If the pointer is
+	  NULL, Table points to a global object of SimpleVersion that are
+	  shared by all tables. There's no swap() function in table, call
+	  SimpleVersion::increase() or
+	  smalltable::increase_global_version() depending on if you passed
+	  in the pointer or not.
+	  * Table::add/Table::del/Table::add_tuple/Table::del_tuple are
+	  renamed to
+	  Table::insert/Table::erase/Table::insert_tuple/Table::erase_tuple
+	  * add Table::erase_ref_by which removes tuples matching given key
+	  and conditions
+	  * add Table::erase_all_by which removes tuples matching given
+	  conditions
+	  * add Table::begin_update and Table::end_update to bracket
+	  modifications and replace Table::modify_background and
+	  Table::sync_background. Any modifications (insert/erase/clear)
+	  outside this pair of functions are rejected. , Roughly saying,
+	  begin_update is basically sync_background + resource recycling +
+	  modification clearing, and end_update is basically
+	  modify_background. They're better designed to enable continous
+	  pairing without swapping. For example following code is legal and
+	  safe without performance penalty.
+	  t.begin_update();
+	  t.insert (...);
+	  t.erase (...);
+	  t.end_update();
+	  t.begin_update();
+	  t.insert (...);
+	  t.erase (...);
+	  t.end_update();
+	  * HashIndex/PrimaryHashIndex/NonPrimaryHashIndex are re-written
+	  to adapt the fundamental change of Cowbass3. They're totally
+	  different from former implementations, checking source code is
+	  much better than listing here. HashIndex is still the base class
+	  for latter two indexes, but seek_ref/all are not virtual any more
+	  as they are moved to IndexManager to enable switch-casing
+	  There're 8 kinds of iterators in PrimaryHashIndex and
+	  NonPrimaryHashIndex:
+	  PrimaryHashIndex::seek_iterator
+	  PrimaryHashIndex::iterator
+	  PrimaryHashIndex::mod_iterator
+	  NonPrimaryHashIndex::seek_iterator
+	  NonPrimaryHashIndex::bg_seek_iterator
+	  NonPrimaryHashIndex::iterator
+	  NonPrimaryHashIndex::bg_iterator
+	  NonPrimaryHashIndex::mod_iterator
+	  - seek_* searches a value or scaning a list of values,
+	  performance is critical
+	  - mod_* iterates modified tuples
+	  - bg_* are variations of regular iterators with
+	  Cowbass3::iterator replaced by Cowbass3::bg_iterator. They're
+	  slower or much slower than regular iterators depending on the
+	  percentage of modifications.
+	  * IndexManager is used for sorting of indexes and providing Table
+	  with seek_ref/all/mod, being very critical at query performance.
+	  It switch-cases accesses to indexes and iterators to provide a
+	  runtime view on compile-time decided indexes. The maximum number
+	  of indexes is 3 now which looks small but enough for real
+	  applications. IndexManager may have different specializations for
+	  different number or combination of indexes to improve
+	  performance.
+
+2010-11-02 09:59  yanlin
+
+	* Makefile, debug.h, hash_index.hpp, smalltable.prj, table.hpp,
+	  test/Makefile.32, test/Makefile.64, test/test_smalltable.prj: fix
+	  XXX_LOG compiling error
+	  surpress unnecessary warning log
+
+2010-10-26 13:20  gejun
+
+	* CHANGELOG, common.h, cowbass3.hpp, el_hashset.hpp,
+	  fixed_deque.hpp, functors.hpp, hash_index.hpp, naive_timer.h,
+	  string_writer.hpp, table.hpp, test/Makefile.32, test/Makefile.64,
+	  test/test_cowbass.cpp, test/test_smalltable.prj,
+	  test/test_table.cpp:
+	  * add macro SYMBOL_LISTN to save typings and improve readability
+	  * adjust layout of some to_string slightly
+	  * add cowbass3.hpp. It uses std::set to store modifications (vs.
+	  previously std::vector) and support
+	  erase_by/update_by which erase or update values matching a given
+	  condition respectively. It also
+	  supports ad-hoc traversal of elements that are not yet merged
+	  into the internal deque. cowbass3 is
+	  a copy-on-write data structure that provides in-place alike
+	  interfaces, thus ease the designing of
+	  upper data structures, such as HashIndex-es. Its biggest drawback
+	  is that erase_by and update_by
+	  are implemented by traversal, so they're much slower than
+	  erase/insert, use them for many values
+	  but one
+
+2010-10-13 07:44  yanlin
+
+	* test/test_table.cpp: add unit test for check memory issue
+
+2010-10-12 11:42  gejun
+
+	* predicate.hpp, selector.hpp, table.hpp, test/test_table.cpp: *
+	  fix the memoryleak of predicates by deleting the
+	  hierarchy(Conjunction) when unused. If you don't share predicate
+	  objects between different selections, resource will be properly
+	  released and everything is fine; If you share, the program will
+	  core. I rarely see a chance that you have to share predicates,
+	  since predicates are generally created by overriden operators.
+	  Users are unlikely to be aware of the predicate objects. All
+	  constructors in predicate classes set to private to avoid being
+	  created at stack. You should call the static function "create" to
+	  new the predicate and get the reference.
+
+2010-10-12 10:09  gejun
+
+	* CHANGELOG, common.h, predicate.hpp, tuple.hpp: * make bdlib
+	  compile
+
+2010-10-12 08:10  gejun
+
+	* CHANGELOG, allocators.hpp, base_table.h, common.h, cowbass.hpp,
+	  cowbass2.hpp, debug.h, dep_manager.hpp, el_hashmap.hpp,
+	  el_hashset.hpp, fixed_deque.hpp, functors.hpp, graph.hpp,
+	  hash_index.hpp, header.hpp, im_ohashmap.hpp, monitor.hpp,
+	  naive_timer.h, old_cowbass.hpp, op_list.hpp, predicate.hpp,
+	  selector.hpp, string_reader.hpp, string_writer.hpp, table.hpp,
+	  test/test_table.cpp, tuple.hpp: * Selection on 3 tables works in
+	  this CL! and almost all diffs work for this purpose. Many classes
+	  and methods are added or changed. I won't talk about details of
+	  changes here (except RefTuple which has a brief intro below) ,
+	  let's leave them to later technical reports. RefPoint in
+	  tuple.hpp references other tuples/constants/pointers. RefTuple is
+	  the tuple that replaces internal values with RefPoints. A
+	  RefTuple can be instantiated to a regular tuple by combining with
+	  an ap_src which is an array of const void*. Their structures are
+	  briefly described below:
+	  RefPoint = { idx(16bit), offset(16bit)}
+	  RefTuple = { RefPoint, RefPoint, ... }
+	  ap_src = { const_ptr1, const_ptr2, const_ptr3 ... }
+	  "((char*)ap_src[rp.idx])+rp.offset" instantiates a field of
+	  RefTuple by combining with an ap_src.
+	  RefTuples are used in Selectors to avoid copying content of
+	  tuples that are stored in indexes. Equi
+	  predicates in Selectors require attributes referencing each other
+	  which generally means that fields
+	  in the same RefTuple may reference constants/pointers/tuples at
+	  the same time. As implemented in
+	  Selector, each selectee table needs only one temporary tuple, so
+	  references on tuples have "idx"
+	  that range from 0 to TABLE_NUM-1 according to corresponding
+	  tables. Each "const void*" is address of
+	  a tuple and keep updating during the selection. References on
+	  constants/variables are placed at
+	  TABLE_NUM to TABLE_NUM+MAX_CV_NUM-1 where the "const void*" are
+	  addresses of constants or pointers
+	  themselves.
+
+2010-10-07 17:56  gejun
+
+	* CHANGELOG, cowbass.hpp, cowbass2.hpp, el_hashmap.hpp,
+	  el_hashset.hpp, functors.hpp, hash_index.hpp, header.hpp,
+	  im_ohashmap.hpp, monitor.hpp, naive_timer.h, old_cowbass.hpp,
+	  predicate.hpp, selector.hpp, string_reader.hpp,
+	  string_writer.hpp, table.hpp, tb_hashmap.hpp,
+	  test/test_cowbass.cpp, test/test_op_list.cpp,
+	  test/test_table.cpp, test/test_tb_hashmap.cpp, tuple.hpp: *
+	  mainly a partial submission of my local repository that rewrites
+	  single_selector(now it's called a specialization of Selector)
+	  which makes the selector more efficient and being a preliminary
+	  step for multi selector. The idea is defining a RefTuple struct
+	  for each tuple_t, which is a tuple storing pointers to
+	  corresponding column values. PrimaryHashIndex and
+	  NonPrimaryHashIndex accept RefTuple in their "seek_ref" methods
+	  so that single_selector can prepare a RefTuple referring to
+	  constants/variables in set_predicate which saves one
+	  inefficient(via virtual functions) copying of the tuple. (and
+	  multi_selector prepares RefTuples referring to
+	  constants/variables/attributes). A selection on primary index
+	  takes 125 comparing to previously ~260ns, much faster but
+	  improvement space is still available since direct seek on
+	  internal PrimaryHashIndex and ELHashset take 100ns/57ns
+	  respectively. Classes in predicate.hpp are also better designed
+	  so that comparisons between columns are truly typed rather than
+	  previously by memcmp which only works for primitive types.
+	  * in operator<< for T* and const T* at string_writer.hpp, call
+	  operator<< on the values from pointers instead of to_string which
+	  does not work for primitive types.
+	  * code-style compliance
+
+2010-10-04 16:49  gejun
+
+	* Makefile, base_table.h, common.h, cowbass2.hpp, dep_manager.cpp,
+	  graph.hpp, monitor.hpp, op_list.hpp, predicate.hpp, selector.hpp,
+	  smalltable.prj, string_reader.cpp, string_reader.hpp,
+	  string_writer.hpp, table.hpp, test/Makefile, test/Makefile.32,
+	  test/Makefile.64, test/test_el_hashmap.cpp,
+	  test/test_smalltable.prj, test/test_string_writer.cpp: remove
+	  compilation issues in previously too-hurry changelist
+
+2010-10-04 15:59  gejun
+
+	* Hashmap.hpp, Makefile, Monitor.hpp, base_table.h, common.h,
+	  cowbass.hpp, cowbass2.hpp, dep_manager.cpp, dep_manager.hpp,
+	  el_hashmap.hpp, el_hashset.hpp, fixed_deque.hpp, functors.hpp,
+	  graph.hpp, hash_index.hpp, header.hpp, im_ohashmap.hpp,
+	  monitor.hpp, naive_timer.h, old_cowbass.hpp, old_tuple.hpp,
+	  op_list.hpp, predicate.hpp, select.hpp, selector.hpp,
+	  shared_object.h, smalltable.prj, string_builder.hpp,
+	  string_writer.hpp, table.hpp, tb_hashmap.hpp, test/Makefile,
+	  test/Makefile.32, test/Makefile.64, test/foo.h,
+	  test/test_Hashmap.cpp, test/test_cowbass.cpp,
+	  test/test_el_hashmap.cpp, test/test_fixed_deque.cpp,
+	  test/test_im_ohashmap.cpp, test/test_indexPerf.cpp,
+	  test/test_load.cpp, test/test_op_list.cpp,
+	  test/test_smalltable.prj, test/test_string_builder.cpp,
+	  test/test_string_reader.cpp, test/test_string_writer.cpp,
+	  test/test_table.cpp, test/test_tb_hashmap.cpp,
+	  test/test_tuple.cpp, tuple.hpp: TO YANLIN, DON'T SYNC CODE OF
+	  THIS CHANGELIST, I UPLOAD THIS CHANGELIST ONLY FOR PERSISTENCE
+	  * change naming styles
+	  * replace SharedData with new_shared_data in monitee_t so that
+	  managed values could be instances of a base class
+	  * select.hpp is renamed to selector.hpp and variable part is
+	  temporarily broken(test_table fails now)
+	  * string_builder_t is renamed to StringWriter, which is more
+	  consistent with StringReader
+	  *
+
+2010-09-29 03:03  yanlin
+
+	* op_list.hpp, test/test_cowbass.cpp, test/test_table.cpp: Suppress
+	  FATAL log in op_list
+	  add new unit test to test a delete tuple bug
+	  change some unit test code to avoid compiler error.
+
+2010-09-20 14:46  gejun
+
+	* Hashmap.hpp, cowbass.hpp, el_hashset.hpp, hash_index.hpp,
+	  op_list.hpp, test/test_cowbass.cpp, test/test_table.cpp: * fix
+	  the bug in el_hashset_t and Hashmap that erase does not use ef_
+	  to check equality.
+	  * fix inaccurate coutings of cb_new_cnt/cb_del_cnt in
+	  non_primary_index_t
+	  * fix the serious bug that insertions into primary_index do not
+	  check existence and add to
+	  * op_ptr_list.
+	  * sync of non_primary_index use internal pa_chg_key_ to replace
+	  input op_list because the op_list
+	  * does not contain tuples overwritten by insertions.
+	  * spawn of non_primary_index calls unique to assure correctness.
+	  * fix the serious bug that cowbass does not reclaim the last
+	  block of memory if count_ is 0
+
+2010-09-20 11:06  yanlin
+
+	* predicate.hpp, select.hpp: replace el_mempoolpool2 by
+	  BSL::Resourcepool. Because el_memorypool2 will not call
+	  destructor for each allocated object in replacement new. It could
+	  cause leaks in vector object.
+
+2010-09-17 07:06  gejun
+
+	* hash_index.hpp, table.hpp: print mem of op_list in table_t
+
+2010-09-17 06:43  yanlin
+
+	* Makefile, select.hpp, smalltable.prj: add -O2 option
+	  change memory_pool init size from 12 to 20
+
+2010-09-17 06:34  gejun
+
+	* hash_index.hpp, op_list.hpp, select.hpp, string_reader.hpp,
+	  table.hpp: change some default parameters
+
+2010-09-17 05:43  gejun
+
+	* Monitor.hpp, monitor.hpp, op_list.hpp, test/test_cowbass.cpp: *
+	  change monitor_t to Monitor to be code style compliant
+	  * delete internal vector of op_list_t if the capacity is high
+
+2010-09-16 14:02  gejun
+
+	* Hashmap.hpp, el_hashmap.hpp, hash_index.hpp, header.hpp,
+	  im_ohashmap.hpp, tb_hashmap.hpp, test/Makefile, test/Makefile.32,
+	  test/Makefile.64, test/test_Hashmap.cpp, test/test_cowbass.cpp,
+	  test/test_el_hashmap.cpp, test/test_smalltable.prj,
+	  test/test_table.cpp, tuple.hpp: * rename el_hashmap_t to Hashmap
+	  to be code style compliant
+	  * rename internal classes in tuple_t
+
+2010-09-15 03:35  yanlin
+
+	* dep_manager.cpp: ignore positive error number when do action. It
+	  usually should be ignored.
+
+2010-09-14 11:03  yanlin
+
+	* functors.hpp, select.hpp, test/test_load.cpp,
+	  test/test_table.cpp: suppress unnecessary log
+	  remove memcmp in operator == and <, it would cause problem when
+	  compare struct object
+
+2010-09-14 09:31  gejun
+
+	* common.h, cowbass.hpp, cowbass2.hpp, debug.h, monitor.hpp,
+	  return_code.h, test/test_cowbass.cpp: *
+	  open_version/close_version/switch in monitor_t are more robust
+	  and informative
+	  * versinable_t is renamed to monitee_t and change embeded
+	  functors OpenFunc/CloseFunc/ZeroRefFunc to abstract functions
+	  * cowbass2_t stores p_prev between action_on_open_version and
+	  action_on_close_version, adds erase_all working as its names says
+	  * change ullog type of DEBUG_LOG of LOG_TYPE=1 from
+	  UL_LOG_WARNING to UL_LOG_DEBUG
+
+2010-09-14 01:49  gejun
+
+	* el_hashmap.hpp, el_hashset.hpp: * fix the bug in 'insert' that
+	  passing-in new value of the key does not overwrite the stored one
+	  in el_hashset_t
+	  * change 'insert' to use 'seek' instead of 'find' in el_hashmap_t
+	  as well
+
+2010-09-14 01:40  yanlin
+
+	* test/test_table.cpp: add a new regression case for modify
+	  background
+
+2010-09-13 15:01  gejun
+
+	* CHANGELOG, tuple.hpp: * change hashing in DEFINE_COLUMN to
+	  smalltable::hashing
+
+2010-09-13 14:29  gejun
+
+	* monitor.hpp, return_code.h, shared_object.h,
+	  test/test_cowbass.cpp: * one mutable monitor and multiple
+	  immutable monitors share same set of
+	  versions(monitor_t::DataHolder), this generally brings in the
+	  possibility that when a mutable monitor wants to open_version,
+	  the version is still referenced by some immutable monitors.
+	  previously I made a force_zero function in shared_object_t and
+	  the mutable monitor has the ability to remove other referencers.
+	  this obviously introduced read-write race condition and potential
+	  inconsistency. this changelist makes things simpler and lets the
+	  open_version fail with everything unchanged if the version is
+	  referenced by immutable monitors. In afs application, this kind
+	  of fail is rare but possible, it will be generally caused by too
+	  small interval between two rounds of updating(so that threads
+	  referencing previous round of tables do not yet quit), or
+	  call-site logic is buggy.
+
+2010-09-13 11:41  gejun
+
+	* CHANGELOG, common.h, cowbass.hpp, debug.h, fixed_deque.hpp,
+	  string_builder.hpp, test/test_string_builder.cpp: * add comments,
+	  copy-constructor, operator== for string_builder_t and fixed bad
+	  formatting for short/unsigned short/unsigned char
+	  * add operator= for fixed_deque_t
+
+2010-09-13 09:21  gejun
+
+	* common.h, cowbass2.hpp, debug.h, el_hashmap.hpp, fixed_deque.hpp,
+	  hash_index.hpp, monitor.hpp, predicate.hpp, return_code.h,
+	  shared_object.h, string_builder.hpp, table.hpp, test/Makefile.32,
+	  test/Makefile.64, test/test_cowbass.cpp,
+	  test/test_smalltable.prj, test/test_string_builder.cpp: * unify
+	  return code
+	  * replace vector<char> in string_builder_t with char* to greatly
+	  improve performance (previously vector::resize made formating
+	  very slow)
+	  * add referential counters for buffers of DataHolder
+
+2010-09-09 19:08  gejun
+
+	* CHANGELOG, el_hashmap.hpp, el_hashset.hpp, fixed_deque.hpp,
+	  shared_object.h: add comments
+
+2010-09-09 18:24  gejun
+
+	* common.h, cowbass.hpp, cowbass2.hpp, el_hashmap.hpp,
+	  fixed_deque.hpp, hash_index.hpp, monitor.hpp, shared_object.h,
+	  table.hpp, test/Makefile, test/Makefile.32, test/Makefile.64,
+	  test/test_cowbass.cpp, test/test_el_hashmap.cpp,
+	  test/test_fixed_deque.cpp, test/test_smalltable.prj,
+	  test/test_table.cpp, tuple.hpp: * el_hashmap_t does not require
+	  TElement to have a zero parameter constructor
+	  * add fixed_deque.hpp, a deque with fixed capacity using space in
+	  cycle
+	  * add shared_object.h, base class of objects that need
+	  thread-safe referential counting
+	  * add monitor.hpp, a easy way to create and manage mutiple
+	  versions for any data value (in principle), add cowbass2 being
+	  temporary fork of cowbass to test this feature. add versionable_t
+	  which is the base class of objects managed by monitor_t
+
+2010-09-09 03:08  yanlin
+
+	* select.hpp, table.hpp: Get rid of compiler warnings in XXX_LOG()
+
+2010-09-08 05:46  cuishijun
+
+	* smalltable.prj: use lib2-64/bsl instead of lib2/bsl
+
+2010-09-08 05:39  cuishijun
+
+	* debug.h: turn LOG_TYPE=1 for release-version
+
+2010-09-08 03:39  yanlin
+
+	* table.hpp: fix fatal log when sync twice
+
+2010-09-07 07:42  gejun
+
+	* hash_index.hpp, test/test_table.cpp: add mapped_iterator<Tuple>
+	  which can alter the tuple type in iterator, created as follows:
+	  mapped_iterator<NewTuple> it;
+	  it.create (iterator of a table, a functor converting Tuple in
+	  previous iterator to NewTuple);
+	  ...
+	  NOTICE: mapped_iterator is SLOW, slower than iterator spanning
+	  from 30% to 50%, more bigger tuple more slower, its usages should
+	  be carefully examined.
+
+2010-09-06 09:33  yanlin
+
+	* op_list.hpp: avoid FATAL log when table is empty
+
+2010-09-03 11:01  yanlin
+
+	* dep_manager.cpp, graph.hpp, test/Makefile.64,
+	  test/test_dep_manager.cpp: fix a severe bug in dep manager. Add a
+	  unit test to check this bug.
+	  add comments in graph
+
+2010-09-02 06:53  gejun
+
+	* select.hpp, test/test_table.cpp: add missed files for last ci
+
+2010-09-02 06:49  gejun
+
+	* test/Makefile.32, test/Makefile.64, test/test_smalltable.prj,
+	  test/test_table.cpp: fix a bug in select that mistyped index as
+	  fg_index
+
+2010-09-02 06:46  yanlin
+
+	* test/test_table.cpp: add a new case for single_selector.set_var()
+
+2010-09-01 15:14  gejun
+
+	* el_hashmap.hpp, el_hashset.hpp, hash_index.hpp, naive_timer.h,
+	  select.hpp, table.hpp, test/Makefile.32, test/Makefile.64,
+	  test/test_smalltable.prj, test/test_table.cpp: * mem_size of
+	  el_hashmap_t and el_hashset_t are most accurate
+	  * use rgn_t and cyc_t in test_table so that data is more
+	  pragmatic
+
+2010-09-01 09:01  gejun
+
+	* allocators.hpp, cowbass.hpp, hash_index.hpp, old_cowbass.hpp,
+	  table.hpp, test/test_cowbass.cpp: sligtly change interface and
+	  comments
+
+2010-09-01 03:58  yanlin
+
+	* table.hpp: add new typedef for op_list iterator
+
+2010-08-31 06:58  gejun
+
+	* functors.hpp, test/test_table.cpp: remove function_t inheritance
+	  of dot_f to make tuple_t with more than 3 columns compile
+
+2010-08-30 09:36  gejun
+
+	* allocators.hpp, old_cowbass.hpp, test/Makefile, test/Makefile.32,
+	  test/Makefile.64, test/test_allocators.cpp,
+	  test/test_cowbass.cpp, test/test_smalltable.prj: change
+	  interfaces of allocator_t to more useable styles
+
+2010-08-30 08:31  gejun
+
+	* el_hashmap.hpp: make insert of el_hashmap_t returns pointer to
+	  stored value
+
+2010-08-30 08:19  gejun
+
+	* CHANGELOG, base_table.h, hash_index.hpp, table.hpp,
+	  test/test_table.cpp: small interface changes to make xlib compile
+
+2010-08-30 06:07  gejun
+
+	* allocators.hpp, base_table.h, common.h, cowbass.hpp,
+	  cowbass2.hpp, cowbass3.hpp, debug.h, el_hashmap.hpp,
+	  el_hashset.hpp, functors.hpp, hash_index.hpp, old_cowbass.hpp,
+	  op_list.hpp, predicate.hpp, select.hpp, string_builder.hpp,
+	  table.hpp, tb_hashmap.hpp, test/Makefile.32, test/Makefile.64,
+	  test/test_cowbass.cpp, test/test_el_hashmap.cpp,
+	  test/test_load.cpp, test/test_op_list.cpp,
+	  test/test_smalltable.prj, test/test_string_reader.cpp,
+	  test/test_table.cpp, test/test_tuple.cpp, tuple.hpp: This is a
+	  HUGE changelist that diffs more than 12K lines of code, the
+	  changes are summarized as:
+	  1) rename embedded classes/structs to camel-style
+	  2) add DEFINE_COLUMN which is exactly same with DEFINE_ATTRIBUTE,
+	  COLUMN is easier to read and understand than ATTRIBUTE
+	  3) add hashing functions for basic_tuple*_t and tuple_t,
+	  calculating hash value for multiple values is changed from
+	  addtion to additive linear congruential, the coefficient is 257
+	  and the formula is v = (v<<8) + v + single_hash_value
+	  4) add single_selector_t::var<COLUMN>() to create a variable
+	  in-place and single_selector_t::set_var<COLUMN>(value) to change
+	  the variable, this approach manages variables in single_selector
+	  and easier to use.
+	  5) modify and simplify el_hashmap_t and el_hashset_t so that they
+	  resize more safely, change some interfaces and make their code
+	  same except necessary diffs.
+	  6) add debugging information for el_hashmap_t, el_hashset_t,
+	  hash_index_t, table_t and consequently change some to_string
+	  7) add begin/end/operator[]/sort/unique for op_list_t, the class
+	  enclose its logic more tightly
+	  8) replace specializations of operator<< of std::vector and
+	  std::set by show_container
+	  9) rename cowbass.hpp to old_cowbass.hpp, delete cowbass2.hpp,
+	  rename cowbass3.hpp to cowbass.hpp and consequently change names
+	  inside.
+	  10) remove add/del in cowbass_t and rename
+	  create_from/freeze/spawn to different overriding forms of assign.
+	  basically you have to store modifications in op_list_t and change
+	  cowbass in batch. remove add/del in hash_index_t, add spawn/sync,
+	  similarly with cowbass, indices are changed in batch now.
+	  background and foreground buffer of a non_primary_index may point
+	  to same object of cowbass to greatly reduce memory consumption.
+	  background buffers of indices may resize according to
+	  resize_threshold
+	  11) remove TABLE_TYPE, use table_t directly instead; remove
+	  create_key, use create_primary_key and create_non_primary_key
+	  instead. replace AdhocIndexReq with PrimaryIndexReq and
+	  NonPrimaryIndexReq
+	  12) table_t inherits base_table_t, add swap to replace manually
+	  changing fore_no; add table_swapper_t to swap multiple tables
+	  atomically.
+
+2010-08-26 16:34  yanlin
+
+	* CHANGELOG, dep_manager.cpp, graph.hpp, table.hpp,
+	  test/Makefile.64: change some interface in table, dep_manager and
+	  graph
+	  update changlog
+
+2010-08-25 11:21  yanlin
+
+	* hash_index.hpp, op_list.hpp, table.hpp: - fix a memory
+	  overlapping issue in op_list.reduce
+	  - fix a memory leak in table_t
+	  - fix several memory leaks in hash_index
+
+2010-08-23 11:18  yanlin
+
+	* CHANGELOG, dep_manager.cpp, table.hpp: add more debug info in
+	  dep_manager
+	  - add a new method in table_t
+	  - update Changlog
+	  
+
+2010-08-21 10:01  gejun
+
+	* functors.hpp, hash_index.hpp, op_list.hpp, select.hpp, table.hpp,
+	  test/Makefile, test/Makefile.32, test/Makefile.64,
+	  test/test_cowbass.cpp, test/test_load.cpp, test/test_op_list.cpp,
+	  test/test_smalltable.prj, test/test_table.cpp, tuple.hpp: * most
+	  functors inherit function_t
+	  * fix a bug in op_list that wrongly passing a size to the
+	  constructor of std::vector as reservation.
+	  * add test_load.cpp that loads plan_cychold into a table_t
+	  * add seeking perf in test_table.cpp
+	  * slightly change tuple.hpp and select.hpp
+
+2010-08-20 08:41  gejun
+
+	* test/test_cowbass.cpp: change inclusion of sf_list2.h
+
+2010-08-20 08:36  gejun
+
+	* cowbass2.hpp, cowbass3.hpp, hash_index.hpp, im_ohashmap.hpp,
+	  op_list.hpp, test/Makefile.32, test/Makefile.64,
+	  test/test_cowbass.cpp, test/test_cowbass3.cpp,
+	  test/test_smalltable.prj, test/test_table.cpp: * move perf tests
+	  of cowbass3 into test_cowbass.cpp
+	  * slightly change some inner interfaces
+
+2010-08-20 07:56  yanlin
+
+	* table.hpp: complete all add/del functions in table_t
+
+2010-08-20 07:48  yanlin
+
+	* table.hpp: add "del" method for table_t
+
+2010-08-20 07:34  yanlin
+
+	* test/test_cowbass3.cpp: add unit test for cowbass3
+
+2010-08-20 07:29  yanlin
+
+	* cowbass3.hpp: add another cowbass implementation with different
+	  iterator
+
+2010-08-19 13:20  gejun
+
+	* cowbass2.hpp, functors.hpp, op_list.hpp, test/test_cowbass.cpp,
+	  test/test_tuple.cpp: add cowbass2_t, a different implementation
+	  of the idea which could be randomly accessed
+
+2010-08-19 09:26  zhuxingchang
+
+	* test/foo.h, test/test_tuple.cpp: update test_tuple.cpp
+
+2010-08-19 06:17  gejun
+
+	* CHANGELOG, im_ohashmap.hpp: adjust code layout
+
+2010-08-19 06:09  gejun
+
+	* Makefile, el_hashmap.hpp, im_ohashmap.hpp, smalltable.prj,
+	  test/Makefile, test/Makefile.32, test/Makefile.64,
+	  test/test_el_hashmap.cpp, test/test_im_ohashmap.cpp,
+	  test/test_smalltable.prj: add im_ohashmap_t and test code, it is
+	  a open addressing hashmap which is very fast at seeking node and
+	  clear (O(1)). Although it does not support
+	  multiple-read-one-write but table_t does not require underlying
+	  hashmap to have this feature, so this is not a problem. ohashmap
+	  may waste space if sizes of key/value are large, do evaluation
+	  before using.
+
+2010-08-18 14:03  gejun
+
+	* CHANGELOG, cowbass.hpp, dep_manager.cpp, hash_index.hpp,
+	  header.hpp, string_builder.hpp, string_reader.hpp, table.hpp:
+	  adjust header inclusions
+
+2010-08-18 13:46  gejun
+
+	* string_reader.cpp, test/test_string_reader.cpp: complement
+	  operator>> of string_reader_t
+
+2010-08-18 13:08  yanlin
+
+	* el_hashmap.hpp, el_hashset.hpp, functors.hpp, hash_index.hpp,
+	  table.hpp, tuple.hpp: fix some ambiguous compiler error in
+	  el_hashxx.hpp
+	  - change method name from "add_tuple" to "add" in table.hpp
+	  - add default operators < and ==
+	  - add default hashing functions
+
+2010-08-18 11:24  gejun
+
+	* CHANGELOG, functors.hpp, smalltable.prj, string_reader.cpp,
+	  string_reader.hpp, test/Makefile, test/Makefile.32,
+	  test/Makefile.64, test/test_smalltable.prj,
+	  test/test_string_reader.cpp, test/test_tuple.cpp: * add
+	  string_reader_t, a combinator parser being able to parse string
+	  in context-free grammar, it lacks floating point parsing, but the
+	  integer part works fine. to combine parsing logics, there should
+	  be higher order parsers, string_reader_t has seq/many/one_of/try
+	  now, quite simple but effective, for example, to parse a string
+	  output of vector to another vector, you wrote:
+	  string_reader_t s1(the_const_char_pointer);
+	  int n;
+	  std::vector<int> xs;
+	  s1 >> n >> ":[" >> s1.one_of("]", s1.seq(xs, s1.many(",", xs),
+	  "]")) >> sr_end;
+	  the grammar in BNF is:
+	  VectorOutput := Integer ":[" OtherPart
+	  OtherPart := "," Integer OtherPart
+	  | "]"
+	  If an error occurs, string_reader_t does not traceback since it
+	  may cause explosion of time, call "try" to explicitly traceback,
+	  in try(parser) if the parser fails, intenal state restores to
+	  before calling parser as if the parser is not called (so that
+	  other parser can be tried later from the point).
+	  * restore broken test_tuple.cpp to last version
+
+2010-08-18 08:52  zhuxingchang
+
+	* test/foo.h, test/test_tuple.cpp: add foo.h for test
+
+2010-08-18 05:04  cuishijun
+
+	* OWNER: update owner format
+
+2010-08-17 13:36  gejun
+
+	* functors.hpp, hash_index.hpp, header.hpp, old_tuple.hpp,
+	  predicate.hpp, select.hpp, table.hpp, test/test_table.cpp,
+	  test/test_tuple.cpp, tuple.hpp: !!This is a huge changelist
+	  replacing the fundamental class tuple_t
+	  !!and it would break the developing afs-xlib, if you can't
+	  correct the compiling error, contact me
+	  previous tuple_t is renamed to old_tuple_t and put into
+	  old_tuple.hpp, the reason to change tuple_t
+	  is that the new tuple_t generates more friendly compiling and
+	  runtime information and easier to use.
+	  we previously use table in this way:
+	  enum { label1, label2, ...}
+	  TABLE_TYPE(type1, lable1, type2, label2 ...) the_table_object;
+	  the_table_object.set_desc_map(...) // if you don't set desc_map,
+	  labels can only be printed as numbers, extremely unreadable
+	  the_table_object.get<lable1>() ...
+	  the_table_object.set<lable1>() ...
+	  single_selector_t(&the_table_object) ss;
+	  ss.set_predicate (ss.a<label1>() == 10 && ss.a<lable2>() ==
+	  ss.a<label1>());
+	  
+	  now we are in another way:
+	  DEFINE_ATTRIBUTE(label1, type1);
+	  DEFINE_ATTRIBUTE(label2, type2);
+	  ...
+	  TABLE_TYPE (lable1, lable2) the_table_object;
+	  // you don't have to set_desc_map, the tuple_t already know
+	  literals of labels
+	  the_table_object.get<lable1>() ...
+	  the_table_object.set<lable1>() ...
+	  single_selector_t(&the_table_object) ss;
+	  ss.set_predicate (ss.a<label1>() == 10 && ss.a<lable2>() ==
+	  ss.a<label1>());
+	  The distinction is clear that you can define an attribute with
+	  type and use them in types and
+	  selections, types go along attributes and you don't have to
+	  repeat them everywhere. If you want the
+	  label as well as a different type, put it in a pair of
+	  parenthesis after the label, like this:
+	  TABLE_TYPE (lable1(different_type), label2) the_table_object;
+	  convenient and magical!
+	  
+	  templates are likely to meet compiling errors, with previous
+	  tuple_t gcc prints the type like below:
+	  table_t<tuple_t<int,4,long,3,null_t,-1,null_t,-1,null_t,-1 ...>>
+	  basically you have to compare the numbers with the enumerated
+	  labels in source code and decide what is what, now it prints
+	  table_t<tuple_t<PLAN_ID, UNIT_ID, null_t, null_t ...>
+	  or
+	  basic_tuple2_t<PLAN_ID, UNIT_ID> blahblah...
+	  much better, right?
+	  enjoy.
+
+2010-08-17 02:34  gejun
+
+	* CHANGELOG, cowbass.hpp, debug.h, functors.hpp: * update CHANGELOG
+	  * change headers of some files
+
+2010-08-16 17:06  gejun
+
+	* common.h, functors.hpp, test/test_table.cpp, test/test_tuple.cpp:
+	  * move null_t to be out of namespace smalltable and add to_string
+	  * easy_tuple_t is almost tuple_t now, the transition will be
+	  carried on this week
+
+2010-08-16 12:01  gejun
+
+	* hash_index.hpp, header.hpp, select.hpp, table.hpp,
+	  test/test_table.cpp: * split some code into header.hpp and change
+	  related logic.
+	  * add a simple implementation of double buffered table, features:
+	  - use buffer no. to access data, which generally appears as the
+	  parameter to do_select(int), query session asks xlib for this
+	  number in preparing stage and should not change it during
+	  searching
+	  - ready_indices is unnecessary to invoke because
+	  add_tuple/del_tuple are recording operations, "freeze" calls the
+	  function automatically before any real change takes place.
+	  - non_primary_index in the two buffers of a table do not share
+	  content now, this would consume too much memory in real
+	  application, should be fixed soon.
+	  * table works in following way:
+	  int no; // this number is also accessible by query sessions
+	  table_t t(&no);
+	  t.create_index (...);
+	  ...
+	  while (1)
+	  {
+	  t.add_tuple (...);
+	  t.del_tuple (...);
+	  ...
+	  // t does not change
+	  t.freeze ();
+	  // t changed background buffer
+	  no = (no+1)%2;
+	  // buffer number is flipped, and background/foreground buffers
+	  are switched
+	  // foreground/background buffers are both accessible by query
+	  session during this stage, namely query sessions starting before
+	  changing the number are accessing background buffers while those
+	  starting after changing the number are accessing foreground
+	  buffers
+	  sleep(...) // sleep seconds to wait for query session accessing
+	  background buffers to be timeout
+	  t.sync ();
+	  // sync=freeze+clear operations, two buffers of the table are
+	  same now, another round begins
+	  }
+	  
+
+2010-08-16 11:32  gejun
+
+	* op_list.hpp: return a_op_ directly if no change since last reduce
+
+2010-08-16 09:49  cuishijun
+
+	* predicate.hpp, select.hpp, test/test_table.cpp: add variable_t
+	  for selector
+
+2010-08-16 05:41  gejun
+
+	* cowbass.hpp, hash_index.hpp, op_list.hpp, table.hpp,
+	  test/test_table.cpp: * move code of recording and reducing
+	  operations to op_list.hpp
+	  * fix the bug that deleting a key from el_hashmap_t which is the
+	  pointed by the current using iterator in del_tuple
+	  * move index_req_t from hash_index.hpp back to table.hpp
+
+2010-08-16 05:34  gejun
+
+	* tuple.hpp: add parenthesis when printing tuple with only one
+	  column
+
+2010-08-13 10:40  yanlin
+
+	* CHANGELOG, hash_index.hpp, table.hpp, tuple.hpp: add some new
+	  add_tuple functions
+	  - fix some minor issues
+
+2010-08-13 05:36  cuishijun
+
+	* tb_hashmap.hpp, test/test_tb_hashmap.cpp: update show() for
+	  tb_hashmap
+
+2010-08-13 03:56  gejun
+
+	* common.h, hash_index.hpp, select.hpp, table.hpp, test/Makefile,
+	  test/test_table.cpp: * put indices implementations into
+	  hash_index.hpp and changed related interfaces
+
+2010-08-13 03:55  gejun
+
+	* test/Makefile.32, test/Makefile.64, test/test_smalltable.prj,
+	  test/test_tuple.cpp: wrote an easy_tuple_t in test_tuple.cpp
+	  which is likely to replace tuple_t soon
+
+2010-08-12 08:34  yanlin
+
+	* CHANGELOG, dep_manager.cpp, dep_manager.hpp, graph.hpp,
+	  string_builder.hpp, test/Makefile, test/Makefile.32,
+	  test/Makefile.64: - update dep_manager member functions will more
+	  clear return value
+	  - fix some bugs in graph.hpp
+	  - update CHANGELOG
+	  - support char* in stream operator for string_builder
+
+2010-08-11 12:09  zhuxingchang
+
+	* test/test_tb_hashmap.cpp: update test_tb_hashmap.cpp.test for
+	  this cpp is over
+
+2010-08-11 11:10  gejun
+
+	* functors.hpp: update functors
+
+2010-08-11 09:27  zhuxingchang
+
+	* test/test_tb_hashmap.cpp: update test_tb_hashmap.cpp
+
+2010-08-11 09:09  gejun
+
+	* functors.hpp: add specializations for std::string in equal_f and
+	  hash_f
+
+2010-08-11 06:44  gejun
+
+	* test/test_cowbass.cpp, test/test_indexPerf.cpp,
+	  test/test_table.cpp: * remove uncessary printing in
+	  test_cowbass.cpp
+	  * make test_indexPerf.cpp compile
+
+2010-08-11 06:25  zhuxingchang
+
+	* test/test_cowbass.cpp, test/test_indexPerf.cpp,
+	  test/test_smalltable.prj: merger qa's test code for cowbass.hpp
+
+2010-08-11 05:40  gejun
+
+	* select.hpp, table.hpp, test/test_table.cpp: * move memorypool
+	  used by predicates from table_t to single_selector_t so that it's
+	  thread safe
+
+2010-08-11 05:00  gejun
+
+	* cowbass.hpp, test/test_cowbass.cpp: * formalize interfaces of
+	  cowbass_t
+	  * put basic fields that describe a list into basic_cowbass_t and
+	  changed related logic in freeze
+	  * replace fork with copy constructor
+
+2010-08-11 04:59  gejun
+
+	* debug.h: change _badcodeset_ in RETURN_EX to _goodcode_ and
+	  changed checking logic
+
+2010-08-11 02:48  gejun
+
+	* CHANGELOG, naive_timer.h, predicate.hpp, test/adt_perf,
+	  test/adt_perf/Makefile, test/adt_perf/adt.cpp,
+	  test/adt_perf/adt.prj: add a test on performance comparison
+	  between virtual-function style and abstract-data-type style
+	  add a very simple timer
+	  update CHANGELOG
+
+2010-08-10 11:46  yanlin
+
+	* Makefile, dep_manager.cpp, dep_manager.hpp, smalltable.prj,
+	  test/test_dep_manager.cpp: - update smalltable.prj to build a lib
+	  - update interfaces in dep manager and also update UT
+
+2010-08-10 09:25  gejun
+
+	* predicate.hpp, select.h, select.hpp, table.hpp, test/Makefile,
+	  test/Makefile.32, test/Makefile.64, test/test_select.cpp,
+	  test/test_smalltable.prj, test/test_table.cpp: single_selector is
+	  working now
+	  remove test_select.cpp and put selecting tests in test_table.cpp
+
+2010-08-10 09:24  gejun
+
+	* cowbass.hpp, test/test_cowbass.cpp: cowbass can add/del after
+	  freeze
+	  freeze is similar with "merge" in xlib now
+
+2010-08-10 02:42  yanlin
+
+	* dep_manager.cpp, dep_manager.hpp, el_hashmap.hpp, el_hashset.hpp,
+	  graph.hpp, string_builder.hpp, test/test_dep_manager.cpp,
+	  test/test_graph.cpp: - Change the interface of dep manager and
+	  dep actions
+	  - Change the iterator interface in graph class
+	  - Correct some "include header" lines
+
+2010-08-09 09:51  gejun
+
+	* table.hpp, test/test_table.cpp: add del_tuple for table_t
+	  change testing code to regressional checking with set
+
+2010-08-09 09:50  gejun
+
+	* string_builder.hpp: check null before printing pointer
+
+2010-08-09 09:47  gejun
+
+	* tuple.hpp: add operator< for tuple_t which invokes compare
+
+2010-08-09 09:46  gejun
+
+	* cowbass.hpp, test/test_cowbass.cpp: cowbass can freeze even if
+	  it's not empty
+
+2010-08-07 19:09  gejun
+
+	* CHANGELOG, table.hpp, test/test_table.cpp: * re-enable
+	  map/foldl/foldr in table_t
+	  * update CHANGELOG
+
+2010-08-07 18:46  gejun
+
+	* table.hpp, test/test_table.cpp: GREATLY changed table_t, which
+	  supports:
+	  primary_index: el_hashset_t< tuple_type, dot_f<typename
+	  sub_tuple_type::template tuple_f<HashF>, sub_tuple_f >,
+	  eq_f<sub_tuple_f> >
+	  non_primary_index: el_hashmap_t< sub_tuple_type, cowbass_t<const
+	  tuple_type*, CompareF> , typename sub_tuple_type::template
+	  tuple_f<HashF> >
+	  non_primary_single_index: el_hashmap_t< sub_tuple_type,
+	  cowbass_t<tuple_type, CompareF> , typename
+	  sub_tuple_type::template tuple_f<HashF> >
+	  tuple_type in non_primary_single_index will not include
+	  attributes in sub_tuple_type to save memory.
+	  An table supports adding tuples, finding tuples and traversing,
+	  where iterator is the most critical point. A table does not
+	  support fork currently.
+	  Iterator is not only a generic method to represent a result set
+	  of tuples but also avoiding to copy the set. A problem is that
+	  different indicies have different types and I'm not able get the
+	  type: the struct is defined inside a function. If I don't get the
+	  type, I don't known the size. One way to conquer this is to use
+	  virtual functions, in my mind virtual functions are performantly
+	  acceptable because the code is likely to be cached. However
+	  memory allocation is unable to avoid in this case(allocate
+	  something and cast to base class) which is generally bad. I
+	  followed an "union" approach, since I don't know the exact size,
+	  I assume size of an iterator does not exceed 128 bytes+some meta
+	  fields, every index has a function called
+	  forward_iterator(iterator&) to reinterpret memory of the iterator
+	  and move it one-step forward. The same iterator is also very
+	  important in select and will be extensively used.
+
+2010-08-07 18:14  gejun
+
+	* common.h: add source_point_t
+	  add macros likely to unlikely to hint compile to optimize branch
+	  predication
+
+2010-08-07 18:12  gejun
+
+	* cowbass.hpp, test/test_cowbass.cpp, test/test_indexPerf.cpp:
+	  GREATLY changed interfaces of cowbass_t, generally speeking,spawn
+	  is removed, fork and freeze are added.
+	  NOTICE: test_indexPerf.cpp in this version does NOT work because
+	  it temporarily commented two important lines, I'll fix that next
+	  week
+
+2010-08-07 18:09  gejun
+
+	* string_builder.hpp: change some operator<< to friend of
+	  string_builder_t
+
+2010-08-07 18:08  gejun
+
+	* el_hashmap.hpp, el_hashset.hpp: minorly changed interfaces and
+	  const modifiers of el_hashmap_t and el_hashset_t
+
+2010-08-07 18:07  gejun
+
+	* functors.hpp, tuple.hpp: change how compare_f works and add
+	  overrides of compare function for tuples
+
+2010-08-06 10:18  yanlin
+
+	* CHANGELOG, allocators.hpp, debug.h, dep_manager.cpp,
+	  dep_manager.hpp, graph.hpp, test/Makefile, test/Makefile.32,
+	  test/Makefile.64, test/test_dep_manager.cpp, test/test_graph.cpp,
+	  test/test_smalltable.prj: - Add graph and dependency manager
+	  class;
+	  - update test_smalltable.prj to remove unused depenency libs
+
+2010-08-06 09:18  gejun
+
+	* string_builder.hpp, test/test_string_builder.cpp: fix the core of
+	  appending empty string to string_builder_t
+
+2010-08-05 14:46  gejun
+
+	* string_builder.hpp: * changed the code layout in string_builder_t
+	  so that GCC should not report "redefinition" when linking
+	  multiple cpp files that all include the header
+
+2010-08-05 14:40  gejun
+
+	* functors.hpp, table.hpp, test/test_table.cpp, tuple.hpp: *
+	  table_t fundamentally changes its way to store indices and body,
+	  the code is working but the job is not done, I'll have more CI in
+	  late night or tomorrow. table_t adds a parameter which is typed
+	  index_config_t whose current values are HAS_PRIMARY and
+	  HAS_MULTIPLE. HAS_PRIMARY means the table would have primary key,
+	  HAS_MULTIPLE means the table would have multiple indices, if
+	  HAS_PRIMARY is on, table_t checks if user invokes
+	  create_primay_key before manipulating the table, and uses
+	  el_hashset_t to store the primary index; if HAS_MULTIPLE is on as
+	  well, other indices are created in el_hashmap_t(optionally with
+	  cowbass_t) whose value is a pointer(or list of pointers) to the
+	  tuple stored in primary index; if HAS_PRIMARY and HAS_MULTIPLE
+	  are both off, table_t creates ordinary el_hashmap_t thing for the
+	  index, otherwise HAS_MULTIPE is on, then table_t automatically
+	  creates a primary index assuming all attributes in the tuple
+	  forming a key and stores the index by el_hashset_t, other indices
+	  points to tuples in the primary index similarly as above.
+
+2010-08-05 04:54  gejun
+
+	* common.h, debug.h, el_hashmap.hpp, el_hashset.hpp, functors.hpp,
+	  table.hpp, test/test_el_hashmap.cpp, test/test_table.cpp,
+	  tuple.hpp: * tuple_t::field_t is renamed to direct_field_t
+	  * tuple_t::idx_map_t is renamed to field_t and has value_type and
+	  OFFSET directly, use field_t<IDX>::value_type to replace
+	  direct_field_t<field_t<IDX>::REAL_IDX>::value_type, use
+	  field_t<IDX>::OFFSET to replace
+	  direct_field_t<field_t<IDX>::REAL_IDX>::OFFSET
+	  * misc changes to table_t
+	  * add el_hashset.hpp which is a set specialization modified from
+	  HashTemplate
+
+2010-08-05 03:35  cuishijun
+
+	* tb_hashmap.hpp, test/test_tb_hashmap.cpp: add log for public
+	  interfaces of tb_hashmap
+
+2010-08-05 03:16  cuishijun
+
+	* tb_hashmap.hpp, test/test_indexPerf.cpp,
+	  test/test_tb_hashmap.cpp: update interface name
+
+2010-08-05 03:12  yanlin
+
+	* CHANGELOG, tb_hashmap.hpp, test/test_indexPerf.cpp,
+	  test/test_tb_hashmap.cpp: refine performance test
+	  update changlog
+	  change tb_hashmap::create parameters
+
+2010-08-04 18:11  cuishijun
+
+	* tb_hashmap.hpp, test/test_tb_hashmap.cpp: update create & destroy
+
+2010-08-04 12:50  yanlin
+
+	* test/Makefile.32, test/Makefile.64, test/test_indexPerf.cpp,
+	  test/test_smalltable.prj: fix 64 bit issue for performance unit
+	  test
+	  set hashmap size to 5000 in performance unit test
+
+2010-08-04 11:39  yanlin
+
+	* CHANGELOG, svn2cl.sh, svn2cl.xsl: add script to generate
+	  changelog
+
+2010-08-04 11:20  yanlin
+
+	* functors.hpp, tb_hashmap.hpp, test/test_indexPerf.cpp,
+	  test/test_smalltable.prj: 1. add performance unit test for merge
+	  and lookup between old and new table/list
+	  2. fix a include file issue
+	  3. add clear method for tb_hashmap
+
+2010-08-04 08:13  cuishijun
+
+	* functors.hpp, tb_hashmap.hpp, test/test_tb_hashmap.cpp: update
+	  for tb_hashmap
+
+2010-08-03 14:37  gejun
+
+	* cowbass.hpp, el_hashmap.hpp, string_builder.hpp, table.hpp,
+	  test/test_cowbass.cpp, test/test_table.cpp, tuple.hpp: change
+	  to_string applications
+
+2010-08-03 13:25  gejun
+
+	* CHANGELOG, functors.hpp, string_builder.hpp, table.hpp,
+	  test/test_table.cpp: minorly change interfaces of table_t
+
+2010-08-03 11:09  gejun
+
+	* allocators.hpp, common.h, functors.hpp: add more specializations
+	  of hash_f
+
+2010-08-03 11:02  gejun
+
+	* allocators.hpp, cowbass.hpp: change pointer_t to handle_type in
+	  allocator_t
+
+2010-08-03 10:59  gejun
+
+	* allocators.hpp, common.h, cowbass.hpp, functors.hpp, table.hpp,
+	  test/test_table.cpp, tuple.hpp: add allocators.hpp and misc
+	  changes to tuple.hpp and table.hpp
+
+2010-08-03 07:14  gejun
+
+	* common.h, cowbass.h, cowbass.hpp, el_hashmap.h, el_hashmap.hpp,
+	  functors.h, functors.hpp, string_builder.h, string_builder.hpp,
+	  table.h, table.hpp, tb_hashmap.h, tb_hashmap.hpp,
+	  test/test_cowbass.cpp, test/test_el_hashmap.cpp,
+	  test/test_functors.cpp, test/test_string_builder.cpp,
+	  test/test_table.cpp, test/test_tb_hashmap.cpp, tuple.h,
+	  tuple.hpp: restructure
+
+2010-08-03 06:57  yanlin
+
+	* common.h, cowbass.h, el_hashmap.h, functors.h, string_builder.h,
+	  table.h, tb_hashmap.h, test/Makefile, test/Makefile.32,
+	  test/Makefile.64, test/test_el_hashmap.cpp,
+	  test/test_smalltable.prj, test/test_string_builder.cpp,
+	  test/test_table.cpp, test/test_tb_hashmap.cpp, tuple.h: 1. Add
+	  dependency for bdlib, it is used for performance comparasion
+	  between hashTemplate and tb_hashmap
+	  2. Change some header files from include<> to include""
+	  3. Change some header files with standard include guards
+	  4. Add smalltable namespace in some header files
+
+2010-08-02 12:06  cuishijun
+
+	* tb_hashmap.h, test/test_tb_hashmap.cpp: add clear test & fix bug
+	  of multi-clear
+
+2010-08-02 09:30  gejun
+
+	* string_builder.h: change interface of string_builder
+
+2010-08-02 09:20  gejun
+
+	* string_builder.h, table.h, test/test_table.cpp,
+	  test/test_tb_hashmap.cpp: string_builder.h does not copy showing
+	  target now
+
+2010-08-02 09:17  cuishijun
+
+	* tb_hashmap.h, test/test_tb_hashmap.cpp: fix core of copy
+	  construct
+
+2010-08-02 08:28  gejun
+
+	* common.h, string_builder.h, tb_hashmap.h,
+	  test/test_tb_hashmap.cpp: test_tb_hashmap.cpp cores at this
+	  version
+
+2010-08-02 07:24  gejun
+
+	* common.h, cowbass.h, debug.h, functors.h, select.h,
+	  string_builder.h, table.h, test/Makefile, test/Makefile.32,
+	  test/Makefile.64, test/test_smalltable.prj,
+	  test/test_string_builder.cpp, test/test_table.cpp, tuple.h: add
+	  string_builder.h and switch text outputing to it
+
+2010-08-02 02:22  cuishijun
+
+	* tb_hashmap.h: drop a evil version of spawn
+
+2010-08-01 11:57  gejun
+
+	* common.h, cowbass.h, el_hashmap.h, functors.h, table.h,
+	  tb_hashmap.h, test/test_cowbass.cpp, test/test_table.cpp,
+	  tuple.h: misc update
+
+2010-07-31 16:25  cuishijun
+
+	* tb_hashmap.h, test/test_tb_hashmap.cpp: add commet & cases
+
+2010-07-31 13:18  gejun
+
+	* table.h, test/Makefile.32, test/Makefile.64, test/run,
+	  test/test_smalltable.prj, test/test_table.cpp, tuple.h: add
+	  tuple.h
+
+2010-07-31 13:01  cuishijun
+
+	* tb_hashmap.h, test/test_tb_hashmap.cpp: fix bug of create && add
+	  dump()
+
+2010-07-31 11:45  cuishijun
+
+	* tb_hashmap.h, test/Makefile, test/Makefile.32, test/Makefile.64,
+	  test/test_smalltable.prj, test/test_tb_hashmap.cpp: add unit test
+	  for tb_hashmap ; add iterator, not tested
+
+2010-07-30 08:10  gejun
+
+	* common.h, cowbass.h, debug.h, el_hashmap.h, functors.h, select.h,
+	  table.h, test/test_cowbass.cpp, test/test_el_hashmap.cpp: add
+	  debug.h
+
+2010-07-29 17:59  cuishijun
+
+	* tb_hashmap.h: add tb hashmap
+
+2010-07-29 12:18  gejun
+
+	* cowbass.h, el_hashmap.h, functors.h, select.h, table.h,
+	  test/Makefile, test/Makefile.32, test/Makefile.64, test/test.prj,
+	  test/test_cowbass.cc, test/test_cowbass.cpp,
+	  test/test_el_hashmap.cc, test/test_el_hashmap.cpp,
+	  test/test_functors.cpp, test/test_main.cc, test/test_main.h,
+	  test/test_select.cpp, test/test_smalltable.prj,
+	  test/test_table.cc, test/test_table.cpp: add test
+
+2010-07-28 12:03  gejun
+
+	* common.h, functors.h, select.h, table.h, test/test_cowbass.cc,
+	  test/test_el_hashmap.cc, test/test_main.cc, test/test_main.h,
+	  test/test_table.cc: fixes
+
+2010-07-28 11:50  gejun
+
+	* cowbass.h, table.h, test/test_cowbass.cc: fix cowbass
+
+2010-07-28 10:01  gejun
+
+	* CHANGELOG, el_hashmap.h, functors.h, table.h, test/run,
+	  test/test_table.cc: change some names
+
+2010-07-28 09:37  gejun
+
+	* el_hashmap.h, functors.h: move some functions in el_hashmap.h
+	  into functors.h
+
+2010-07-28 09:22  gejun
+
+	* Makefile, afs_cowbass.h, afs_functors.h, cowbass.h, functors.h,
+	  smalltable.prj, table.h, test/test_cowbass.cc,
+	  test/test_table.cc: change namespace
+
+2010-07-28 08:38  gejun
+
+	* Makefile, afs_cowbass.h, afs_functors.h, common.h,
+	  proto_table.cc, select.h, smalltable.prj, table.h, test,
+	  test/Makefile, test/test.prj, test/test_cowbass.cc,
+	  test/test_el_hashmap.cc, test/test_main.cc, test/test_main.h,
+	  test/test_table.cc: restructure
+
+2010-07-26 07:00  gejun
+
+	* Makefile, el_hashmap.h, proto_table.cc, smalltable.prj: add
+	  el_hashmap.h
+
+2010-07-24 17:34  gejun
+
+	* Makefile, proto_table.cc, smalltable.prj: update
+
+2010-07-20 11:41  gejun
+
+	* proto_table.cc: add generic vector
+
+2010-07-20 10:52  gejun
+
+	* proto_table.cc: quick fix
+
+2010-07-20 10:50  gejun
+
+	* Makefile: quick fix
+
+2010-07-20 10:50  gejun
+
+	* Makefile, proto_table.cc: add proto_table.cc and Makefile
+
+2010-07-20 10:41  gejun
+
+	* CHANGELOG, OWNER: initialize
+
+2010-07-20 07:48  svn
+
+	* .: "SPM
+

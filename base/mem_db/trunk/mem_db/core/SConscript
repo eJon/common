@@ -1,0 +1,19 @@
+#-mode python-
+Import('env')
+env = env.Clone()
+
+libsname=['memcached', 'mem_db_common']
+libmem_db_core_sources = Glob('*.c[cp]*')
+
+env.aLibrary(target = 'mem_db_core',
+             source = libmem_db_core_sources,
+      	     LIBS = libsname
+             )	  
+
+commontest = env.aDirs('test')
+
+#env.aSDKIncludes(['mem_db.h', 'mem_db_def.h'])
+
+cpps=[libmem_db_core_sources]
+Return(['cpps'] )
+

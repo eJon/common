@@ -1,0 +1,11 @@
+#-mode python-
+Import('env')
+env = env.Clone()
+
+libexample_sources = ['monitor_agent_example.cpp']
+libsname = ['rt','pthread' , 'z','protobuf', 'bidfeed-sharelib','log4cpp', 'monitor-client']
+env.aProgram(target= 'client_agent_example',	
+		    source = libexample_sources,
+		    LIBS=libsname   
+             )
+

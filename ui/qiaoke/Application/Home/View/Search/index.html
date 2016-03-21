@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+ <head> 
+  <include file="Public/head"/>
+
+  <meta name="description" content={$description} /> 
+  <meta name="keywords" content={$keywords} /> 
+  <title>{$title}</title> 
+<style>
+      .color_b{background:#FAFAFA }
+    </style>
+ </head> 
+ <body> 
+  <include file="Public/header"/>
+  <include file="Public/page_header"/>
+  
+  <section class="job-list"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-8" id="search_list"> 
+      <foreach name="search_result" item="jobs"> 
+       <ul class="media-list color_b"> 
+        <li class="media color_b"> <a class="pull-left" href="{$jobs.redirect}"> <img class="media-object" src="{$jobs.logo}" width="128px" height="110px" /> </a> 
+         <div class="media-body"> 
+          <a href="{$jobs.redirect}"><h4 class="media-heading">{$jobs.title}</h4> </a> 
+          <p>公司：{$jobs.company}&nbsp;&nbsp;地点： {$jobs.location}&nbsp;&nbsp;招聘部门：{$jobs.department}&nbsp;&nbsp; 薪水：<span class="label label-danger">{$jobs.salary}</span></p> 
+          <p>描述：{$jobs.company_desc}</p> 
+          <p> 标签： 
+           <foreach name="jobs['label']" item="v"> 
+            <span class="label label-info">{$v}</span>&nbsp;&nbsp; 
+           </foreach> </p> 
+         </div> </li> 
+       </ul> 
+      </foreach> 
+     </div> 
+      <div class="col-md-4 text-left"> 
+     <div class="color_block row"> 
+      <div class="col-md-12 text-center" draggable="true"> 
+       <div class="panel panel-warning"> 
+        <div class="panel-heading"> 
+         <h3 class="panel-title">合作伙伴</h3> 
+        </div> 
+        <p> </p> 
+        
+         <a href="{$books.url}" title="{$books.title}"> 
+          <img src="__PUBLIC__/images/tencent.jpg" class="img-responsive img-thumbnail" width="228px" height="228px" /> 
+          <p></p>
+          <img src="__PUBLIC__/images/alibaba.jpg" class="img-responsive img-thumbnail" width="228px" height="228px" /> 
+          <p></p>
+          <img src="__PUBLIC__/images/baidu2.jpg" class="img-responsive img-thumbnail" width="228px" height="228px" /> 
+          <p></p>
+          <img src="__PUBLIC__/images/sina.jpg" class="img-responsive img-thumbnail" width="228px" height="228px" /> 
+         </a> 
+         
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+     
+    </div> 
+    <div class="row"> 
+     <div class="col-md-12"> 
+      <ul class="pagination"> 
+       <li> <a href="#">上一页</a> </li> 
+       <li> <a href="#">1</a> </li> 
+       <li> <a href="#">2</a> </li> 
+       <li> <a href="#">3</a> </li> 
+       <li> <a href="#">4</a> </li> 
+       <li> <a href="#">5</a> </li> 
+       <li> <a href="#">下一页</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  
+  <include file="Public/footer"/>
+   
+
+ </body>
+</html>

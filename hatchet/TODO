@@ -1,0 +1,32 @@
+Add TODO in `TODO' section, move done items to `DONE' section
+
+TODO: (sorted by priorities)
++ Add constraints for indexes of a table
++ Improve replacement handling in Connector
++ Specialize Selector2 on single table
++ Support picking storage pointer of value in Connector
++ Study traversal performance of hash_cluster
++ Explain new mechanism of sharing allocators in comments
++ Unify StringWriter/ostream/logging (to streaming style)
++ Move _MAX_FANOUT of Cowbass4 from template parameters to member variables
++ Evaluate parallel write
++ Separate template-dependent and template-independent code
++ Profile instantiations of templates
+
+DONE:
++ Solve ParentInfo issue of Cowbass4
++ Connect cow_table and version_manager
++ better tests on Selector2 and Connector
++ Port cases test/test_table.cpp to test/test_cow_table.cpp
++ Support maybe modifier for tables in Selector2 and Connector
++ Devise GroupView
++ Reversed order of cluster key
++ Support customized picking of attributes in Connector
++ Support seek-by-index-keys and erase-by-index-keys in CowTable
++ Support two kinds of clearing events of cow_table
++ Make observer more generic
++ Enable easy init of cow_table
++ Support table observation, including insert/erase/replace
++ Think about exclusive old_value and new_value in a replacement
++ Separate interfaces and implementations of cow_hash_cluster_map.hpp
++ Change typename that can't be primitive types to class

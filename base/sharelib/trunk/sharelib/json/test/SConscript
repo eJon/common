@@ -1,0 +1,22 @@
+# -*- mode: python -*-
+
+# Inherit the environment from my parent.
+Import('env')
+
+# Make a copy of the environment, so my changes are limited in this directory and sub-directories.
+env = env.Clone()
+
+env.Append(LIBS=['sharelib_json', 'gtest'])
+test_cpps = [str(fn) for fn in Glob('*test.cpp')]
+print test_cpps
+
+json_test_sources=  [
+    '#sharelib/test/dotest.cpp',
+    test_cpps
+                     ]
+
+libsname = [ 'sharelib_json', 'sharelib_util']
+jsontest = env.aTest(target = 'json_test',
+                     source = json_test_sources,
+                     LIBS = libsname
+                     );

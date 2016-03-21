@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/cjserver.dir/server.cpp.o  -o ../bin/cjserver -rdynamic -lpthread 

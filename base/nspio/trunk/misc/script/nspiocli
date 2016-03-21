@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cur_wd="/home/w/conf/nspio/cli"
+
+if [[ $1 == "start" ]]; then
+    /home/w/bin/nspiod -c $cur_wd -s start
+    echo "nspio client starting . . . . . .                      [ok]"
+elif [[ $1 == "stop" ]]; then
+    /home/w/bin/nspiod -c $cur_wd -s stop
+    echo "nspio client stopping . . . . . .                      [ok]"
+elif [[ $1 == "restart" ]]; then
+    /home/w/bin/nspiod -c $cur_wd -s restart
+    echo "nspio client restarting . . . . . .                    [ok]"
+elif [[ $1 == "status" ]]; then
+    if [ -f $cur_wd/nspio_daemon.pid ]; then
+	echo "nspio client . . . . . .                          [running]"
+    else
+	echo "nspio client . . . . . .                          [stopped]"	
+    fi
+fi

@@ -1,0 +1,131 @@
+#!/usr/bin/env python
+#_*_ encoding: utf-8 _*_
+
+from __future__ import with_statement
+import ConfigParser
+
+'''
+Description:
+    parse html file to tuples save in txt file
+'''
+
+__author__ = 'liuwenyong'
+__version__ = '0.1'
+__date__ = '2012-03-31 23:29'
+
+import sys
+import os 
+import time 
+from htmlparser import HtmlParser
+import getopt
+
+def usage():
+    print "usage:"
+    print "\tparse -p sourceFile resultFile"
+    print "\tparse -g sourceFile xpath resultFile"
+    print "\tsourceFile must be format of html  and resultFile will be format of txt"
+    print ""
+
+def main():
+    #opts, args = getopt.getopt(sys.argv[1:], 'pg')
+    argvs = sys.argv[1:]
+
+    para = readConfig()
+    if len(argvs)==0:
+        print "read file in configuration "
+
+        if str(para["parse_isOn"]) == "1" :
+            """parse html to txt"""
+            if para["parse_inputFileName"]=="":
+                print "inputFileName must not  be null"
+                sys.exit()
+            if para["parse_outputFileName"] == "":
+                print "outputFileName must not  be null"
+                sys.exit()
+            print "parse html from "+para["parse_inputFileName"] + " and save result into "+para["parse_outputFileName"]
+            html_doc = file(para["parse_inputFileName"],"rb").read()
+            parser = HtmlParser(html_doc,para["encoding_encode"])
+            elements = parser.parse(para["parse_XpathHasIndex"])
+            parser.saveElementsToFile(elements,para["parse_outputFileName"])
+            
+        if str(para["Xpath_isOn"]) == "1":
+            if para["Xpath_inputFileName"]=="":
+                print "inputFileName must not  be null"
+                sys.exit()
+            if para["Xpath_outputFileName"] == "":
+                print "outputFileName must not  be null"
+                sys.exit()
+            if para["Xpath_Xpath"] == "":
+                print "Xpath must not be null"
+                sys.exit()
+            print "get elements from "+para["Xpath_inputFileName"] +" by xpath = "+para["Xpath_Xpath"]
+            html_doc = file(para["Xpath_inputFileName"],"rb").read()
+            parser = HtmlParser(html_doc,para["encoding_encode"])
+            parser.parse()
+            element = parser.get_element_by_xpath(para["Xpath_Xpath"],para["Xpath_XpathHasIndex"])
+            parser.saveElementsToFile(element, para["Xpath_outputFileName"])
+            sys.exit()
+        
+    elif len(argvs) == 3 and argvs[0] =="-p":
+        if argvs[1][-5:] !=".html" or argvs[2][-4:] != ".txt":
+            print "the second parameter must be a file type of .html and the third parameter must be a file type of .txt"
+            sys.exit()
+        html_doc = file(argvs[1],"rb").read()
+        parser = HtmlParser(html_doc,para["encoding_encode"])
+        elements = parser.parse(para["parse_XpathHasIndex"])
+        parser.saveElementsToFile(elements,argvs[2])
+    elif len(argvs) ==4 and argvs[0]=="-g":
+        if argvs[1][-5:] !=".html":
+            print "the second parameter must be a file type of .html"
+            sys.exit()
+            
+        html_doc = file(argvs[1],"rb").read()
+        parser = HtmlParser(html_doc,para["encoding_encode"])
+        parser.parse()
+        element = parser.get_element_by_xpath(argvs[2],para["Xpath_XpathHasIndex"])
+        parser.saveElementsToFile(element, argvs[3])
+    else:
+        usage()
+        sys.exit()
+    
+
+def readConfig():
+    config=ConfigParser.ConfigParser()
+    baseDir = sys.path[0]
+    with open(baseDir+"/conf/conf.cfg","rw") as cfgfile:
+        config.readfp(cfgfile)
+
+    ret = {}
+    ret["global_baseDir"] = config.get("global","baseDir")
+    
+    
+    ret["encoding_isOn"] = config.get("encoding","isOn")
+    if ret["encoding_isOn"] == "1":
+        ret["encoding_encode"] = config.get("encoding","encode")
+    else :
+        ret["encoding_encode"] = ""
+    
+    ret["parse_inputFileName"] = config.get("global","baseDir")+config.get("parse","inputFileName")
+    ret["parse_outputFileName"] = config.get("global","baseDir") + config.get("parse","outputFileName")
+    ret["parse_isOn"] = config.get("parse","isOn")
+    if config.get("parse","XpathHasIndex") == "1":
+        ret["parse_XpathHasIndex"] = True
+    else:
+        ret["parse_XpathHasIndex"] = False
+        
+    ret["Xpath_inputFileName"] = config.get("global","baseDir") + config.get("Xpath","inputFileName")
+    ret["Xpath_Xpath"] = config.get("Xpath","Xpath")
+    ret["Xpath_outputFileName"] = config.get("global","baseDir") + config.get("Xpath","outputFileName")
+    ret["Xpath_isOn"] = config.get("Xpath","isOn")
+    if config.get("Xpath","XpathHasIndex") == "1":
+        ret["Xpath_XpathHasIndex"] = True
+    else :
+        ret["Xpath_XpathHasIndex"] = False
+
+    return ret
+
+if __name__ == "__main__":
+    reload( sys )
+    sys.setdefaultencoding('utf-8')
+    main()
+

@@ -1,0 +1,59 @@
+{
+"dir":
+  "\/home\/w\/share\/monitor-server\/data",
+"maxFileCount":
+  10,
+"maxFileSize":
+  100000,
+"maxFileTime":
+  86400,
+"aggrSpanTime":
+  300,
+"writePatternSet":
+  [
+     {
+    "calculation":
+      "+",
+    "dest":
+      "c",
+    "source":
+      [
+        "a",
+        "b"
+      ]
+    },
+    {
+    "calculation":
+      "/",
+    "dest":
+      "e",
+    "source":
+      [
+        "d",
+        "c"
+      ]
+    },
+    {
+    "calculation":
+      "*",
+    "dest":
+      "h",
+    "source":
+      [
+        "f",
+        "g"
+      ]
+    },
+    {
+    "calculation":
+      "/",
+    "dest":
+      "k",
+    "source":
+      [
+        "i",
+        "j"
+      ]
+    }
+  ]
+} 

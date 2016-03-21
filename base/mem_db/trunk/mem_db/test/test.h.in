@@ -1,0 +1,12 @@
+#ifndef CPMCOMMON_TEST_H_
+#define CPMCOMMON_TEST_H_
+
+#define TOP_BUILDDIR "@TOP_BUILDDIR@"
+#define BUILDDIR "@BUILDDIR@"
+#define TEST_DATA_PATH "@TOP_SRCDIR@/testdata/"
+#define DOTEST_LOGGER_CONF "@DOTEST_LOGGER_CONF@"
+
+#define CPPUNIT_ASSERT_FAIL(x) CPPUNIT_ASSERT(!(x))
+
+#endif
+

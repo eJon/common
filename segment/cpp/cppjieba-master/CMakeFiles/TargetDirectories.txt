@@ -1,0 +1,7 @@
+/home/andrew/andrew/__tmp/cpp/cppjieba-master/server/CMakeFiles/cjserver.dir
+/home/andrew/andrew/__tmp/cpp/cppjieba-master/test/unittest/CMakeFiles/gtest.dir
+/home/andrew/andrew/__tmp/cpp/cppjieba-master/test/CMakeFiles/keyword.demo.dir
+/home/andrew/andrew/__tmp/cpp/cppjieba-master/test/CMakeFiles/load_test.dir
+/home/andrew/andrew/__tmp/cpp/cppjieba-master/test/CMakeFiles/segment.demo.dir
+/home/andrew/andrew/__tmp/cpp/cppjieba-master/test/CMakeFiles/tagging.demo.dir
+/home/andrew/andrew/__tmp/cpp/cppjieba-master/test/unittest/CMakeFiles/test.run.dir

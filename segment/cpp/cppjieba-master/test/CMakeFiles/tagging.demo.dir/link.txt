@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/tagging.demo.dir/tagging_demo.cpp.o  -o ../tagging.demo -rdynamic 

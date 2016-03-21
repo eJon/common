@@ -1,0 +1,4 @@
+0. <GO TO NGINX MAIN DIRECTORY>
+1. ./configure --prefix=/usr/local/nginx --add-module=mod_crmservice --with-ld-opt=-lstdc++
+2. make
+3. sudo make install

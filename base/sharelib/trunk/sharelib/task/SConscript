@@ -1,0 +1,18 @@
+#-mode python-
+Import('env')
+env = env.Clone()
+
+libtask_sources = Glob('*.c[cp]*')
+libsname = ['rt','pthread' , 'z','protobuf', 'log4cpp', 'boost_thread']
+env.aLibrary(target = 'sharelib_task',
+             source = libtask_sources,
+             LIBS=[libsname]
+             )
+
+
+env.aDirs('test')
+env.aSDKIncludes(Glob('*.h'))
+
+cpps=[libtask_sources]
+Return(['cpps'] )
+

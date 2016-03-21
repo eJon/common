@@ -1,0 +1,81 @@
+# -*- mode: python -*-
+import os, sys
+# Inherit the environment from my parent.
+Import('env')
+
+# Make a copy of the environment, so my changes are limited in this directory and sub-directories.
+env = env.Clone()
+
+defineMacro = env['prjName'].upper()
+config_h_content_head = """//config.h
+#ifndef """ + defineMacro + """_CONFIG_H_
+#define """ + defineMacro + """_CONFIG_H_
+"""
+
+config_h_content_tail = """
+#endif
+"""
+
+def aGenerateConfigHeader(target, source, env):
+    t = target[0]
+    file = open(t.path, 'w')
+    file.write(config_h_content_head)
+
+    file.write(config_h_content_tail)
+    file.close()
+    return 0
+
+env.Append(BUILDERS = {'aGenConfigHeader' : Builder(action = aGenerateConfigHeader)})
+
+def aGenConfig(self, *args, **kwargs):
+    target = self.aGenConfigHeader(*args, **kwargs)
+    self.Default(target)
+    self.AlwaysBuild(target)
+    return target
+env.AddMethod(aGenConfig)
+
+env.aGenConfig('config.h', env['userconf'])
+
+#env.Append(CPPPATH = env['topdir'] + '/contribute/mxml-2.2.2/')
+##############################################################################################
+
+def aSDKIncludes(self, sdk_includes = []):
+    ans = []
+    if sdk_includes:
+        for header in sdk_includes:
+            source_path = str(header)
+            dest_path = os.path.abspath(source_path)
+            dest_path = dest_path[dest_path.rfind('/scribe/'):]
+            dest_path = self['SDK_BUILD_DIR_INCLUDE'] + dest_path
+            t = env.InstallAs(dest_path, source_path)
+            env.Alias('sdk', t)
+            env.Default(t)
+            ans.append(t)
+    return ans
+env.AddMethod(aSDKIncludes)
+##############################################################################################
+# List my sub-directories.
+env.Append(LIBS=['z'])
+env.Append(LIBS=['pthread'])
+env.aSDKIncludes(Glob('*.h'))
+
+#common = env.aDirs('common')
+
+###################    modified by Andrew 2013-04-25 for wireless ##########################
+#targetforcpm = env.aDirs('targetforcpm')
+#rankforcpm = env.aDirs('rankforcpm')
+#cpps=[targetforcpm,rankforcpm, ]
+scribeserver=env.aDirs('scribeserver');
+scribeclient=env.aDirs('scribeclient');
+scribecommon=env.aDirs('common');
+scribetools=env.aDirs('tools');
+cpps=[scribeserver, scribecommon, scribeclient]
+
+###################################    end #################################################
+libsname=['bidfeed-sharelib', 'log4cpp', 'fb303','boost_thread','thriftnb','event',
+          'thrift', 'boost_system']
+env.aLibrary(target='scribe_processor',
+             source = cpps,LIBS=[libsname], package='scribe_processor')
+
+env.aDirs('test')
+

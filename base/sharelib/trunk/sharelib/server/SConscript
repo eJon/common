@@ -1,0 +1,17 @@
+#-mode python-
+Import('env')
+env = env.Clone()
+
+libserver_sources = Glob('*.c[cp]*')
+env.aLibrary(target = 'sharelib_server',
+             source = libserver_sources
+             )
+
+libsname = ['rt','pthread' , 'z','protobuf', 'log4cpp', ]
+
+env.aDirs('test')
+env.aSDKIncludes(Glob('*.h'))
+
+cpps=[libserver_sources]
+Return(['cpps'] )
+

@@ -1,0 +1,25 @@
+
+
+mem_db-4.1.0
+------------
+  new features:
+    * fix bug for DeleteGeneralValue().
+    * use scons/hudson to build the project.
+    * remove EXPIRATION #ifdef; make EXPIRATION always the true.
+    * fix bug that more-than-3-month-expiration setting failure.
+    * add feature that failed servers will be automatically ejected after a number of retries.
+    * add feature that auto ejected servers will recovery after dead timeout limit.
+    * add complete comments for mem_db.conf and header files.
+    * GetGenenelValue-->GetGeneralValue; and GetGenenelValue becomes DEPRECATED.
+    * Support global expiration setting for all general k-v pair storage.
+    * add support for auto loading configuration file.
+  TODOs:
+    * When auto_remove_failed_servers=0, if the memcached server A cracks down,
+      it could not be accessed any more, even if the server A is recoverd. You just have to
+      restart clients. However, auto-load-config feature is supplied to avoid the bugs. That
+      to say, when you set auto_remove_failed_servers=0, you'd better set auto_load_config=1
+      to reload configuration and rebuild mem_db instance periodically.
+  May-be issues:
+    * This version may be not compitable with former versions, because of remaing type of
+      private variable of MemDB class. It's better to recompile related code to make sure
+      everything is better.

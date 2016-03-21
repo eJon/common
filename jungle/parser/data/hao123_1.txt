@@ -1,0 +1,1213 @@
+<ID: ; url: ; txt: ; Xpath: /html/head/meta; css: {content: text/html; charset=%SOUP-ENCODING%;http-equiv: content-type;#}>
+<ID: ; url: ; txt: ; Xpath: /html/head/meta; css: {charset: %SOUP-ENCODING%;#}>
+<ID: ; url: ; txt: ; Xpath: /html/head/base; css: {target: _blank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/head/base; css: {href: http://www.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/head/meta; css: {content: 上网导航,网址大全,网址导航,hao123上网导航,hao123网址,hao123导航,hao123网址大全;name: keywords;#}>
+<ID: ; url: ; txt: ; Xpath: /html/head/meta; css: {content: hao123是最具权威的中文上网导航，汇集最优秀的网站及资源。及时收录影视、音乐、小说、游戏等分类的网址和内容，让您的网络生活更简单精彩。上网，从hao123开始。;name: description;#}>
+<ID: ; url: ; txt: hao123_上网从这里开始; Xpath: /html/head/title; css: {#}>
+<ID: ; url: ; txt: body,p,b,dl,dd,table,td,th,input,button,textarea,xmp,pre,img,form,div,ul,ol,li,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}img,iframe,acronym{border:0;}ol,ul,li{list-style:none;}img,input,label,button{vertical-align:middle;}table{border-collapse:collapse;border-spacing:0;width:100%;}address,caption,cite,code,dfn,em,strong,th,var,b,i{font-style:normal;font-weight:normal;}button,input,select,textarea{font-size:100%;}body{_zoom:expression(function(el){document.execCommand('BackgroundImageCache',false,true);el.style.zoom = "1";}(this));}button{cursor:pointer;}::-moz-focus-inner{border:0;padding:0;margin:0;}:focus{outline:none;}body{font:14px/1.14 Arial;background:#F6F6F9 url(http://s0.hao123img.com/index/images/body_bg.png) repeat-x 0 27px;}a{color:#1C1C1C;text-decoration:none;}a:hover{color:#f30;text-decoration:underline;}b{font-size:0;display:block;overflow:hidden;-moz-user-select:none;}i{display:inline-block;_display:inline;zoom:1;cursor:pointer;position:relative;width:16px;height:16px;background:url(http://s1.hao123img.com/index/images/main1.png) no-repeat;}.i-home{background-position:0 -147px;}.i-tool{background-position:0 -165px;}.i-tv{background-position:0 -195px;}.i-movie{background-position:0 -225px;}.i-caipiao{background-position:0 -284px;}.i-music{background-position:0 -254px;}.i-tuan{background-position:0 -315px;}.i-game{background-position:0 -345px;}.i-papers{background-position:0 -131px;}.tc-red,.tc-red a{color:#F85050!important;}.tc-green,.tc-green a{color:#1EAC1E!important;}.tc-blue,.tc-blue a{color:#0053a5!important;}b.space{display:inline-block;_display:inline;zoom:1;height:13px;width:0;position:relative;top:2px;border-left:1px solid #999;}.ft-l{float:left;}.ft-r{float:right;}.clearfix{zoom:1;}.clearfix:before,.clearfix:after{content:"";display:table;}.clearfix:after{clear:both;}.corner b{width:5px;height:5px;}.corner .l{float:left;_margin-right:-3px;}.corner .r{float:right;_margin-left:-3px;}.corner .m{width:auto;}.span-rows{letter-spacing:-.3em;*letter-spacing:normal;word-spacing:-.5em;}.span-rows span{display:inline-block;vertical-align:top;letter-spacing:normal;}.span-rows span a{letter-spacing:normal;word-spacing:normal;vertical-align:baseline;}.sug-wrap{position:absolute;white-space:nowrap;overflow:hidden;top:30px;left:-1px;border:1px solid #817F82;background:#fff;width:448px;color:#1C1C1C;z-index:999;}.sug-shim{position:absolute;top:-1px;left:-1px;z-index:-1;filter:alpha(opacity="0");width:420px;height:232px;}.sug-wrap ol{font:bold 14px/21px verdana;cursor:default;}.sug-wrap li{padding:1px 6px;padding-left:8px;}.sug-wrap .sug-sub{color:#999;font-size:12px;font-weight:normal;padding-left:5px;}.sug-wrap .sug-select{background:#E2EAFF;}.sug-wrap .sug-query{font-weight:normal;}.sug-wrap .sug-querynull{font-weight:normal;}.l-header{overflow:hidden;}.l-header_l,.l-header_m,.l-header_r,.box-weather,.box-date{height:80px;}.l-header_l{_margin-right:-3px;}.l-header_r{_margin-left:-3px;}.l-article_l{float:left;width:220px;margin-right:10px;_margin-right:7px;}.l-article_r{overflow:hidden;zoom:1;}.l-footer{text-align:center;font-size:12px;padding-top:20px;}.box{width:960px;margin:0 auto;}.box-userbar{height:27px;font-size:12px;min-width:960px;overflow:hidden;color:#666;background:#F7F7F7 url(http://s1.hao123img.com/index/images/main1.png) repeat-x 0 0;border-bottom:1px solid #E8E8E9;}.box-userbar .box{line-height:27px;}.box-userbar_link{line-height:28px;margin-right:-9px;}.box-userbar_link span{margin:0 9px;vertical-align:baseline;}.box-userbar_link a{color:#1C1C1C;}.box-userbar_link a:hover{color:#f30;}.box-userbar_link .i-home{float:left;margin-right:3px;_margin-right:0;top:4px;}@-moz-document url-prefix(){.box-userbar_link .i-home{top:5px;}}.box-banner{border:1px solid #E8E8E8;margin-top:9px;display:inline-block;}.box-logo{display:inline-block;width:220px;height:80px;}.box-logo img{margin-top:7px;}.box-weather{float:left;width:289px;height:65px;font-size:12px;font-family:Arial;white-space:nowrap;line-height:21px;padding:15px 0 0 10px;}.box-weather_tip{display:none;}#forecast_content{position:relative;}.box-weather_city{width:65px;float:left;margin-top:5px;position:absolute;left:0;top:0;}.box-weather_city a:hover{color:red;}.box-weather_city .change-city{display:block;height:24px;}.box-weather_city .change-city a{cursor:pointer;}.box-weather_city .change-city a:hover{text-decoration:none;}.box-weather_city span{display:inline-block;height:100%;vertical-align:middle;}.box-weather_city .change-city a .cityName,.box-weather_city .change-city a:link .cityName,.box-weather_city .change-city a:visited .cityName{width:24px;width:auto!important;max-width:52px;overflow:hidden;font-weight:bold;}.box-weather_city .change-city a:hover .cityName{color:red;text-decoration:underline;}.box-weather_city .change-city a .city_edit{display:inline-block;height:100%;width:15px;background:url(http://s1.hao123img.com/index/images/weather/edit.png) no-repeat right 4px;}.box-weather_city .change-city a:hover .city_edit{background:url(http://s1.hao123img.com/index/images/weather/edit.png) no-repeat right -33px;}.box-weather_info{width:224px;float:right;overflow:hidden;position:relative;}.box-weather_info a{cursor:pointer;zoom:1;}.box-weather_info a:hover p{text-decoration:underline;}.box-weather_info_item{width:112px;float:left;position:relative;}.box-weather_info_item .weather_day{font-weight:bold;}.box-weather_info_item_icon{height:48px;width:48px;position:absolute;top:0;left:0;}.box-weather_info_item p{padding-left:55px;height:18px;padding-top:5px;}.box-weather_setCity{display:none;padding-top:5px;}.box-weather_setCity_cancel{cursor:pointer;margin-left:15px;background:none;border:none;cursor:pointer;padding:1px;}.box-weather_setCity p{text-align:center;height:30px;}.box-weather_setCity select{margin-right:3px;}.box-weather_setCity_btn{vertical-align:middle;line-height:1.2;width:50px;height:24px;}.box-weather_setCity_prov{width:79px;}.box-weather_setCity_city,.box-weather_setCity_county{width:96px;}.box-date{width:142px;text-align:center;white-space:nowrap;font-size:12px;font-family:Arial;line-height:23px;}.box-date_ymd{margin-top:3px;}.box-date a:hover{border:none;text-decoration:none;color:#1C1C1C;}.box-date a:hover *{text-decoration:underline;color:#1C1C1C;}.box-date ul{cursor:pointer;display:inline-block;_display:inline;zoom:1;}.box-date_ymd span{font-size:14px;}.box-search{border:1px solid #CBE6BD;margin-bottom:10px;_overflow:hidden;background:#F5F5F5 url(http://s1.hao123img.com/index/images/search2.png) repeat-x 0 -29px;padding-top:6px;width:958px;height:67px;}.box-search_l{float:left;overflow:hidden;position:relative;width:220px;height:58px;margin-right:9px;}.box-search_l img{position:absolute;right:0;bottom:0;}.box-search_c{float:left;}.box-search_tabs a{float:left;text-align:center;line-height:25px;width:49px;height:28px;margin-right:-1px;}.box-search_tabs a:hover{text-decoration:none;color:#1C1C1C;}.box-search_tabs a.cur{background:url(http://s1.hao123img.com/index/images/search2.png) no-repeat 0 0;color:#fff!important;font-weight:bold;cursor:default;}.box-search_input{float:left;position:relative;background:#fff;z-index:99;cursor:text;height:30px;border:1px solid #ABABAB;border-right-color:#D9D9D9;border-bottom-color:#D9D9D9;}.box-search_input input{border:none;background:none;width:441px;height:18px;margin-top:6px;*margin-top:5px;font:16px arial;padding-left:7px;}.box-search_input b{font-size:0;display:block;position:absolute;-moz-user-select:none;}.box-search_input .shadow-x{border-left:1px solid #CFCFCF;border-right:1px solid #EFEFEF;height:100%;}.box-search_input .shadow-y{left:1px;border-top:1px solid #CFCFCF;border-bottom:1px solid #EFEFEF;width:447px;}.box-search_btn{_display:inline;zoom:1;overflow:hidden;float:left;width:96px;margin-left:5px;background:#DBDBDB url(http://s1.hao123img.com/index/images/search2.png) repeat-x 0 -104px;}.box-search_btn .l,.box-search_btn .r{margin-right:0;background:#DBDBDB url(http://s1.hao123img.com/index/images/search2.png) no-repeat -43px -172px;width:3px;height:33px;}.box-search_btn .r{background-position:-39px -172px;}.box-search_btn .m{border:none;background:none;float:left;width:90px;height:33px;line-height:33px;}.box-search_btn_click .l{background-position:-35px -172px;}.box-search_btn_click .r{background-position:-39px -172px;}.box-search_btn_click{background-position:0 -138px;}.box-search_more{overflow:hidden;_margin-left:-3px;_display:inline;zoom:1;width:56px;background:url(http://s1.hao123img.com/index/images/search2.png) no-repeat 43px -174px;position:relative;z-index:99;}.box-search_more a{text-align:left;margin-left:8px;}.box-search_more_wrap{position:absolute;z-index:99;width:60px;line-height:23px;text-align:center;_overflow-y:hidden;_padding-bottom:2px;}.box-search_more_wrap .shadow{background:#000;opacity:.15;filter:alpha(opacity=15);position:absolute;top:2px;left:2px;position:absolute;width:60px;z-index:-1;height:60px;display:block;position:absolute;z-index:99;width:100%;height:100%;_height:3000px;}.box-search_more_wrap .content{position:relative;z-index:100;border:1px solid #817F82;background:#fff;}.box-search_more_wrap a{zoom:1;display:block;}.box-search_more_wrap a:hover{background:#E2EAFF;color:#1C1C1C;font-weight:bold;text-decoration:none;}.box-search_r{float:right;position:relative;overflow:hidden;width:170px;height:58px;}.box-search_notice{font-size:12px;text-align:right;margin-top:6px;padding-right:5px;}.box-hotword{display:inline;vertical-align:bottom;position:absolute;bottom:5px;white-space:nowrap;font:normal 12px/1.231 宋体!important;margin-left:15px;}.box-hotword span{margin:0 9px;}.box-hotword a{color:#666;}.box-leftbar{border:1px solid #CBE6BD;padding:2px;background:#ECF5E8;height:1075px;overflow:hidden;}.box-leftbar_inner{background:#F9FEF4;overflow:hidden;width:214px;}.box-sidebar{background:#F9FEF4;padding:12px 0 11px 9px;margin:0 5px;width:214px;}.box-sidebar_title{display:block;line-height:30px;}.box-sidebar_title a{font-weight:bold;color:#498949;}.box-sidebar_content{line-height:28px;}.box-sidebar_content span{width:24.9%;}.box-sidebar_last{height:216px;}.box-starbar{background:#F9FEF4;padding:5px 5px 13px;white-space:nowrap;height:205px;}.box-starbar li{height:30px;*margin-bottom:-3px;line-height:1.2;padding:0 10px;position:relative;}.box-starbar li em a{position:absolute;top:9px;*top:10px;}.box-starbar li.hover{background:url(http://s1.hao123img.com/index/images/hot.png) no-repeat 0 4px;}.box-starbar i{float:left;left:-1px;margin-right:5px;}.box-hotspot{width:auto;padding-top:7px;}.box-hotspot li a{font-family:宋体;}.box-hotspot .box-sidebar_title{color:#498949;font-size:14px;}.box-hotspot li{height:22px;line-height:24px;font-size:12px;overflow:hidden;}.box-hotspot .em{color:red;}.box-hotspot .hot-video{padding-right:20px;background:url(http://s1.hao123img.com/index/images/hot.png) no-repeat right -38px;}.box-hotspot .hot-title{color:#666;}.box-starbar acronym{position:absolute;right:8px;top:9px;*top:11px;height:14px;line-height:14px;}.box-starbar acronym a{font-size:12px;color:#666;}.box-starbar acronym a:hover{color:#f30;}.box-hot{border:2px solid #97c853;overflow:hidden;height:208px;background:#FEFEFB;}.box-hot_content{width:100%;margin-left:15px;margin-top:6px;line-height:31px;}.box-hot_content span{text-align:center;width:115px;overflow:hidden;height:30px;}.box-hot_content span em{color:#999;margin:3px;}.box-adbar{overflow:hidden;height:25px;line-height:25px;font-size:12px;text-align:center;padding-left:5px;}.box-adbar span{margin:0 10px;}.box-adbar a{color:#3b5998;}.box-adbar a:hover{color:#f30;text-decoration:underline;}.box-sort{position:relative;margin-bottom:0;border:1px solid #97c853;background:#ECF5E8;padding:2px;overflow:hidden;z-index:10;}.box-sort_title{position:absolute;left:3px;z-index:10;}.box-sort_title a{color:#108410;}.box-sort_title a:hover{color:#f30;}.box-sort_content .box-sort_more{position:absolute;right:-3px;line-height:29px;z-index:10;display:block;}.box-sort_more a{color:#666;font-size:12px;font-family:\5B8B\4F53;}.box-sort_content{overflow:hidden;white-space:nowrap;padding:5px 0;line-height:32px;background:#fff;text-align:center;border-bottom:5px solid #E5EFDB;background:#FBFEF7;}.box-sort_last{border:0;}.box-sort_content span{margin:0 11px;}.box-sort_content span em{color:#999;margin:3px;}.box-tools{margin-top:10px;border:1px solid #CBE6BD;padding:2px;background:#ECF5E8;overflow:hidden;height:82px;position:relative;}.box-tools_content{white-space:nowrap;line-height:26px;font-size:12px;padding-top:2px;padding-bottom:2px;background:#F9FEF4;}.box-tools_content li{overflow:hidden;position:relative;zoom:1;}.box-tools_content span{margin-right:18px;}span.box-tools_title{float:left;overflow:hidden;margin-left:15px;margin-right:3px;_margin-right:-3px;width:60px;}.box-tools_content a{color:#1C1C1C;}.box-tools_content a:hover{color:#f30;text-decoration:underline;}.box-tools_title a{color:#205001;font-weight:bold;}.box-tools_content .box-tools_more{position:absolute;top:0;right:6px;margin:0;}.box-tools_more a{color:#666;font-family:\5B8B\4F53;}.box-about span{padding:0 9px;}.box-about b{top:0;}span.box-about_first{border:none;}.box-copyright{margin-top:10px;_margin-top:12px;margin-bottom:10px;line-height:16px;}.box-copyright span{margin:0 14px;}.box-copyright .i-papers{left:3px;top:-1px;vertical-align:top;_vertical-align:baseline;}.box-copyright a,.box-copyright a:hover,.box-about a,.box-about a:hover{color:#1C1C1C;}.box-mail{font-size:12px;color:#666;width:190px;}.box-mail ul{margin-top:15px;}.box-mail li{margin-top:10px;}.box-mail_input,.box-mail_select,.box-mail_btn{display:inline-block;_display:inline;zoom:1;vertical-align:middle;border:1px solid #A1BCD1;}.box-mail_input{background:#fff;border-color:#A1BCD1;border-bottom-color:#A1BCD1;border-right-color:#A1BCD1;margin-right:2px;height:17px;overflow:hidden;}.box-mail_input input{background:none;border:1px solid #E9E9E9;padding-left:-5px;border-bottom:none;border-right:none;width:88px;height:16px;line-height:17px;font-family:arial;vertical-align:top;*margin-top:-1px;padding-left:1px;padding-left:2px\9;}.box-mail_input_passwd,.box-mail_input_passwd input{width:129px;_width:130px;}.box-mail_select span,.box-mail_btn button{float:left;overflow:hidden;line-height:17px;height:17px;_height:16px;}.box-mail_select,.box-mail_btn button{background:#F1F1F4 url(http://s1.hao123img.com/index/images/main1.png) repeat-x 0 -28px;}.box-mail_select{font-family:Tahoma;margin-left:-10px;height:17px;line-height:17px;margin-right:5px;cursor:pointer;}.box-mail_select span{width:88px;padding-left:3px;background:url(http://s1.hao123img.com/index/images/main1.png) no-repeat right -108px;}.box-mail_select_click{background:#DDD;}.box-mail_btn button{width:39px;line-height:18px;line-height:20px\9;border:none;color:#666;}.box-mail_layer{z-index:99;font-size:12px;line-height:19px;vertical-align:baseline;cursor:default;border:1px solid #817F82;background:#fff;width:91px;position:absolute;overflow:hidden;}.box-mail_layer li{padding-left:3px;}.box-mail_layer .hover{background:#E2EAFF;cursor:pointer;}.box-mail_layer .no{color:#999;}.box-mail_layer a{zoom:1;display:block;}.box-mail_layer a:hover{color:#1C1C1C;text-decoration:none;}@media not screen and(1){.box-mail{margin-top:0;}}.box-fav{margin:0 auto;margin:0 auto;width:960px;margin-top:-10px;}.b-edit{margin-bottom:0;padding-bottom:0;}.box-fav .site{width:100%;}.box-fav .s-edit{height:34px;position:relative;overflow:hidden;}.box-fav .s-list{float:left;width:960px;height:34px;}.box-sites .haoMySite dt{padding-left:0;}.haoMySite{font-size:14px;height:34px;line-height:34px;overflow:hidden;}.haoMySite dt{float:left;padding-right:5px;}.haoMySite dd{display:inline-block;float:left;position:relative;}.haoMySite a{margin-right:20px;position:relative;}.tc-orange,.tc-orange a{color:#f30;}.box-banner{vertical-align:middle\0;}.box-tools_title a{color:#498949;}.box-side_more{font-family: SimSun;}
+	.l-article_r a{ display:inline-block; padding:0px 7px;}
+	.l-article_r a.hot-item-left{ padding-right:4px;}
+	.l-article_r .box-sort .span-rows span{ height:32px; overflow:hidden; }
+	.l-article_r .box-hot .span-rows span{ height:30px; overflow:hidden; }
+	.l-article_r a.hot-item-right{padding-left:4px;}
+	.l-article_r a.sort-item-left{ padding-right:4px;}
+	.l-article_r a.sot-item-right{padding-left:4px;}
+	.box-sort_content{ line-height:30px;}
+	.box-adbar span{ margin:0 3px;}
+	
+	.box-hot_content span{ }
+
+	.box-sort_content span{ margin:0 4px;}
+	.box-mail_input input{ width:80px; padding-right:2px;}
+	.box-mail_select{ margin-left:-4px;}; Xpath: /html/head/style; css: {type: text/css;#}>
+<ID: ; url: ; txt: ; Xpath: /html/head/script; css: {src: http://s0.hao123img.com/index/js/hao_20120306.js?r=1;#}>
+<ID: ; url: ; txt: var pageId = "hao123-indexnu"; 
+var antic =(function(_){var A=((self!==top)||(!!window.opener))?1:0,$=encodeURIComponent(_.referrer);return{embed:A,ref:$}})(document);
+Model.Global.UT && (Model.Global.UT.conf = {data: {level: 1,page: "index"}});
+Model.Global.UT.send({type:"access",embed:antic.embed,ref:antic.ref,pageId:pageId});; Xpath: /html/head/script; css: {#}>
+<ID: ; url: ; txt: STATUS OK[if gte IE 9]>
+<meta name="application-name" content="hao123 我的上网主页" />
+	<meta name="msapplication-tooltip" content="hao123 我的上网主页" />
+	<meta name="msapplication-window" content="width=1024;height=768" />
+        <meta name="msapplication-task" content="name=实用查询;action-uri=http://www.hao123.com/tools/tool.html?pin;icon-uri=http://www.hao123.com/images/tool.ico" />
+	<meta name="msapplication-task" content="name=电视剧;action-uri=http://tv.hao123.com/?pin;icon-uri=http://www.hao123.com/images/tv.ico" />
+	<meta name="msapplication-task" content="name=电影;action-uri=http://movie.hao123.com/?pin;icon-uri=http://www.hao123.com/images/movie.ico" />
+	<meta name="msapplication-task" content="name=音乐;action-uri=http://music.hao123.com/?pin;icon-uri=http://www.hao123.com/images/music.ico" />
+        <meta name="msapplication-task" content="name=团购;action-uri=http://tuan.baidu.com/?pin;icon-uri=http://www.hao123.com/images/tuan.ico" />	
+        <meta name="msapplication-task" content="name=小游戏;action-uri=http://xyx.hao123.com/?pin;icon-uri=http://www.hao123.com/images/game.ico" />	
+        <meta name="msapplication-task" content="name=意见反馈;action-uri=http://feedback.hao123.com/?pin&catalog_id=3;icon-uri=http://www.hao123.com/images/haofav.ico" />	
+	<meta name="msapplication-starturl" content="http://www.hao123.com/index.html" />
+        <link rel="shortcut icon" href="http://www.hao123.com/images/haofav.ico" type="image/x-icon" />
+<![endif][if IE 6]>
+<style>
+.box-date_ymd {margin-left:-12px;}
+.box-sidebar_last {
+    height:212px;
+} 
+</style>
+<![endif]; Xpath: /html/head; css: {#}>
+<ID: ; url: http://app.baidu.com/365rili; txt: ; Xpath: /html/body/div/div/div/a; css: {hidefocus: true;href: http://app.baidu.com/365rili;title: 点击查看万年历;#}>
+<ID: ; url: http://app.baidu.com/365rili; txt: ; Xpath: /html/body/div/div/div/ul/a; css: {hidefocus: true;href: http://app.baidu.com/365rili;title: 点击查看万年历;#}>
+<ID: ; url: http://app.baidu.com/365rili; txt: ; Xpath: /html/body/div/div/div/ul/li/a; css: {hidefocus: true;href: http://app.baidu.com/365rili;title: 点击查看万年历;#}>
+<ID: ; url: ; txt: 14:41; Xpath: /html/body/div/div/div/ul/li/a/span; css: {#}>
+<ID: ; url: ; txt: 2012年4月12日 星期四（农历三月廿二）; Xpath: /html/body/div/div/div/ul/li/a; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {class: box-date_ymd;#}>
+<ID: dateBox; url: ; txt: ; Xpath: /html/body/div/div/div/ul; css: {id: dateBox;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div; css: {class: ft-l box-date;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span/a/i; css: {class: i-home;#}>
+<ID: setHomeLink; url: http://www.hao123.com; txt: 把hao123设为主页; Xpath: /html/body/div/div/div/span/a; css: {hidefocus: true;href: http://www.hao123.com;id: setHomeLink;onclick: return false;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {class: tc-blue;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/b; css: {class: space;#}>
+<ID: ; url: http://www.hao123.com/redian/tongzhi.htm; txt: 主页修复; Xpath: /html/body/div/div/div/span/a; css: {href: http://www.hao123.com/redian/tongzhi.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/b; css: {class: space;#}>
+<ID: ; url: http://www.hao123.com/indexnt.html?theme; txt: 个性设置; Xpath: /html/body/div/div/div/span/a; css: {href: http://www.hao123.com/indexnt.html?theme;target: _self;title: 新版暂不支持个性设置;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/b; css: {class: space;#}>
+<ID: ; url: http://app.hao123.com/sms/app.html; txt: 手机版; Xpath: /html/body/div/div/div/span/a; css: {style: color: rgb(255, 51, 0);;href: http://app.hao123.com/sms/app.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/b; css: {class: space;#}>
+<ID: ; url: http://feedback.hao123.com/?catalog_id=3; txt: 意见反馈; Xpath: /html/body/div/div/div/span/a; css: {href: http://feedback.hao123.com/?catalog_id=3;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div; css: {class: ft-r span-rows box-userbar_link;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div; css: {class: box;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div; css: {class: box-userbar;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/span/a/img; css: {width: 210;height: 71;src: http://s1.hao123img.com/index/images/logo-2012-wuxian.png?v=1;#}>
+<ID: indexLogo; url: http://app.hao123.com/sms/app.html; txt: ; Xpath: /html/body/div/div/span/a; css: {hidefocus: true;href: http://app.hao123.com/sms/app.html;id: indexLogo;title: 下载hao123手机客户端;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/span; css: {class: box-logo;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div; css: {class: ft-l l-header_l;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/span/a/img; css: {width: 240;style: display: block;;height: 60;border: 0;src: http://drmcmm.baidu.com/media/id=Pj6YPHndnWc&gp=402&time=nHnzP1bLrHfsPf.gif;#}>
+<ID: ; url: http://www.baidu.com/adrc.php?t=00jy00c00fAUq0m0TW0h0cyPFf0BXmu50000000000000000XLdjY0.THY60A3q0ZnqnW79PW9-PHDzm1bsuW9hP6Kd5fK95ywlnAdWXWK4HNI7nbqZNH7PNDGJHdwaURqZyHF2UH7JmNIwrR4RiHF5wDbdHbwoUyPciMupwvkoR7w7UN-RnZ9mXb7VuDTsrRG8NMwfRdGvmvdorRdjyMGbNYGvmvdorRG8fM-9NjK3ihdApvn1ihGfNDD-nYf0uHdCIZwsrBtEILILQMC8mv3E5Lw9u1dCmytknWPWUvYVmh78UhNzQHc10APzm1YkPWDsn0; txt: ; Xpath: /html/body/div/div/span/a; css: {href: http://www.baidu.com/adrc.php?t=00jy00c00fAUq0m0TW0h0cyPFf0BXmu50000000000000000XLdjY0.THY60A3q0ZnqnW79PW9-PHDzm1bsuW9hP6Kd5fK95ywlnAdWXWK4HNI7nbqZNH7PNDGJHdwaURqZyHF2UH7JmNIwrR4RiHF5wDbdHbwoUyPciMupwvkoR7w7UN-RnZ9mXb7VuDTsrRG8NMwfRdGvmvdorRdjyMGbNYGvmvdorRG8fM-9NjK3ihdApvn1ihGfNDD-nYf0uHdCIZwsrBtEILILQMC8mv3E5Lw9u1dCmytknWPWUvYVmh78UhNzQHc10APzm1YkPWDsn0;target: _blank;#}>
+<ID: ads214; url: ; txt: ; Xpath: /html/body/div/div/span; css: {id: ads214;class: box-banner;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div; css: {class: ft-r l-header_r;#}>
+<ID: mailUserName; url: ; txt: ; Xpath: /html/body/div/div/div/form/ul/li/span/input; css: {autocomplete: off;id: mailUserName;value: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/form/ul/li/span; css: {class: box-mail_input;#}>
+<ID: mailSelect; url: ; txt: @163.com; Xpath: /html/body/div/div/div/form/ul/li/span/span; css: {id: mailSelect;data-n: 0;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/form/ul/li/span; css: {style: -moz-user-select: none;;class: box-mail_select;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/form/ul/li; css: {#}>
+<ID: mailPassWord; url: ; txt: ; Xpath: /html/body/div/div/div/form/ul/li/span/input; css: {type: password;id: mailPassWord;value: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/form/ul/li/span; css: {class: box-mail_input box-mail_input_passwd;#}>
+<ID: mailParas; url: ; txt: ; Xpath: /html/body/div/div/div/form/ul/li/span; css: {style: display: none;;id: mailParas;#}>
+<ID: ; url: ; txt: 登录; Xpath: /html/body/div/div/div/form/ul/li/span/button; css: {hidefocus: true;type: submit;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/form/ul/li/span; css: {class: box-mail_btn;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/form/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/form/ul; css: {#}>
+<ID: mailForm; url: ; txt: ; Xpath: /html/body/div/div/div/form; css: {action: http://reg.163.com/CheckUser.jsp;method: post;id: mailForm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div; css: {class: ft-r box-mail;#}>
+<ID: ; url: ; txt: B 北京; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10101;#}>
+<ID: ; url: ; txt: S 上海; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10102;#}>
+<ID: ; url: ; txt: T 天津; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10103;#}>
+<ID: ; url: ; txt: C 重庆; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10104;#}>
+<ID: ; url: ; txt: A 安徽; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10122;#}>
+<ID: ; url: ; txt: F 福建; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10123;#}>
+<ID: ; url: ; txt: G 甘肃; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10116;#}>
+<ID: ; url: ; txt: G 广东; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10128;#}>
+<ID: ; url: ; txt: G 广西; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10130;#}>
+<ID: ; url: ; txt: G 贵州; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10126;#}>
+<ID: ; url: ; txt: H 海南; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10131;#}>
+<ID: ; url: ; txt: H 河北; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10109;#}>
+<ID: ; url: ; txt: H 河南; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10118;#}>
+<ID: ; url: ; txt: H 黑龙江; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10105;#}>
+<ID: ; url: ; txt: H 湖北; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10120;#}>
+<ID: ; url: ; txt: H 湖南; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10125;#}>
+<ID: ; url: ; txt: J 江苏; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10119;#}>
+<ID: ; url: ; txt: J 江西; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10124;#}>
+<ID: ; url: ; txt: J 吉林; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10106;#}>
+<ID: ; url: ; txt: L 辽宁; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10107;#}>
+<ID: ; url: ; txt: N 内蒙古; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10108;#}>
+<ID: ; url: ; txt: N 宁夏; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10117;#}>
+<ID: ; url: ; txt: Q 青海; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10115;#}>
+<ID: ; url: ; txt: S 山东; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10112;#}>
+<ID: ; url: ; txt: S 山西; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10110;#}>
+<ID: ; url: ; txt: S 陕西; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10111;#}>
+<ID: ; url: ; txt: S 四川; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10127;#}>
+<ID: ; url: ; txt: X 西藏; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10114;#}>
+<ID: ; url: ; txt: X 新疆; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10113;#}>
+<ID: ; url: ; txt: Y 云南; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10129;#}>
+<ID: ; url: ; txt: Z 浙江; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10121;#}>
+<ID: ; url: ; txt: X 香港; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10132;#}>
+<ID: ; url: ; txt: A 澳门; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10133;#}>
+<ID: ; url: ; txt: T 台湾; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10134;#}>
+<ID: ; url: ; txt: G 国外; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10135;#}>
+<ID: provSelect; url: ; txt: ; Xpath: /html/body/div/div/div/div/p/select; css: {class: box-weather_setCity_prov;id: provSelect;#}>
+<ID: ; url: ; txt: B 北京; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 00;#}>
+<ID: citySelect; url: ; txt: ; Xpath: /html/body/div/div/div/div/p/select; css: {class: box-weather_setCity_city;id: citySelect;#}>
+<ID: ; url: ; txt: B 北京; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 01;#}>
+<ID: ; url: ; txt: C 昌平; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 07;#}>
+<ID: ; url: ; txt: C 朝阳; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 03;#}>
+<ID: ; url: ; txt: D 大兴; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 11;#}>
+<ID: ; url: ; txt: F 房山; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 12;#}>
+<ID: ; url: ; txt: F 丰台; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 09;#}>
+<ID: ; url: ; txt: H 海淀; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 02;#}>
+<ID: ; url: ; txt: H 怀柔; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 05;#}>
+<ID: ; url: ; txt: M 门头沟; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 14;#}>
+<ID: ; url: ; txt: M 密云; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 13;#}>
+<ID: ; url: ; txt: P 平谷; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 15;#}>
+<ID: ; url: ; txt: S 石景山; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 10;#}>
+<ID: ; url: ; txt: S 顺义; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 04;#}>
+<ID: ; url: ; txt: T 通州; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 06;#}>
+<ID: ; url: ; txt: Y 延庆; Xpath: /html/body/div/div/div/div/p/select/option; css: {value: 08;#}>
+<ID: countySelect; url: ; txt: ; Xpath: /html/body/div/div/div/div/p/select; css: {class: box-weather_setCity_county;id: countySelect;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/p; css: {#}>
+<ID: setBtn; url: ; txt: 确定; Xpath: /html/body/div/div/div/div/p/button; css: {class: box-weather_setCity_btn;id: setBtn;#}>
+<ID: cancel; url: ; txt: 取消; Xpath: /html/body/div/div/div/div/p/button; css: {class: box-weather_setCity_cancel;id: cancel;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/p; css: {#}>
+<ID: setCity; url: ; txt: ; Xpath: /html/body/div/div/div/div; css: {class: box-weather_setCity;id: setCity;#}>
+<ID: weatherTip; url: ; txt: ; Xpath: /html/body/div/div/div/div/div; css: {style: display: none;;class: box-weather_tip;id: weatherTip;#}>
+<ID: ; url: ; txt: 北京; Xpath: /html/body/div/div/div/div/div/div/div/a/span; css: {class: cityName;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div/div/a/span; css: {class: city_edit;#}>
+<ID: changeCity; url: #; txt: ; Xpath: /html/body/div/div/div/div/div/div/div/a; css: {href: #;id: changeCity;title: 修改城市;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div/div; css: {class: change-city;#}>
+<ID: ; url: http://www.weather.com.cn/weather/101010100.shtml#7d; txt: 七日天气; Xpath: /html/body/div/div/div/div/div/div/a; css: {href: http://www.weather.com.cn/weather/101010100.shtml#7d;target: _blank;title: 最近7日天气详情;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div; css: {class: box-weather_city;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div/a/div/div; css: {style: background: transparent url(http://s1.hao123img.com/index/images/weather/icon/a0.jpg) no-repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;;class: box-weather_info_item_icon;#}>
+<ID: ; url: ; txt: 今天; Xpath: /html/body/div/div/div/div/div/div/a/div/p; css: {class: weather_day;#}>
+<ID: ; url: ; txt: 23 ~ 10℃; Xpath: /html/body/div/div/div/div/div/div/a/div/p; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div/a/div; css: {class: box-weather_info_item;#}>
+<ID: ; url: http://www.weather.com.cn/weather/101010100.shtml; txt: ; Xpath: /html/body/div/div/div/div/div/div/a; css: {href: http://www.weather.com.cn/weather/101010100.shtml;target: _blank;title: 晴;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div/a/div/div; css: {style: background: transparent url(http://s1.hao123img.com/index/images/weather/icon/a0.jpg) no-repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;;class: box-weather_info_item_icon;#}>
+<ID: ; url: ; txt: 明天; Xpath: /html/body/div/div/div/div/div/div/a/div/p; css: {class: weather_day;#}>
+<ID: ; url: ; txt: 26 ~ 12℃; Xpath: /html/body/div/div/div/div/div/div/a/div/p; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div/a/div; css: {class: box-weather_info_item;#}>
+<ID: ; url: http://www.weather.com.cn/weather/101010100.shtml; txt: ; Xpath: /html/body/div/div/div/div/div/div/a; css: {href: http://www.weather.com.cn/weather/101010100.shtml;target: _blank;title: 晴;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div; css: {class: box-weather_info;#}>
+<ID: forecast_content; url: ; txt: ; Xpath: /html/body/div/div/div/div/div; css: {style: display: block;;id: forecast_content;#}>
+<ID: weatherInfo; url: ; txt: ; Xpath: /html/body/div/div/div/div; css: {style: display: block;;id: weatherInfo;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div; css: {class: ft-l box-weather;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div; css: {class: l-header_m;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div; css: {monkey: header;class: box l-header;#}>
+<ID: searchGroupLogo; url: ; txt: ; Xpath: /html/body/div/div/a/img; css: {width: 97;alt: 百度首页;height: 32;id: searchGroupLogo;src: http://s0.hao123img.com/index/images/search_logo/web.png;#}>
+<ID: ; url: http://www.baidu.com/index.php?tn=sitehao123; txt: ; Xpath: /html/body/div/div/a; css: {href: http://www.baidu.com/index.php?tn=sitehao123;title: 百度首页;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div; css: {class: box-search_l;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div; css: {class: box-search_notice;#}>
+<ID: ; url: http://app.hao123.com/sms/app.html; txt: hao123手机客户端发布啦; Xpath: /html/body/div/div/div/a; css: {href: http://app.hao123.com/sms/app.html;target: _blank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div; css: {class: box-hotword;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div; css: {class: box-search_r;#}>
+<ID: ; url: #; txt: 网页; Xpath: /html/body/div/dl/dt/a; css: {hidefocus: true;href: #;data-t: web;onclick: baidu.event.preventDefault(event);class: cur;#}>
+<ID: ; url: #; txt: MP3; Xpath: /html/body/div/dl/dt/a; css: {hidefocus: true;href: #;data-t: mp3;onclick: baidu.event.preventDefault(event);#}>
+<ID: ; url: #; txt: 视频; Xpath: /html/body/div/dl/dt/a; css: {hidefocus: true;href: #;data-t: video;onclick: baidu.event.preventDefault(event);#}>
+<ID: ; url: #; txt: 图片; Xpath: /html/body/div/dl/dt/a; css: {hidefocus: true;href: #;data-t: image;onclick: baidu.event.preventDefault(event);#}>
+<ID: ; url: #; txt: 贴吧; Xpath: /html/body/div/dl/dt/a; css: {hidefocus: true;href: #;data-t: tieba;onclick: baidu.event.preventDefault(event);#}>
+<ID: ; url: #; txt: 知道; Xpath: /html/body/div/dl/dt/a; css: {hidefocus: true;href: #;data-t: zhidao;onclick: baidu.event.preventDefault(event);#}>
+<ID: ; url: #; txt: 新闻; Xpath: /html/body/div/dl/dt/a; css: {hidefocus: true;href: #;data-t: news;onclick: baidu.event.preventDefault(event);#}>
+<ID: ; url: #; txt: 地图; Xpath: /html/body/div/dl/dt/a; css: {hidefocus: true;href: #;data-t: map;onclick: baidu.event.preventDefault(event);#}>
+<ID: searchGroupMoreTab; url: #; txt: 更多; Xpath: /html/body/div/dl/dt/div/a; css: {hidefocus: true;href: #;data-t: more;onclick: baidu.event.preventDefault(event);id: searchGroupMoreTab;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/dl/dt/div; css: {class: box-search_more;#}>
+<ID: searchGroupTabs; url: ; txt: ; Xpath: /html/body/div/dl/dt; css: {class: box-search_tabs clearfix;style: -moz-user-select: none;;id: searchGroupTabs;monkey: search;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/dl/dd/form/div/b; css: {class: shadow-x;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/dl/dd/form/div/b; css: {class: shadow-y;#}>
+<ID: searchGroupInput; url: ; txt: ; Xpath: /html/body/div/dl/dd/form/div/input; css: {name: word;value: ;autocomplete: off;maxlength: 100;type: text;id: searchGroupInput;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/dl/dd/form/div; css: {class: box-search_input;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/dl/dd/form/span/b; css: {class: r;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/dl/dd/form/span/b; css: {class: l;#}>
+<ID: searchGroupBtn; url: ; txt: 百度一下; Xpath: /html/body/div/dl/dd/form/span/button; css: {hidefocus: true;type: submit;class: m;id: searchGroupBtn;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/dl/dd/form/span; css: {class: corner box-search_btn clearfix;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/dl/dd/form/span/input; css: {type: hidden;name: tn;value: sitehao123;#}>
+<ID: searchGroupParams; url: ; txt: ; Xpath: /html/body/div/dl/dd/form/span; css: {style: display: none;;id: searchGroupParams;#}>
+<ID: sugMonParam; url: ; txt: ; Xpath: /html/body/div/dl/dd/form/span; css: {style: display: none;;id: sugMonParam;#}>
+<ID: searchGroupForm; url: ; txt: ; Xpath: /html/body/div/dl/dd/form; css: {action: http://www.baidu.com/s;id: searchGroupForm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/dl/dd; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/dl; css: {class: box-search_c;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div; css: {class: box box-search clearfix;#}>
+<ID: netsite; url: ; txt: ; Xpath: /html/body/div; css: {style: display: none;;id: netsite;class: box-fav b-edit;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em/a/i; css: {class: i-tool;#}>
+<ID: ; url: http://life.hao123.com; txt: 实用查询; Xpath: /html/body/div/div/div/div/ul/li/em/a; css: {href: http://life.hao123.com;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em; css: {#}>
+<ID: ; url: http://www.hao123.com/xingzuonew.html; txt: 星座运势; Xpath: /html/body/div/div/div/div/ul/li/acronym/a; css: {href: http://www.hao123.com/xingzuonew.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/acronym; css: {title: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em/a/i; css: {class: i-tv;#}>
+<ID: ; url: http://v.hao123.com/tv/; txt: 电视剧; Xpath: /html/body/div/div/div/div/ul/li/em/a; css: {href: http://v.hao123.com/tv/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em; css: {#}>
+<ID: ; url: http://tv.hao123.com/intro?id=10755; txt: 后宫甄嬛传; Xpath: /html/body/div/div/div/div/ul/li/acronym/a; css: {href: http://tv.hao123.com/intro?id=10755;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/acronym; css: {title: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em/a/i; css: {class: i-movie;#}>
+<ID: ; url: http://v.hao123.com/movie/; txt: 电　影; Xpath: /html/body/div/div/div/div/ul/li/em/a; css: {href: http://v.hao123.com/movie/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em; css: {#}>
+<ID: ; url: http://movie.hao123.com/index/?plot=%BE%AA%E3%A4; txt: 惊悚电影专辑; Xpath: /html/body/div/div/div/div/ul/li/acronym/a; css: {href: http://movie.hao123.com/index/?plot=%BE%AA%E3%A4;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/acronym; css: {title: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em/a/i; css: {class: i-music;#}>
+<ID: ; url: http://music.hao123.com/; txt: 音　乐; Xpath: /html/body/div/div/div/div/ul/li/em/a; css: {href: http://music.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em; css: {#}>
+<ID: ; url: http://music.hao123.com/?provider=kuwo_mb&isb=1&bid=5; txt: 经典歌曲; Xpath: /html/body/div/div/div/div/ul/li/acronym/a; css: {href: http://music.hao123.com/?provider=kuwo_mb&isb=1&bid=5;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/acronym; css: {title: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em/a/i; css: {class: i-caipiao;#}>
+<ID: ; url: http://caipiao.hao123.com/; txt: 彩　票; Xpath: /html/body/div/div/div/div/ul/li/em/a; css: {href: http://caipiao.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em; css: {#}>
+<ID: ; url: http://caipiao.hao123.com/; txt: 大乐透开奖公告; Xpath: /html/body/div/div/div/div/ul/li/acronym/a; css: {href: http://caipiao.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/acronym; css: {title: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em/a/i; css: {class: i-tuan;#}>
+<ID: ; url: http://tuan.baidu.com/; txt: 团　购; Xpath: /html/body/div/div/div/div/ul/li/em/a; css: {href: http://tuan.baidu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em; css: {#}>
+<ID: ; url: http://zhekou.hao123.com/zt/coupon?hmsr=mxlm&hmmd=&hmpl=&hmkw=&hmci=; txt: 优惠券限量抢; Xpath: /html/body/div/div/div/div/ul/li/acronym/a; css: {href: http://zhekou.hao123.com/zt/coupon?hmsr=mxlm&hmmd=&hmpl=&hmkw=&hmci=;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/acronym; css: {title: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em/a/i; css: {class: i-game;#}>
+<ID: ; url: http://xyx.hao123.com/; txt: 小游戏; Xpath: /html/body/div/div/div/div/ul/li/em/a; css: {href: http://xyx.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/em; css: {#}>
+<ID: ; url: http://xyx.hao123.com/pic/pic_0_0_1_32_0.html; txt: 连连看全集; Xpath: /html/body/div/div/div/div/ul/li/acronym/a; css: {href: http://xyx.hao123.com/pic/pic_0_0_1_32_0.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li/acronym; css: {title: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/li; css: {#}>
+<ID: starBar; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul; css: {class: m box-starbar;id: starBar;monkey: star;#}>
+<ID: ; url: ; txt: T.event.on(T.g("starBar"), "mouseover", function (e) {
+                        var e = e || window.event,
+							el = e.target || e.srcElement;
+                        try {
+                            while (el && el.tagName.toUpperCase() != "LI") {
+                                el = el.parentNode;
+                            }
+                        } catch (e) {
+                        }
+
+                        if (!el) {
+                            return;
+                        }
+                        clearHover();
+                        T.addClass(el, "hover");
+                    });
+                    T.event.on(T.g("starBar"), "mouseout", function (e) {
+                        clearHover();
+                    });
+                    function clearHover() {
+                        var list = T.g("starBar").getElementsByTagName("li"),
+							len = list.length,
+							i = 0;
+
+                        for (; i < len; i++) {
+                            T.removeClass(list[i], "hover");
+                        }
+                    }; Xpath: /html/body/div/div/div/div/script; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div; css: {style: border-top: 1px dashed rgb(204, 224, 194); margin: 0pt 6px; line-height: 0pt; height: 0pt; font-size: 0pt;;#}>
+<ID: ; url: ; txt: 实时热点; Xpath: /html/body/div/div/div/div/ul/h3; css: {class: box-sidebar_title;#}>
+<ID: ; url: http://news.ifeng.com/; txt: 新闻; Xpath: /html/body/div/div/div/div/ul/ul/li/span/a; css: {href: http://news.ifeng.com/;#}>
+<ID: ; url: ; txt: |; Xpath: /html/body/div/div/div/div/ul/ul/li/span; css: {class: hot-title;#}>
+<ID: ; url: http://news.ifeng.com/mainland/special/boxilai/content-3/detail_2012_04/11/13814695_0.shtml; txt: 重庆人大:震惊薄熙来违纪; Xpath: /html/body/div/div/div/div/ul/ul/li/a; css: {href: http://news.ifeng.com/mainland/special/boxilai/content-3/detail_2012_04/11/13814695_0.shtml;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/ul/li; css: {#}>
+<ID: ; url: http://news.ifeng.com/; txt: 新闻; Xpath: /html/body/div/div/div/div/ul/ul/li/span/a; css: {href: http://news.ifeng.com/;#}>
+<ID: ; url: ; txt: |; Xpath: /html/body/div/div/div/div/ul/ul/li/span; css: {class: hot-title;#}>
+<ID: ; url: http://v.ifeng.com/v/bxlwj2012/index.shtml#30097879-bb6e-4238-b69b-3cc9a81f76ef; txt: 中纪委对薄熙来立案调查; Xpath: /html/body/div/div/div/div/ul/ul/li/a; css: {href: http://v.ifeng.com/v/bxlwj2012/index.shtml#30097879-bb6e-4238-b69b-3cc9a81f76ef;class: hot-video;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/ul/li; css: {#}>
+<ID: ; url: http://ent.163.com/; txt: 娱乐; Xpath: /html/body/div/div/div/div/ul/ul/li/span/a; css: {href: http://ent.163.com/;#}>
+<ID: ; url: ; txt: |; Xpath: /html/body/div/div/div/div/ul/ul/li/span; css: {class: hot-title;#}>
+<ID: ; url: http://ent.163.com/12/0412/00/7UROLQRJ00031H2L.html; txt: 曝车晓与晋首富离婚获赔3亿; Xpath: /html/body/div/div/div/div/ul/ul/li/a; css: {href: http://ent.163.com/12/0412/00/7UROLQRJ00031H2L.html;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/ul/li; css: {#}>
+<ID: ; url: http://news.163.com/; txt: 新闻; Xpath: /html/body/div/div/div/div/ul/ul/li/span/a; css: {href: http://news.163.com/;#}>
+<ID: ; url: ; txt: |; Xpath: /html/body/div/div/div/div/ul/ul/li/span; css: {class: hot-title;#}>
+<ID: ; url: http://news.163.com/12/0412/03/7US3M79N00014JB6.html; txt: 两中国留美生 宝马车内被杀; Xpath: /html/body/div/div/div/div/ul/ul/li/a; css: {href: http://news.163.com/12/0412/03/7US3M79N00014JB6.html;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/ul/ul; css: {#}>
+<ID: box-hotspot; url: ; txt: 实时热点; Xpath: /html/body/div/div/div/div/ul; css: {id: box-hotspot;class: corner box-sidebar box-hotspot;monkey: cool;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div; css: {style: border-top: 1px dashed rgb(204, 224, 194); margin: 0pt 6px; line-height: 0pt; height: 0pt; font-size: 0pt;;#}>
+<ID: ; url: http://www.hao123.com/menu_shfw; txt: 生活服务; Xpath: /html/body/div/div/div/div/div/dl/dt/span/a; css: {href: http://www.hao123.com/menu_shfw;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dt/span; css: {class: box-sidebar_title;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dt; css: {class: m;#}>
+<ID: ; url: http://gouwu.hao123.com/; txt: 购物; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://gouwu.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://caipiao.hao123.com/; txt: 彩票; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://caipiao.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://life.hao123.com/; txt: 查询; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://life.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/tianqi; txt: 天气; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/tianqi;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: /stocknew.htm; txt: 股票; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: /stocknew.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/stock; txt: 基金; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/stock;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/bank; txt: 银行; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/bank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://lvyou.hao123.com/; txt: 旅游; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://lvyou.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/fangchan; txt: 房产; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/fangchan;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/menu; txt: 菜谱; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/menu;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/auto; txt: 汽车; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/auto;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/map; txt: 地图; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/map;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/health; txt: 健康; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/health;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://zhekou.hao123.com/; txt: 折扣; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://zhekou.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/woman; txt: 女性; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/woman;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://tuan.baidu.com/; txt: 团购; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://tuan.baidu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/child; txt: 儿童; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/child;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/zhaopin; txt: 招聘; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/zhaopin;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/edu; txt: 大学; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/edu;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/mobile; txt: 手机; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/mobile;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd; css: {class: m span-rows box-sidebar_content;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl; css: {monkey: cool;class: corner box-sidebar;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div; css: {style: border-top: 1px dashed rgb(204, 224, 194); margin: 0pt 6px; line-height: 0pt; height: 0pt; font-size: 0pt;;#}>
+<ID: ; url: http://www.hao123.com/menu_ylxx; txt: 娱乐休闲; Xpath: /html/body/div/div/div/div/div/dl/dt/span/a; css: {href: http://www.hao123.com/menu_ylxx;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dt/span; css: {class: box-sidebar_title;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dt; css: {class: m;#}>
+<ID: ; url: http://music.hao123.com; txt: 音乐; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://music.hao123.com;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/game; txt: 游戏; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/game;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/video; txt: 视频; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/video;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://v.hao123.com/movie/; txt: 电影; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://v.hao123.com/movie/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/news; txt: 新闻; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/news;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://book.hao123.com/; txt: 小说; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://book.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/junshi; txt: 军事; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/junshi;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/image; txt: 图片; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/image;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://dongman.hao123.com/; txt: 动漫; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://dongman.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: /xingzuonew.html; txt: 星座; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: /xingzuonew.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/sport; txt: 体育; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/sport;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/nba; txt: NBA; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/nba;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/love; txt: 交友; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/love;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/star; txt: 明星; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/star;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/shequ; txt: 社区; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/shequ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/gaoxiao; txt: 搞笑; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/gaoxiao;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/qq; txt: QQ; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/qq;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/live.htm; txt: 直播; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/live.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://v.hao123.com/tv/; txt: 电视剧; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://v.hao123.com/tv/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://zongyi.hao123.com/; txt: 综艺; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://zongyi.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd; css: {class: m span-rows box-sidebar_content;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl; css: {monkey: cool;class: corner box-sidebar;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div; css: {style: border-top: 1px dashed rgb(204, 224, 194); margin: 0pt 6px; line-height: 0pt; height: 0pt; font-size: 0pt;;#}>
+<ID: ; url: http://www.hao123.com/menu_dfwz; txt: 地方网站; Xpath: /html/body/div/div/div/div/div/dl/dt/span/a; css: {href: http://www.hao123.com/menu_dfwz;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dt/span; css: {class: box-sidebar_title;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dt; css: {class: m;#}>
+<ID: ; url: http://www.hao123.com/navhtm_navbj; txt: 北京; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/navhtm_navbj;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/navhtm_navsh; txt: 上海; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/navhtm_navsh;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/navhtm_navgd; txt: 广东; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/navhtm_navgd;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/navhtm_navhub; txt: 湖北; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/navhtm_navhub;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/navhtm_navsd; txt: 山东; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/navhtm_navsd;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/navhtm_navgx; txt: 广西; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/navhtm_navgx;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/navhtm_navhun; txt: 湖南; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/navhtm_navhun;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/navhtm_navsc; txt: 四川; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/navhtm_navsc;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/navhtm_navjs; txt: 江苏; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/navhtm_navjs;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/navhtm_navshanx; txt: 陕西; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/navhtm_navshanx;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/difangfuwu; txt: 更多>>; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/difangfuwu;class: box-side_more;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd; css: {class: m span-rows box-sidebar_content;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl; css: {monkey: cool;class: corner box-sidebar;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/div; css: {style: border-top: 1px dashed rgb(204, 224, 194); margin: 0pt 6px; line-height: 0pt; height: 0pt; font-size: 0pt;;#}>
+<ID: ; url: http://www.hao123.com/menu_other; txt: 其他; Xpath: /html/body/div/div/div/div/div/dl/dt/span/a; css: {href: http://www.hao123.com/menu_other;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dt/span; css: {class: box-sidebar_title;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dt; css: {class: m;#}>
+<ID: ; url: http://life.hao123.com/soft.html; txt: 软件; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://life.hao123.com/soft.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/mail; txt: 邮箱; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/mail;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/chongwu; txt: 宠物; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/chongwu;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/harcksafe; txt: 杀毒; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/harcksafe;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/sheji; txt: 设计; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/sheji;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/hardware; txt: 电脑; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/hardware;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/desktop; txt: 桌面; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/desktop;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/zhiye; txt: 行业; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/zhiye;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/sheying; txt: 摄影; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/sheying;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/campuseng; txt: 英语; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/campuseng;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/exam; txt: 考试; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/exam;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/eduhtm_qyqx; txt: 学习; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/eduhtm_qyqx;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/quyi; txt: 曲艺; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/quyi;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/yisiu; txt: 琴棋; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/yisiu;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/wendang; txt: 知识; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/wendang;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/worldzh; txt: 国外; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/worldzh;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/aihao; txt: 爱好; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/aihao;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/weibo; txt: 微博; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/weibo;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/xiaoqingxin; txt: 小清新; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/xiaoqingxin;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: http://www.hao123.com/gongyi; txt: 公益; Xpath: /html/body/div/div/div/div/div/dl/dd/span/a; css: {href: http://www.hao123.com/gongyi;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl/dd; css: {class: m span-rows box-sidebar_content;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div/dl; css: {monkey: cool;class: corner box-sidebar box-sidebar_last;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div; css: {class: box-leftbar_inner;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div; css: {class: box-leftbar;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div; css: {class: l-article_l;#}>
+<ID: ; url: http://www.baidu.com/; txt: 百　度; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.baidu.com/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.sina.com.cn/; txt: 新　浪; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.sina.com.cn/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.qq.com/; txt: 腾讯; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.qq.com/;class: hot-item-left em;#}>
+<ID: ; url: http://qzone.qq.com/; txt: QQ空间; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://qzone.qq.com/;class: hot-item-right em;#}>
+<ID: ; url: ; txt: •; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.sohu.com; txt: 搜　狐; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.sohu.com;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.163.com; txt: 网　易; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.163.com;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.google.com.hk/; txt: 谷　歌; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.google.com.hk/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.ifeng.com/; txt: 凤 凰 网; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.ifeng.com/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://weibo.com/; txt: 新浪微博; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://weibo.com/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.xinhuanet.com; txt: 新 华 网; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.xinhuanet.com;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.people.com.cn; txt: 人 民 网; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.people.com.cn;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.10086.cn/; txt: 中国移动; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.10086.cn/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.cntv.cn/index.shtml; txt: CNTV; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.cntv.cn/index.shtml;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.renren.com/; txt: 人 人 网; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.renren.com/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.kaixin001.com/; txt: 开 心 网; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.kaixin001.com/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.51seer.com/?tmcid=85; txt: 赛 尔 号; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.51seer.com/?tmcid=85;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.autohome.com.cn; txt: 汽车之家; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.autohome.com.cn;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.4399.com/; txt: 4399游戏; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.4399.com/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.pconline.com.cn; txt: 太平洋电脑; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.pconline.com.cn;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/div; css: {style: border-top: 1px dashed rgb(204, 224, 194); margin: 5px 15px 6px 0pt;;#}>
+<ID: ; url: http://www.eastmoney.com; txt: 东方财富; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.eastmoney.com;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.58.com; txt: 58 同 城; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.58.com;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.zhcw.com; txt: 中 彩 网; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.zhcw.com;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.taobao.com; txt: 淘 宝 网; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.taobao.com;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.hunantv.com/; txt: 湖南卫视; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.hunantv.com/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.zhaopin.com/; txt: 智联招聘; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.zhaopin.com/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.icbc.com.cn/; txt: 工商银行; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.icbc.com.cn/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.vancl.com/?source=hao123mph; txt: 凡客诚品; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.vancl.com/?source=hao123mph;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.zol.com.cn/; txt: 中关村在线; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.zol.com.cn/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.gome.com.cn/?cmpid=dh_hao123_mz; txt: 国美电器; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.gome.com.cn/?cmpid=dh_hao123_mz;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.bitauto.com/; txt: 易 车 网; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.bitauto.com/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.qunar.com/; txt: 去哪儿网; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.qunar.com/;class: ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://click.union.360buy.com/JdClick/?unionId=75; txt: 京东商城; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://click.union.360buy.com/JdClick/?unionId=75;class: tc-green;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.suning.com/; txt: 苏宁易购; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.suning.com/;class: tc-green;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.lashou.com/?qdh=3001; txt: 拉 手 网; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.lashou.com/?qdh=3001;class: tc-green;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.amazon.cn/?tag=hao123com-famous-23; txt: 卓越亚马逊; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.amazon.cn/?tag=hao123com-famous-23;class: tc-green;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://www.vipshop.com/g_url.php?g_id=12807; txt: 唯 品 会; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://www.vipshop.com/g_url.php?g_id=12807;class: tc-green;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: http://reg.jiayuan.com/st/?id=3237&url=/st/main.php; txt: 世纪佳缘; Xpath: /html/body/div/div/div/div/span/a; css: {href: http://reg.jiayuan.com/st/?id=3237&url=/st/main.php;class: tc-green;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/div; css: {class: m span-rows box-hot_content;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div; css: {monkey: hot;class: corner box-hot;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: http://www.m18.com/market/front.aspx?pno=ap-hao123-zjl&url=; txt: 麦考林; Xpath: /html/body/div/div/div/span/a; css: {href: http://www.m18.com/market/front.aspx?pno=ap-hao123-zjl&url=;target: _blank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: http://a1419.oadz.com/link/C/1419/501/4G0jQ.NrVXEX6S3NqGWu5NXLDAU_/p015/59/http://www.yougou.com; txt: 优购网; Xpath: /html/body/div/div/div/span/a; css: {href: http://a1419.oadz.com/link/C/1419/501/4G0jQ.NrVXEX6S3NqGWu5NXLDAU_/p015/59/http://www.yougou.com;target: _blank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: http://www.mbaobao.com%20; txt: 麦包包; Xpath: /html/body/div/div/div/span/a; css: {href: http://www.mbaobao.com%20;target: _blank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: http://www.coo8.com/?utm_source=hao123&utm_medium=dh_Linezjl%20; txt: 库巴网; Xpath: /html/body/div/div/div/span/a; css: {href: http://www.coo8.com/?utm_source=hao123&utm_medium=dh_Linezjl%20;target: _blank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: http://www.okbuy.com/?from=hao123_syzjl; txt: 好乐买; Xpath: /html/body/div/div/div/span/a; css: {href: http://www.okbuy.com/?from=hao123_syzjl;target: _blank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: http://www.yihaodian.com/product/index.do?tracker_u=7520390; txt: 1号店; Xpath: /html/body/div/div/div/span/a; css: {href: http://www.yihaodian.com/product/index.do?tracker_u=7520390;target: _blank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: http://www.jumei.com?referer=hao123_zj&utm_source=hao123; txt: 聚美优品; Xpath: /html/body/div/div/div/span/a; css: {href: http://www.jumei.com?referer=hao123_zj&utm_source=hao123;target: _blank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div; css: {monkey: ad;class: span-rows box-adbar;#}>
+<ID: ; url: http://www.hao123.com/video; txt: 视 频; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/video;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/video; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/video;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.youku.com/; txt: 优酷网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.youku.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.iqiyi.com/; txt: 奇艺高清; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.iqiyi.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.tudou.com/; txt: 土豆网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.tudou.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://tv.sohu.com/; txt: 搜狐视频; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://tv.sohu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.pptv.com/; txt: PPTV; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.pptv.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.letv.com/; txt: 乐视网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.letv.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.xunlei.com/; txt: 迅雷看看; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.xunlei.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/game; txt: 游 戏; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/game;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/game; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/game;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.4399.com/; txt: 4399游戏; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.4399.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.7k7k.com/; txt: 7k7k游戏; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.7k7k.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.17173.com/; txt: 17173; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.17173.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://youxi.baidu.com; txt: 百度游戏; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://youxi.baidu.com;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.265g.com/; txt: 265G游戏; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.265g.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.07073.com/; txt: 07073游戏; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.07073.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://allyes.nie.163.com/main/adfclick?db=afanie&bid=348482,173211,691&cid=49287,15,1&sid=347493&show=ignore&url=http://qn.163.com/hao123/; txt: 倩女幽魂; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://allyes.nie.163.com/main/adfclick?db=afanie&bid=348482,173211,691&cid=49287,15,1&sid=347493&show=ignore&url=http://qn.163.com/hao123/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://zt2.ztgame.com/hao.html; txt: 征途2S; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://zt2.ztgame.com/hao.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/news; txt: 新 闻; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/news;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/news; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/news;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://news.sina.com.cn/; txt: 新浪新闻; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://news.sina.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://news.sohu.com/; txt: 搜狐新闻; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://news.sohu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.zaobao.com/; txt: 联合早报; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.zaobao.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://cn.reuters.com/; txt: 路透中文网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://cn.reuters.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.huanqiu.com; txt: 环球网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.huanqiu.com;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.gov.cn/; txt: 中国政府网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.gov.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/junshi; txt: 军 事; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/junshi;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/junshi; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/junshi;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://military.china.com/zh_cn/; txt: 中华网军事; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://military.china.com/zh_cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://mil.news.sina.com.cn/; txt: 新浪军事; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://mil.news.sina.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://news.ifeng.com/mil/; txt: 凤凰军事; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://news.ifeng.com/mil/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.tiexue.net/; txt: 铁血军事; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.tiexue.net/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.chinaiiss.com/; txt: 战略军事网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.chinaiiss.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.junshijia.com/; txt: 米尔军情; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.junshijia.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/bank; txt: 银 行; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/bank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/bank; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/bank;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.icbc.com.cn/; txt: 工商银行; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.icbc.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.ccb.com/; txt: 建设银行; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.ccb.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.abchina.com/; txt: 农业银行; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.abchina.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.cmbchina.com/; txt: 招商银行; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.cmbchina.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.boc.cn/; txt: 中国银行; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.boc.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.bankcomm.com/; txt: 交通银行; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.bankcomm.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.alipay.com/; txt: 支付宝; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.alipay.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul; css: {class: m span-rows box-sort_content;#}>
+<ID: ; url: http://www.hao123.com/stocknew.htm; txt: 财 经; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/stocknew.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/stocknew.htm; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/stocknew.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.eastmoney.com/; txt: 东方财富; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.eastmoney.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://finance.sina.com.cn/; txt: 新浪财经; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://finance.sina.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.jrj.com.cn/; txt: 金融界; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.jrj.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.hexun.com/; txt: 和讯网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hexun.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.stockstar.com/; txt: 证券之星; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.stockstar.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://business.sohu.com/; txt: 搜狐财经; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://business.sohu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/mail; txt: 邮 箱; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/mail;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/mail; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/mail;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://mail.163.com/; txt: 163邮箱; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://mail.163.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://mail.126.com/; txt: 126邮箱; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://mail.126.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://mail.cn.yahoo.com/; txt: 雅虎邮箱; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://mail.cn.yahoo.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://mail.sina.com.cn/; txt: 新浪邮箱; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://mail.sina.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://mail.qq.com/; txt: QQ邮箱; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://mail.qq.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.hotmail.com/; txt: Hotmail; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hotmail.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://mail.10086.cn/; txt: 139邮箱; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://mail.10086.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://book.hao123.com/; txt: 小 说; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://book.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://book.hao123.com/; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://book.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.qidian.com/; txt: 起点; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.qidian.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.readnovel.com/; txt: 小说阅读网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.readnovel.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.xxsy.net/; txt: 潇湘书院; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.xxsy.net/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.xs8.cn/; txt: 言情小说吧; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.xs8.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.zongheng.com/; txt: 纵横中文网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.zongheng.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.hongxiu.com/; txt: 红袖添香; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hongxiu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://gouwu.hao123.com/; txt: 购 物; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://gouwu.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://gouwu.hao123.com/; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://gouwu.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.taobao.com/; txt: 淘宝网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.taobao.com/;class: sort-item-left;#}>
+<ID: ; url: http://www.tmall.com/; txt: 商城; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.tmall.com/;class: sort-item-right;#}>
+<ID: ; url: ; txt: •; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://click.union.360buy.com/JdClick/?unionId=35; txt: 京东商城; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://click.union.360buy.com/JdClick/?unionId=35;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.paipai.com/?PTAG=10117.1.1; txt: 拍拍网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.paipai.com/?PTAG=10117.1.1;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.amazon.cn/?tag=hao123com-kuzhan-23; txt: 卓越网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.amazon.cn/?tag=hao123com-kuzhan-23;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.yintai.com/?source=hao123&subsource=sykz; txt: 银泰网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.yintai.com/?source=hao123&subsource=sykz;class: tc-green;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.vancl.com/?source=hao123gw; txt: 凡客诚品; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.vancl.com/?source=hao123gw;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/shequ; txt: 社 交; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/shequ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/shequ; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/shequ;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://tieba.baidu.com/; txt: 百度贴吧; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://tieba.baidu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://qzone.qq.com/; txt: QQ空间; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://qzone.qq.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.tianya.cn/; txt: 天涯社区; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.tianya.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.mop.com/; txt: 猫扑; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.mop.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.renren.com/; txt: 人人网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.renren.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://weibo.com/?c=spr_web_sq_hao123_weibo_t002; txt: 新浪微博; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://weibo.com/?c=spr_web_sq_hao123_weibo_t002;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul; css: {class: m span-rows box-sort_content;#}>
+<ID: ; url: http://music.hao123.com/; txt: 音 乐; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://music.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://music.hao123.com/; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://music.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://mp3.baidu.com/; txt: 百度MP3; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://mp3.baidu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.1ting.com/; txt: 一听音乐; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.1ting.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://y.qq.com/%20; txt: QQ音乐; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://y.qq.com/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://mp3.sogou.com/; txt: 搜狗音乐; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://mp3.sogou.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.kuwo.cn/; txt: 酷我音乐盒; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.kuwo.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.yinyuetai.com/; txt: 音悦台; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.yinyuetai.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/love; txt: 交 友; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/love;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/love; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/love;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.jiayuan.com/; txt: 世纪佳缘; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.jiayuan.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.zhenai.com; txt: 珍爱网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.zhenai.com;class: tc-green;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.baihe.com/; txt: 百合网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.baihe.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://web.qq.com/; txt: 网页QQ; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://web.qq.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.qiyi.com/zongyi/fcwr.html; txt: 非诚勿扰; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.qiyi.com/zongyi/fcwr.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/shenghuo; txt: 生 活; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/shenghuo;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/shenghuo; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/shenghuo;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.ganji.com/; txt: 赶集网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.ganji.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.baixing.com/; txt: 百姓网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.baixing.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.soufun.com/; txt: 搜房网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.soufun.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.dianping.com/; txt: 大众点评网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.dianping.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.chinahr.com; txt: 中华英才网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.chinahr.com;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.51job.com/; txt: 前程无忧; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.51job.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.meishichina.com/%20; txt: 美食天下; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.meishichina.com/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/wangyou; txt: 页 游; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/wangyou;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/wangyou; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/wangyou;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://web.sanguosha.com/; txt: 三国杀; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://web.sanguosha.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.51seer.com/%20; txt: 赛尔号; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.51seer.com/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://web.zenshan.com/market/hao/frxz2/index20120302161113.html; txt: 凡人修真2; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://web.zenshan.com/market/hao/frxz2/index20120302161113.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://wan.7k7k.com/market/hao/sxd/index20120302154736.html; txt: 神仙道; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://wan.7k7k.com/market/hao/sxd/index20120302154736.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://wan.7k7k.com/market/hao/sssg/index20120302160126.html; txt: 盛世三国; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://wan.7k7k.com/market/hao/sssg/index20120302160126.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://web.7k7k.com/market/hao/lj/indexhao123-kzsy-lj.html; txt: 龙将; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://web.7k7k.com/market/hao/lj/indexhao123-kzsy-lj.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://skygame.baidu.com/kkml/; txt: 库库马力; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://skygame.baidu.com/kkml/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://tuan.baidu.com/; txt: 团 购; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://tuan.baidu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://tuan.baidu.com/; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://tuan.baidu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.meituan.com/u/8357642; txt: 美团网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.meituan.com/u/8357642;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.55tuan.com/?from=daohang-hao123kz; txt: 窝窝团; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.55tuan.com/?from=daohang-hao123kz;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://t.58.com/?utm_source=hao123&utm_campaign=hao123-101; txt: 58团购; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://t.58.com/?utm_source=hao123&utm_campaign=hao123-101;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.jumei.com?referer=hao123_kz&utm_source=hao123; txt: 聚美优品; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.jumei.com?referer=hao123_kz&utm_source=hao123;class: tc-green;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.nuomi.com/; txt: 糯米网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.nuomi.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.miqi.cn#cps_site=hao123_kz; txt: 米奇网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.miqi.cn#cps_site=hao123_kz;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul; css: {class: m span-rows box-sort_content;#}>
+<ID: ; url: http://www.hao123.com/sport; txt: 体 育; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/sport;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/sport; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/sport;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://sports.sina.com.cn/; txt: 新浪体育; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://sports.sina.com.cn/;class: sort-item-left;#}>
+<ID: ; url: http://sports.sina.com.cn/nba/; txt: NBA; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://sports.sina.com.cn/nba/;class: sort-item-right;#}>
+<ID: ; url: ; txt: •; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://sports.sohu.com/; txt: 搜狐体育; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://sports.sohu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://sports.cntv.cn/; txt: CCTV5直播; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://sports.cntv.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.hupu.com/; txt: 虎扑体育; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hupu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://sports.163.com/; txt: 网易体育; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://sports.163.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/hardware; txt: 电 脑; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/hardware;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/hardware; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/hardware;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.zol.com.cn/; txt: 中关村在线; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.zol.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.pconline.com.cn/; txt: 太平洋电脑; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.pconline.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.pcpop.com/; txt: 泡泡网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.pcpop.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.skycn.com/; txt: 天空软件; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.skycn.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.onlinedown.net/; txt: 华军软件; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.onlinedown.net/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.apple.com.cn/%20; txt: 苹果官网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.apple.com.cn/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/mobile; txt: 手 机; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/mobile;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/mobile; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/mobile;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://tech.sina.com.cn/mobile/; txt: 新浪手机; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://tech.sina.com.cn/mobile/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.10010.com/; txt: 中国联通; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.10010.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.ct10000.com/; txt: 中国电信; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.ct10000.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.weiphone.com/%20; txt: 威锋网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.weiphone.com/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.hiapk.com/%20; txt: 安卓网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hiapk.com/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.xiaomi.com/index.php%20; txt: 小米手机; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.xiaomi.com/index.php%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.app111.com/; txt: 苹果园; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.app111.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://lvyou.hao123.com/; txt: 旅 行; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://lvyou.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://lvyou.hao123.com/; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://lvyou.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.ctrip.com/; txt: 携程旅行网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.ctrip.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.qunar.com/; txt: 去哪儿网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.qunar.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.lvmama.com/; txt: 驴妈妈旅游; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.lvmama.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.elong.com/; txt: 艺龙网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.elong.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.12306.cn/%20; txt: 12306; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.12306.cn/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.mafengwo.cn/%20; txt: 蚂蜂窝; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.mafengwo.cn/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://map.baidu.com/%20; txt: 百度地图; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://map.baidu.com/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/auto; txt: 汽 车; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/auto;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/auto; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/auto;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.autohome.com.cn/; txt: 汽车之家; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.autohome.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.pcauto.com.cn/; txt: 太平洋汽车; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.pcauto.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://auto.sina.com.cn/; txt: 新浪汽车; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://auto.sina.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.bitauto.com/?WT.mc_id=hao123kz; txt: 易车网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.bitauto.com/?WT.mc_id=hao123kz;class: tc-green;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.xcar.com.cn/; txt: 爱卡汽车; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.xcar.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://auto.sohu.com/; txt: 搜狐汽车; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://auto.sohu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.cheshi.com/; txt: 网上车市; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.cheshi.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul; css: {class: m span-rows box-sort_content;#}>
+<ID: ; url: http://www.hao123.com/woman; txt: 女 性; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/woman;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/woman; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/woman;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.pclady.com.cn/; txt: 太平洋女性; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.pclady.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://women.sohu.com/; txt: 搜狐女人; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://women.sohu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://eladies.sina.com.cn/; txt: 新浪女性; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://eladies.sina.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.meilishuo.com/; txt: 美丽说; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.meilishuo.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.mogujie.com/; txt: 蘑菇街; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.mogujie.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.rayli.com.cn/; txt: 瑞丽女性网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.rayli.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.vogue.com.cn/%20; txt: VOGUE时尚; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.vogue.com.cn/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://caipiao.hao123.com/; txt: 彩 票; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://caipiao.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://caipiao.hao123.com/; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://caipiao.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.zhcw.com/; txt: 中彩网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.zhcw.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.lottery.gov.cn/; txt: 中国体彩网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.lottery.gov.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.500wan.com/; txt: 500wan彩票; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.500wan.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://baidu.lehecai.com/; txt: 乐和彩; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://baidu.lehecai.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.lehecai.com/lottery/draw/view/50%20; txt: 双色球; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.lehecai.com/lottery/draw/view/50%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/xiaoqingxin; txt: 清 新; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/xiaoqingxin;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/xiaoqingxin; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/xiaoqingxin;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://www.douban.com/; txt: 豆瓣; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.douban.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.qiushibaike.com/; txt: 糗事百科; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.qiushibaike.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://kxt.fm/%20; txt: 邻居的耳朵; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://kxt.fm/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.u148.net/%20; txt: 有意思吧; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.u148.net/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.mtime.com/%20; txt: Mtime时光网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.mtime.com/%20;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.guokr.com/; txt: 果壳; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.guokr.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.duitang.com/; txt: 堆糖; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.duitang.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/zhaoz; txt: 其 他; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/zhaoz;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_title;#}>
+<ID: ; url: http://www.hao123.com/zhaoz; txt: 更多>>; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.hao123.com/zhaoz;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {class: box-sort_more;#}>
+<ID: ; url: http://bbs.kaoyan.com/; txt: 考研论坛; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://bbs.kaoyan.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.chsi.com.cn/; txt: 学信网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.chsi.com.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.xitek.com/; txt: 色影无忌; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.xitek.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.39.net/; txt: 39健康; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.39.net/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.nipic.com/; txt: 昵图网; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.nipic.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.jxedt.com/; txt: 驾校一点通; Xpath: /html/body/div/div/div/ul/li/span/a; css: {href: http://www.jxedt.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div/ul; css: {class: m span-rows box-sort_content box-sort_last;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/div; css: {monkey: cool;class: box-sort;#}>
+<ID: ; url: ; txt: sort 开始sort结束; Xpath: /html/body/div/div; css: {class: l-article_r;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div; css: {class: box l-article clearfix;#}>
+<ID: ; url: http://life.hao123.com/; txt: 实用工具; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://life.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {class: box-tools_title;#}>
+<ID: ; url: http://life.hao123.com/; txt: 更多>>; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://life.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {class: box-tools_more;#}>
+<ID: ; url: /haoserver/kuaidi.htm; txt: 快递查询; Xpath: /html/body/div/div/ul/li/span/a; css: {href: /haoserver/kuaidi.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: /haoserver/showjicc.htm; txt: 手机号; Xpath: /html/body/div/div/ul/li/span/a; css: {href: /haoserver/showjicc.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.weather.com.cn/static/html/weather.shtml; txt: 天气预报; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.weather.com.cn/static/html/weather.shtml;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://app.baidu.com/ip138_id/index.asp; txt: 身份证; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://app.baidu.com/ip138_id/index.asp;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.qunar.com/?dh=hotk_P0T0M0; txt: 机票; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.qunar.com/?dh=hotk_P0T0M0;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://lvyou.hao123.com/lvyou?tn=huoche; txt: 火车票查询; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://lvyou.hao123.com/lvyou?tn=huoche;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.hao123.com/ss/fy.htm; txt: 在线翻译; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.hao123.com/ss/fy.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://365rili.duapp.com/; txt: 万年历; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://365rili.duapp.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.ip138.com/; txt: IP地址; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.ip138.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: haoserver/jianfanzh.htm; txt: 繁体字; Xpath: /html/body/div/div/ul/li/span/a; css: {href: haoserver/jianfanzh.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.51jiemeng.com/; txt: 周公解梦; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.51jiemeng.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: haoserver/jiaotongcx.htm; txt: 交通违章; Xpath: /html/body/div/div/ul/li/span/a; css: {href: haoserver/jiaotongcx.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://web2.qq.com/; txt: 网页QQ; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://web2.qq.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li; css: {#}>
+<ID: ; url: http://life.hao123.com/soft.html; txt: 软件专区; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://life.hao123.com/soft.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {class: box-tools_title;#}>
+<ID: ; url: http://life.hao123.com/soft.html; txt: 更多>>; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://life.hao123.com/soft.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {class: box-tools_more;#}>
+<ID: ; url: http://www.hao123.com/qq; txt: QQ; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.hao123.com/qq;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.skycn.com/hao123/28200.html; txt: 飞信; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.skycn.com/hao123/28200.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.skycn.com/hao123/14857.html; txt: 迅雷; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.skycn.com/hao123/14857.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.skycn.com/hao123/27159.html; txt: 搜狗拼音; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.skycn.com/hao123/27159.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.google.cn/chrome; txt: Chrome; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.google.cn/chrome;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.skycn.com/hao123/25709.html; txt: 风行; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.skycn.com/hao123/25709.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.skycn.com/hao123/98.html; txt: 暴风影音; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.skycn.com/hao123/98.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.hao123.com/soft/shouji/default.htm; txt: 手机软件; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.hao123.com/soft/shouji/default.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.wandoujia.com/windows.html; txt: 豌豆荚; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.wandoujia.com/windows.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.skycn.com/hao123/11350.html; txt: 千千静听; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.skycn.com/hao123/11350.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.skycn.com/soft/37757.html; txt: Photoshop; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.skycn.com/soft/37757.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://dl.pps.tv/; txt: PPS; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://dl.pps.tv/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.skycn.com/hao123/48836.html; txt: 美图秀秀; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.skycn.com/hao123/48836.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://motu.baidu.com/; txt: 百度魔图; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://motu.baidu.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://weixin.qq.com/; txt: 微信; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://weixin.qq.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li; css: {#}>
+<ID: ; url: http://www.hao123.com/game; txt: 游戏专区; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.hao123.com/game;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {class: box-tools_title;#}>
+<ID: ; url: http://www.hao123.com/game; txt: 更多>>; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.hao123.com/game;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {class: box-tools_more;#}>
+<ID: ; url: http://www.hao123.com/wow.htm; txt: 魔兽世界; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.hao123.com/wow.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://dnf.qq.com/; txt: DNF; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://dnf.qq.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.aobi.com/; txt: 奥比岛; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.aobi.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://cf.qq.com/; txt: CF; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://cf.qq.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://youxi.baidu.com/pm.xhtml?pid=10100200108_29; txt: 弹弹堂3; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://youxi.baidu.com/pm.xhtml?pid=10100200108_29;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.hao123.com/game/dzjs.htm; txt: 植物大战僵尸; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.hao123.com/game/dzjs.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://apps.hi.baidu.com/apps/info/?api_key=b991177d6331224498bc3a8e15568c53; txt: 开心农场; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://apps.hi.baidu.com/apps/info/?api_key=b991177d6331224498bc3a8e15568c53;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://17roco.qq.com/; txt: 洛克王国; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://17roco.qq.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://1314.qq.com/; txt: 玫瑰小镇; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://1314.qq.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://speed.qq.com/; txt: QQ飞车; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://speed.qq.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://skygame.baidu.com/kuku/; txt: 库库; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://skygame.baidu.com/kuku/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.51mole.com/; txt: 摩尔庄园; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.51mole.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://www.hao123.com/game/15llk.htm; txt: 连连看; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://www.hao123.com/game/15llk.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: http://game.weibo.com/nihuawocai; txt: 你画我猜; Xpath: /html/body/div/div/ul/li/span/a; css: {href: http://game.weibo.com/nihuawocai;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div/ul; css: {class: m span-rows box-tools_content;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/div; css: {class: box-tools;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div; css: {monkey: footer;class: box box-bottom;#}>
+<ID: ; url: http://www.hao123.com/abouthao123.htm; txt: 关于本站; Xpath: /html/body/div/p/span/a; css: {href: http://www.hao123.com/abouthao123.htm;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p/span; css: {class: box-about_first;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p/b; css: {class: space;#}>
+<ID: ; url: http://feedback.hao123.com/?catalog_id=11; txt: 挑错有礼; Xpath: /html/body/div/p/span/a; css: {href: http://feedback.hao123.com/?catalog_id=11;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p/b; css: {class: space;#}>
+<ID: ; url: http://app.hao123.com/sms/getmsg.php; txt: 手机版; Xpath: /html/body/div/p/span/a; css: {href: http://app.hao123.com/sms/getmsg.php;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p/b; css: {class: space;#}>
+<ID: ; url: http://weibo.com/hao123gf; txt: 官方微博; Xpath: /html/body/div/p/span/a; css: {href: http://weibo.com/hao123gf;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p/b; css: {class: space;#}>
+<ID: ; url: http://zhidao.hao123.com/; txt: 问题解答; Xpath: /html/body/div/p/span/a; css: {href: http://zhidao.hao123.com/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p/span; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p; css: {class: span-rows box-about;#}>
+<ID: ; url: ; txt: hao123.com; Xpath: /html/body/div/p/span; css: {style: margin: -2px 4px 0pt;;#}>
+<ID: ; url: ; txt: 上网导航第一品牌; Xpath: /html/body/div/p/span; css: {style: margin: 0pt 4px;;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p/span/a/i; css: {class: i-papers;#}>
+<ID: ; url: http://www.miibeian.gov.cn/; txt: 京ICP证030173号; Xpath: /html/body/div/p/span/a; css: {href: http://www.miibeian.gov.cn/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div/p/span; css: {style: margin-right: 4px;;#}>
+<ID: ; url: ; txt: -; Xpath: /html/body/div/p; css: {class: span-rows box-copyright;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div; css: {class: box l-footer;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/script; css: {src: http://s0.hao123img.com/index/js/model_20120323.js;#}>
+<ID: ; url: ; txt: var UA2Config = { id: "hao123-index", action: "http://www.hao123.com/images/", rate: 100 };
+    T.cookie.move('HAOMAILSV');
+    T.cookie.move('HAOMAILUN');
+    T.cookie.move('STO');
+    T.dom.ready(function () {
+        H.index.netsite("netsite");
+    });
+    T.on(window, 'load', function () {
+        var sg = Model.Index.searchGroup();
+
+        Model.Index.mail();
+        Model.Index.weather.init();
+        //Model.Index.starSection();
+        Model.Global.setHomePage.bind('setHomeLink');
+        T.sio.load.js('http://s0.hao123img.com/global/js/widget/widget_20111117.js');
+
+        /*百度一下统计，词频统计*/
+        T.on(T.g('searchGroupBtn'), 'mouseup', function () {
+             Model.Global.UT.send({ type: "submit", position: sg.getCurTabValue(), title: T.g('searchGroupInput').value, pageId: pageId, btnclick: 1 });
+        });
+
+        T.on(T.g('searchGroupInput'), 'keydown', function (e) {
+            e = e || window.event;
+            if (e.keyCode == 13) {
+               Model.Global.UT.send({ type: "submit", position: sg.getCurTabValue(), title: T.g('searchGroupInput').value, pageId: pageId });
+            }
+        });
+
+    });
+    var arrBaiduAds = []; T.sio.load.js("http://a.baidu.com/ecom?di=214&tm=baidufsbanner", function () { if (arrBaiduAds["214"] == undefined) return; T.g("ads214").innerHTML = arrBaiduAds["214"] });
+
+    window.onload = function () {
+        if (document.URL.indexOf("?no") > 0 && T.cookie.get("STO"))
+            T.cookie.del("STO");
+    }
+
+    T.g("box-hotspot") && T.on("box-hotspot", "click", function (e) {
+        var els = T.G("box-hotspot").getElementsByTagName("a"),
+		len = els.length,
+		i = 0,
+		el;
+        e = e || window.event;
+        el = e.target || e.srcElement;
+
+        for (; i < len; i++) {
+            if (els[i] == el) {
+                var sTitle = el.innerHTML;
+                Model.Global.UT.send({ type: "click", position: "hotspot", title: sTitle });
+            }
+        }
+    });; Xpath: /html/body/script; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/div; css: {style: display: none;;class: box-search_more_wrap;#}>
+<ID: ; url: ; txt: @163.com; Xpath: /html/body/ul/li; css: {data-n: 0;#}>
+<ID: ; url: ; txt: @126.com; Xpath: /html/body/ul/li; css: {data-n: 1;#}>
+<ID: ; url: ; txt: @sina.com; Xpath: /html/body/ul/li; css: {data-n: 2;#}>
+<ID: ; url: ; txt: @yahoo.com.cn; Xpath: /html/body/ul/li; css: {data-n: 3;#}>
+<ID: ; url: ; txt: @yahoo.cn; Xpath: /html/body/ul/li; css: {data-n: 4;#}>
+<ID: ; url: ; txt: @sohu.com; Xpath: /html/body/ul/li; css: {data-n: 5;#}>
+<ID: ; url: ; txt: @yeah.net; Xpath: /html/body/ul/li; css: {data-n: 6;#}>
+<ID: ; url: ; txt: @139.com; Xpath: /html/body/ul/li; css: {data-n: 7;#}>
+<ID: ; url: ; txt: @tom.com; Xpath: /html/body/ul/li; css: {data-n: 8;#}>
+<ID: ; url: ; txt: @21cn.com; Xpath: /html/body/ul/li; css: {data-n: 9;#}>
+<ID: ; url: ; txt: 人人网; Xpath: /html/body/ul/li; css: {data-n: 10;#}>
+<ID: ; url: ; txt: 登录百度; Xpath: /html/body/ul/li; css: {data-n: 11;#}>
+<ID: ; url: ; txt: 51.com; Xpath: /html/body/ul/li; css: {data-n: 12;#}>
+<ID: ; url: ; txt: 以下弹出登录; Xpath: /html/body/ul/li; css: {class: no;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/ul/li; css: {#}>
+<ID: ; url: http://mail.qq.com; txt: @qq.com; Xpath: /html/body/ul/li/a; css: {href: http://mail.qq.com;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/ul/li; css: {#}>
+<ID: ; url: http://qzone.qq.com/index.html; txt: QQ空间; Xpath: /html/body/ul/li/a; css: {href: http://qzone.qq.com/index.html;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/ul/li; css: {#}>
+<ID: ; url: http://web2.qq.com; txt: webqq; Xpath: /html/body/ul/li/a; css: {href: http://web2.qq.com;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/ul/li; css: {#}>
+<ID: ; url: http://weibo.com/login.php; txt: 新浪微博; Xpath: /html/body/ul/li/a; css: {href: http://weibo.com/login.php;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/ul/li; css: {#}>
+<ID: ; url: http://mail.google.com/mail/; txt: @gmail.com; Xpath: /html/body/ul/li/a; css: {href: http://mail.google.com/mail/;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/ul/li; css: {#}>
+<ID: ; url: http://www.hotmail.com; txt: @hotmail.com; Xpath: /html/body/ul/li/a; css: {href: http://www.hotmail.com;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/ul/li; css: {#}>
+<ID: ; url: http://www.kaixin001.com; txt: 开心网; Xpath: /html/body/ul/li/a; css: {href: http://www.kaixin001.com;#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/ul/li; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html/body/ul; css: {style: display: none; -moz-user-select: none;;class: box-mail_layer;#}>
+<ID: ; url: ; txt: f7a61f9f; Xpath: /html/body; css: {#}>
+<ID: ; url: ; txt: ; Xpath: /html; css: {#}>
+<ID: ; url: ; txt: html; Xpath: ; css: {#}>

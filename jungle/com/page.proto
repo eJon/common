@@ -1,0 +1,57 @@
+//@version 1.0.0.1 
+//@author AndrewPD
+//@date 2014-12-19
+//@brief 
+
+package jungle.com.page;
+
+message CommonID
+{
+   required uint64 id = 1;
+    required string url = 2;
+    enum field_t{
+       TECH=0;
+       PM=1;
+    };
+    required field_t field = 3;
+}
+message JobDescription
+{
+ required CommonID id = 1;
+    enum job_type_t {
+       FULLTIME = 0;
+       INTERN = 1;
+    };
+    required job_type_t job_type = 2;
+    required string title = 3;
+    required string department = 4;
+    repeated string require = 5;
+    repeated string duty = 6;
+    required string des = 7;
+    required string about = 8;
+    required uint64 pub_tm = 9;
+    required uint64 expire_tm = 10;
+    required uint64 update_tm = 11;
+    required int32 salary = 12;
+    required int32 work_age = 13;
+    required int32 location = 14;	
+    optional int32 head_count = 15;
+    optional string contact = 16;		
+}
+
+message LectureDescription 
+{
+   required CommonID id = 1;
+   enum lecture_type_t{
+       TEXT = 0;
+       PPT = 1;
+       PDF = 2;
+       DOC = 3;
+       VIDEO = 4;
+   };
+   required lecture_type_t type = 2;
+   required string des = 3;
+   required string author = 4;
+   required uint64 pub_tm = 5;
+   required uint64 update_tm = 6;
+}

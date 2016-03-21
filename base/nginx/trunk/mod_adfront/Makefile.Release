@@ -1,0 +1,36 @@
+BIN = .
+INC = -I./ \
+	  -I/home/w/include/ \
+	  -I/home/w/include/spio/ \
+	  -I/home/w/include/zmq/
+
+LIB_INC = -L./ -L/home/w/lib64 -L/usr/local/lib/ -L/home/w/lib64/spio/
+
+LIBS = -lengine_common -ljson -lrsdata -lspio_api_cpp  -llog4cpp -lzmq -lpthread -ldl -lprotobuf
+
+OBJS =  request_handler.o
+
+TGTS = ./libhandler.so 
+
+LDFLAGS = -g -shared -fPIC
+
+CFLAGS = -g -Wall -O2 -fPIC -DTRACE_TIME -DMYDEBUG
+
+CC = g++
+
+CXXFLAGS = -g -Wall -DLINUX
+.PHONY  : all clean 
+all: $(TGTS)
+
+.cpp.o:
+	$(CC) $(CFLAGS) -c $< -o $@ $(INC)
+
+.cc.o:
+	$(CC) $(CFLAGS) -c $< -o $@ $(INC)
+
+$(TGTS): $(OBJS) 
+	$(CC) $(LDFLAGS) -o $(TGTS) $(OBJS) $(INC) $(LIB_INC) $(LIBS)
+
+clean:
+	$(RM) $(OBJS) $(TGTS)
+

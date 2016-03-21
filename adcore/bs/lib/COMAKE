@@ -1,0 +1,40 @@
+#edit-mode: -*- python -*-
+#coding:gbk
+
+#工作路径.
+WORKROOT('../../../../..')
+
+#使用硬链接copy.
+CopyUsingHardLink(True)
+
+#C预处理器参数.
+CPPFLAGS('-D_GNU_SOURCE -D__STDC_LIMIT_MACROS')
+
+#C++编译参数.
+CXXFLAGS('-O1 -ggdb -pipe -W -Wall -fPIC -Werror -Wno-invalid-offsetof')
+
+#链接参数.
+LDFLAGS('-lpthread -lcrypto -lrt')
+
+#依赖库
+CONFIGS('lib2-64/ccode@ccode_3-1-12-1_PD_BL')
+CONFIGS('public/urlparser@urlparser_1-2-2-1_PD_BL')
+CONFIGS('app/ecom/cm/utility@ci', IncludePaths('output/include'))
+CONFIGS('app/ecom/cm/interface@ci')
+CONFIGS('app/ecom/uap/proto/dmp@ci')
+CONFIGS('app/ecom/adx/interface@ci', IncludePaths('output/include'))
+CONFIGS('app/ecom/cm/mrf@ci', IncludePaths('output/include'))
+CONFIGS('app/ecom/cm/pb-rpc@ci', IncludePaths('output/include'))
+CONFIGS('quality/autotest/bmock@bmock_1-1-4-0_PD_BL')
+CONFIGS('third-64/boost@boost_1-46-1-101_PD_BL',Libraries('./lib/libboost_regex.a'))
+CONFIGS('app/ecom/nova/thirdparty/gflags@gflags_1-0-0-0_PD_BL',Libraries('./output/lib/libgflags.a'))
+CONFIGS('public/comlogext/cronoapd@cronoapd_1-0-0-3_PD_BL')
+CONFIGS('com-test/itest/tools/fault@trunk')
+CONFIGS('app/ecom/nova/afs/smalltable@smalltable_1-0-0-7_PD_BL')
+CONFIGS('app/ecom/nova/afs/config-io@config-io_1-0-0-17_PD_BL@COMAKE')
+
+Application('lib-main', Sources(GLOB('./*.cpp')), HeaderFiles(GLOB('./*.h *.hpp')), HeaderOutputPath('output/include/snlib'))
+
+#静态检查
+RUNCCP('ccheck', CCPSources(GLOB('./*.h ./*.cpp')))
+CCHECKFLAGS('-c ../../cm/global/cc.conf')

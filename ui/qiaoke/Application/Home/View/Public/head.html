@@ -1,0 +1,48 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <!-- Meta, title, CSS, favicons, etc. --> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  
+  <!-- Bootstrap core CSS --> 
+  <link href="__PUBLIC__/css/app.min.css" rel="stylesheet" /> 
+  <link href="__PUBLIC__/css/font-awesome.min.css" rel="stylesheet" /> 
+  <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet" /> 
+  <script src="__PUBLIC__/js/jquery.min.js"></script> 
+  <script src="__PUBLIC__/js/bootstrap.min.js"></script> 
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+  <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]--> 
+  <!-- Favicons --> 
+  <link rel="apple-touch-icon-precomposed" href="./img/apple-touch-icon-precomposed.png" /> 
+  <link rel="icon" href="__PUBLIC__/images/favion.ico" /> 
+  <script>
+        var _hmt = _hmt || [];
+      </script> 
+  <script type="text/javascript">
+        $(function () {
+          $("#search").click(function(){
+            
+            var search_words = $('input[id=search_words]');
+            
+            var url = "{:U('Home/Search/index/','','')}";
+            url += "&keywords=";
+            url += search_words.val();
+            //alert(url);
+            window.location.href=url;
+
+          });
+        });
+  </script>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?225b31747f665ec848cbba3d4d9066e5";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+ 

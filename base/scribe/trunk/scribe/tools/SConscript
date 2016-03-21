@@ -1,0 +1,17 @@
+#-mode python- 
+Import('env')
+env = env.Clone()
+
+libsname = ['rt','pthread', 'z', 'protobuf', 
+        'bidfeed-sharelib', 'event', 'scribe_processor', 'thrift']
+libframework_sources = Glob('*.cpp')
+env.aProgram(target = 'scribe_client_tool',
+             source = libframework_sources,
+             LIBS=libsname
+             )       
+
+env.aSDKIncludes(Glob('*.h'))
+
+cpps=[libframework_sources]
+Return(['cpps'] )
+

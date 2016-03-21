@@ -1,0 +1,26 @@
+# -*- mode: python -*-
+
+# Inherit the environment from my parent.
+Import('env')
+
+# Make a copy of the environment, so my changes are limited in this directory and sub-directories.
+env = env.Clone()
+
+#############################################################################################################
+test_cpps = [str(fn) for fn in Glob('*.cpp')]
+#test_cpps = ['ms_select_utest.cpp']
+#test_cpps = [str(fn) for fn in Glob('*.cpp') if str(fn) not in 'ms_freq_utest.cpp' and str(fn)  not in 'ms_handler_utest.cpp' and str(fn) not  in 'ms_filter_utest.cpp']
+base_test_sources=  [
+    '#matchserver/test/dotest.cpp',
+    test_cpps
+                     ]
+
+libsname = ['gtest', 'bidfeed-sharelib', 'mscom']
+basetest = env.aTest(target = 'base_test',
+                     source = base_test_sources,
+                     LIBS = libsname
+                     );
+
+
+
+

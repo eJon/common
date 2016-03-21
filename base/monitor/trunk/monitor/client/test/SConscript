@@ -1,0 +1,25 @@
+# -*- mode: python -*-
+
+# Inherit the environment from my parent.
+Import('env')
+
+# Make a copy of the environment, so my changes are limited in this directory and sub-directories.
+env = env.Clone()
+#################################################################################################
+source_clienttest=['fake_epoll_server.cpp', 'fake_tcp_context.cpp', 'client_data_tool.cpp']
+lib_clienttest = env.aSharedLibrary(target = 'clienttest', source = source_clienttest, LIBS=[ ])
+#############################################################################################################
+
+test_cpps = [str(fn) for fn in Glob('*.cpp')]
+
+client_test_sources=  [
+    '#monitor/test/dotest.cpp',
+    test_cpps
+                     ]
+
+
+libsname = [ 'gtest',   'pthread' , 'z',  'log4cpp', 'bidfeed-sharelib', 'monitor_client', 'monitor_common', 'clienttest']
+clienttest = env.aTest(target = 'client_test',
+                     source = client_test_sources,
+                     LIBS = libsname
+                     );

@@ -1,0 +1,19 @@
+# -*- mode: python -*-
+
+# Inherit the environment from my parent.
+Import('env')
+
+# Make a copy of the environment, so my changes are limited in this directory and sub-directories.
+env = env.Clone()
+
+############################################################
+test_cpps = [str(fn) for fn in Glob('*.cc') ]
+# test_cpps = Glob('*.cc*')
+
+common_test_sources=  [test_cpps]
+
+libsname = [ 'gtest',   'pthread' , 'nspio_common', 'bidfeed-sharelib', 'event']
+commontest = env.aTest(target = 'common_test',
+                       source = common_test_sources,
+                       LIBS = libsname
+                       );

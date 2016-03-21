@@ -1,0 +1,9 @@
+#-mode python-
+Import('env')
+env = env.Clone()
+
+nspiod_libsname=['nspio_common', 'nspio_core', 'monitor-client']
+nspiod_sources = Glob('*.cc')
+nspiod = env.aProgram(target = 'nspiod', source = nspiod_sources, LIBS = nspiod_libsname);
+
+Return('nspiod_sources')

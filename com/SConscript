@@ -1,0 +1,23 @@
+#-mode python-
+Import('env')
+env = env.Clone()
+
+libmsbase_sources = Glob('base/*.cpp')
+libmsiface_sources = Glob('iface/*.cpp')
+libmsrpc_sources = Glob('rpc/*.cpp')
+libmscom_sources = [libmsbase_sources, libmsiface_sources, libmsrpc_sources]
+
+libsname = ['rt', 'pthread', 'aes','curl', 'bidfeed-sharelib', 'monitor-client', 'nspio_api', 'spio_api_cpp', 'mccli', 'vadecommon', 'jsoncpp']
+env.aLibrary(target = 'mscom',
+             source = [libmscom_sources],
+	     LIBS = [libsname],
+             package = 'matchserver'
+             )
+env.aDirs('utest')
+env.aSDKIncludes(Glob('base/*.h'))
+env.aSDKIncludes(Glob('iface/*.h'))
+env.aSDKIncludes(Glob('rpc/*.h'))
+
+cpps=[libmsbase_sources]
+Return(['cpps'] )
+

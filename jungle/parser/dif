@@ -1,0 +1,87 @@
+#!/usr/bin/env python
+#_*_ encoding: utf-8 _*_
+from __future__ import with_statement
+import ConfigParser
+'''
+Description:
+
+'''
+__author__ = 'liuwenyong'
+__version__ = '0.1'
+__date__ = '2012-03-31 22:56'
+
+from differ import differ
+import sys
+import getopt
+import time
+def main(): 
+    argvs=sys.argv[1:]
+    para = readConfig() 
+
+    if len(argvs)==0:
+        print "read file in configuration "
+        if para['dif_type'] == "html":
+            differs = differ.diff_html_from_file(para['dif_file1'],para['dif_file2'],para['encoding_encode'])
+            differ.saveDiffsToFile(differs,para['dif_outputFileName'])
+        elif para['dif_type'] == "txt":
+            differs = differ.diff_txt_from_file(para['dif_file1'],para['dif_file2'])
+            differ.saveDiffsToFile(differs,para['dif_outputFileName'])
+        sys.exit()
+    if len(argvs)==1:
+        print "there must be two parameters or you can configure it in the conf file"
+        sys.exit()
+    if len(argvs)==2: 
+        if argvs[0][-5:] == ".html" and argvs[1][-5:]==".html":
+        
+            print "diff two html files"
+            differs = differ.diff_html_from_file(argvs[0],argvs[1],para['encoding_encode'])
+            differ.saveDiffsToFile(differs,para['dif_outputFileName'])
+            sys.exit() 
+        elif argvs[0][-4:] == ".txt" and argvs[1][-4:]==".txt":
+            print "diff two txt files"
+            differs = differ.diff_txt_from_file(argvs[0],argvs[1])
+            differ.saveDiffsToFile(differs,para['dif_outputFileName']) 
+            sys.exit()
+        else:
+            print "file must be html or txt format "
+            sys.exit()
+    if len(argvs)==3:
+        if argvs[0][-5:] == ".html" and argvs[1][-5:]==".html":
+        
+            print "diff two html files"
+            differs = differ.diff_html_from_file(argvs[0],argvs[1],para['encoding_encode'])
+            differ.saveDiffsToFile(differs,argvs[2])
+            sys.exit() 
+        elif argvs[0][-4:] == ".txt" and argvs[1][-4:]==".txt":
+            differs = differ.diff_txt_from_file(argvs[0],argvs[1])
+            differ.saveDiffsToFile(differs,argvs[2]) 
+            print "diff two txt files"
+            sys.exit()
+        else:
+            print "file must be html or txt format "
+
+def readConfig():
+        config=ConfigParser.ConfigParser()
+        baseDir = sys.path[0]
+        with open(baseDir+"/conf/conf.cfg","rw") as cfgfile:
+            config.readfp(cfgfile)
+        
+        ret = {}
+        ret["global_baseDir"] = config.get("global","baseDir")
+       
+        ret["encoding_isOn"] = config.get("encoding","isOn")
+        if ret["encoding_isOn"] == "1":
+            ret["encoding_encode"] = config.get("encoding","encode")
+        else :
+            ret["encoding_encode"] = ""
+       
+        ret["dif_type"] = config.get("dif","type")
+        ret["dif_file1"] = config.get("global","baseDir") + config.get("dif","file1")
+        ret["dif_file2"] = config.get("global","baseDir") + config.get("dif","file2")   
+        ret["dif_outputFileName"] = config.get("global","baseDir") + config.get("dif","outputFileName")
+
+        return ret 
+        
+if __name__ == "__main__":
+    main()
+

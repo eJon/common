@@ -1,0 +1,18 @@
+使用说明
+
+servers.conf是两个工具的配置文件,可以配置memcached服务器集群的信息(ip和port)
+
+
+data_copies_check.sh
+ 该脚本用来统计mem_db存储的数据的备份数目, 以及一致性检验信息和所在的memcached
+ 服务器列表
+
+ 使用方法: ./data_copies_check.sh XXX.gz, 其中XXX.gz为导入mem_db的备份文件
+ 
+
+fetch_data_termate.sh
+ 访问mem_db的小工具,可以用来获取执行table, key, column的value信息, 输入的信息
+ 包括value的信息以及该value所在memcached服务器列表
+
+ 语法为 a. ./fetch_data_termate.sh table key column 
+				b. ./fetch_data_termate.sh 是一种交互式的界面,可以进行多次的信息查询

@@ -1,0 +1,54 @@
+
+
+prefix
+------
+
+  before run the test examples, you must start the following memcached cluster
+    $ /usr/local/bin/memcached -d -p 11211 -uroot
+    $ /usr/local/bin/memcached -d -p 11212 -uroot
+    $ /usr/local/bin/memcached -d -p 11213 -uroot
+    $ /usr/local/bin/memcached -d -p 11214 -uroot
+    $ /usr/local/bin/memcached -d -p 11215 -uroot
+
+
+
+
+Tests include:
+  * 只对二进制协议进行通信(文本协议没有备份功能), 不对文本协议进行测试
+  * 多份数据备份可以正常备份；
+  * 自动弹出功能+弹出机器节点自动加入=实现当前节点出现错误时可以从接下来的服务节点存储和读取数据
+  * 自动弹出机制（重试次数设置）
+  * set
+    > 启动NO REPLY模式时，memcached服务不再发送STORED响应命令
+    > 单份数据时
+    > 可以正确地进行set操作
+    > 当存储备份数据时，不对备份数据的返回值做判断  
+  * get
+    > 可以正确地进行get操作
+    > 使用mget可以正常地获取数据, 并提供操作的标准格式
+    > 提供方法：使得当某一服务节点挂掉的时候，可以顺次地从下一个服务节点获取数据(
+                一般地可以不启用多份数据随机选择读的策略）
+
+    > bug:
+      >> 当一台机器挂掉之后，再马上恢复正常，客户端已经不能再对这台机器进行访问，必须重启客户端才可以, 问题在connect.cc(poll)中, 这个可以正常恢复，但是耗费时间太长才能恢复正常）
+      >>   
+  * 使用一致性hash进行正常的操作
+  * connect连接超时测试(跨机房)
+  * 发送超时，接受数据超时设置（一般默认为0, 永不超时)
+  * 测试NO_BLOCK的功能(存储数据时生效), NO_BLOCK的功能确定
+  * 测试buffer_request的功能(在存储操作时生效）
+  * hash_with_prefix_key的可用性，以及应用场景 
+  * 数据备份测试
+    > 关联的几个配置项需要设置: 
+      >> MEMCACHED_BEHAVIOR_NUMBER_OF_REPLICAS: 2( 设置为1就足够了)
+      >> MEMCACHED_BEHAVIOR_REMOVE_FAILED_SERVERS: true
+      >> MEMCACHED_BEHAVIOR_RANDOMIZE_REPLICA_READ(对于自动弹出机制， 这个选项需要设置为0）为什么
+      >> MEMCACHED_BEHAVIOR_DISTRIBUTION: MEMCACHED_DISTRIBUTION_CONSISTENT
+  * 没有启动自动弹出机制时，故障节点自动加入机制 DONE
+    > 这个对于get和set都是可以正常进行的，不过需要较长的恢复时间，持续数秒到数十秒时间
+    > 服务节点故障的这段时间之内，从这一台获取数据将会返回错误信息
+  * 启动自动弹出机制之后  DONE
+    > 访问故障节点达到指定的次数和时间上限之后，故障节点会被自动剔除
+    > 自动弹出机制源代码中出现bug, 导致不能正常地弹出
+    > 修复原有bug, 限制条件MEMCACHED_BEHAVIOR_SERVER_FAILURE_LIMIT必须不小于2, 否则自动弹出机制是失败的。属于这种方案。 
+    > 

@@ -1,0 +1,11 @@
+arc:
+
+accs: access  layer
+adcore: advertising kernel
+3rd: 3rd part code
+com: common 
+db: database
+hacker: database accessor
+search: search engine
+smalltable: ad table in memory
+ui: user interface

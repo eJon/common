@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://job.bootcss.com/ -->
+<html lang="zh-cn">
+ <head>
+  <include file="Public/head"/>
+
+  <meta name="description" content={$description} /> 
+  <meta name="keywords" content={$keywords} /> 
+  <title>{$title}</title> 
+  
+  <!--<script src="__PUBLIC__/js/recom.js"></script> -->
+  <script type="text/javascript">
+  $(document).ready(function() {
+     
+
+  });
+ 
+  </script>
+
+
+ </head>  
+ <body> 
+
+  <include file="Public/header"/>
+
+
+  <div class="container"> 
+    
+   <div class="row"> 
+    <div class="col-md-8" draggable="true"> 
+     <div class="row"> 
+      <div class="col-md-4" id="co_log" draggable="true"> 
+       <div class="thumbnail"> 
+        <img src="{$job_info.logo}" class="img-responsive" /> 
+        <div class="caption"> 
+         <h3>{$job_info.company}</h3> 
+         <p draggable="true">{$job_info.company_desc}</p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-8" id="job_title"> 
+       <div class="row color_block"> 
+        <div class="col-md-12 color_block"> 
+         <div class="page-header"> 
+          <h1>{$job_info.title} <small>{$job_info.type}</small> </h1> 
+         </div> 
+        </div> 
+        <div class="col-md-12 color_block"> 
+         <div class="col-md-6"> 
+          <p>工作地址：{$job_info.location}</p> 
+          <p>学历要求：{$job_info.edu}</p> 
+          <p>工作经验：{$job_info.work_experience}</p> 薪资水平： 
+          <span class="label label-danger">{$job_info.salary}</span> 
+         </div> 
+         <div class="col-md-6"> 
+          <div class="row"> 
+           <foreach name="job_info['label']" item="v"> 
+            <span class="label label-success">{$v}</span>&nbsp;&nbsp; 
+           </foreach> 
+           <p>发布时间：{$job_info.pub_time}</p> 
+           <p>招聘人数：{$job_info.head_count}</p> 
+           <p draggable="true">来源：<a href="{$job_info.url}">{$job_info.src_desc}</a></p> 
+           <a class="btn btn-block btn-primary" href="{$job_info.url}">申请职位</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-md-12 color_block" id="job_detail"> 
+       <blockquote> 
+        <h3>职位需求：</h3> 
+        <foreach name="job_info['job_require']" item="job_require"> 
+         <p> {$job_require}</p> 
+        </foreach> 
+        <h3>工作内容：</h3> 
+        <foreach name="job_info['job_duty']" item="job_require"> 
+         <p> {$job_require}</p> 
+        </foreach> 
+        <h3>公司福利：</h3> 
+        <foreach name="job_info['job_welfare']" item="job_require"> 
+         <p> {$job_require}</p> 
+        </foreach> 
+        <h3>公司简介：</h3> 
+        <foreach name="job_info['company_desc']" item="job_require"> 
+         <p> {$job_require}</p> 
+        </foreach> 
+       </blockquote> 
+      </div> 
+     </div> 
+    </div> 
+    <!--
+        推荐右侧
+        --> 
+    <div class="col-md-4 text-left"> 
+     <div class="color_block row"> 
+      <div class="col-md-12 text-center" draggable="true"> 
+       <div class="panel panel-warning"> 
+        <div class="panel-heading"> 
+         <h3 class="panel-title">推荐阅读</h3> 
+        </div> 
+        <p> </p> 
+        <div class="row">
+
+        <foreach name="recom_books" item="books"> 
+          <div class = "col-md-6">
+         <a href="{$books.url}" title="{$books.title}"> <img src="{$books.img}" class="img-responsive img-thumbnail" width="217px" height="217px" /> </a> 
+         <p><font color="red">{$books.prize}</font> {$books.orig_prize} <br>
+          <a class="btn" href="{$books.url}"><strong>{$books.website}</strong></a> 
+         
+            <img src="__PUBLIC__/images/icon_star_2.gif"/>
+            <img src="__PUBLIC__/images/icon_star_2.gif"/>
+            <img src="__PUBLIC__/images/icon_star_2.gif"/>
+            <img src="__PUBLIC__/images/icon_star_2.gif"/>
+            <img src="__PUBLIC__/images/icon_star_1.gif"/></p>
+            <p>{$books.desc}</p>
+             <p></p>
+           </div>
+        </foreach> 
+      </div>
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+
+     <div class="col-md-4 text-left">
+      <!--这里可以添加更多推荐组件-->
+      <script type="text/javascript" >
+<!--
+dd_ad_output="html";
+dd_ad_width=180;
+dd_ad_height=282;
+dd_ad_client="P-322559";
+dd_ad_format=20;
+dd_ad_id=0;
+dd_product_id=8904581;
+dd_img_size=150;
+dd_display_style=0;
+dd_text_url="";
+dd_color_text="";
+dd_color_bg="";
+dd_open_target="_blank";
+dd_border=0;
+dd_color_link="";
+dd_ad_text="";
+//--></script>
+<script type="text/javascript" src="http://union.dangdang.com/union/script/dd_ads.js" ></script>
+
+     </div>
+
+   </div> 
+
+   <div class="row"> 
+    <div class="col-md-12" style="" draggable="true"> 
+     <div class="panel panel-success"> 
+      <div class="panel-heading"> 
+       <h3 class="panel-title">推荐学习资料</h3> 
+      </div> 
+      <foreach name="recom_links" item="links"> 
+       <a href="{$links.url}" class="list-group-item"> <h4 class="list-group-item-heading text-primary"> {$links.title} 
+<img src="__PUBLIC__/images/icon_star_2.gif"/>
+          <img src="__PUBLIC__/images/icon_star_2.gif"/>
+           <img src="__PUBLIC__/images/icon_star_2.gif"/>
+            <img src="__PUBLIC__/images/icon_star_2.gif"/>
+             <img src="__PUBLIC__/images/icon_star_1.gif"/>
+       </h4> 
+        <p class="list-group-item-text"> {$links.desc} </p> 
+
+       </a> 
+
+       <div> 
+       </div> 
+      </foreach> 
+     </div> 
+     <div class="row"> 
+      
+      <foreach name="recom_courses" item="courses"> 
+       <div class="col-md-4 color_block"> 
+        <div class="panel panel-success"> 
+         <div class="panel-heading"> 
+          <h3 class="panel-title">推荐课程 <small>{$courses.title}</small></h3> 
+         </div> 
+         <div class="embed-responsive embed-responsive-16by9"> 
+          <iframe class="embed-responsive-item" src="{$courses.play_url}" allowfullscreen=""></iframe> 
+         </div> 
+         <div> 
+          <h4>&nbsp;{$courses.desc}</h4> 
+          &nbsp;来源：<a href="{$courses.url}">{$courses.website}</a> 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;课程评价
+          <img src="__PUBLIC__/images/icon_star_2.gif"/>
+          <img src="__PUBLIC__/images/icon_star_2.gif"/>
+           <img src="__PUBLIC__/images/icon_star_2.gif"/>
+            <img src="__PUBLIC__/images/icon_star_1.gif"/>
+             <img src="__PUBLIC__/images/icon_star_1.gif"/>
+         </div> 
+        </div> 
+       </div> 
+      </foreach> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="col-md-12 color_b"> 
+    <div> 
+    </div> 
+   </div> 
+   <div class="col-md-12"> 
+    <form role="form"> 
+     <div class="form-group" draggable="true"> 
+      <label class="control-label">你可以发布评论</label> 
+      <textarea class="form-control input-lg"></textarea> 
+      <a class="btn btn-info btn-sm"><span class="glyphicon glyphicon-star"></span>发布评论</a> 
+     </div> 
+    </form> 
+   </div> 
+   <div class="col-md-12"> 
+    <ul class="media-list"> 
+     <foreach name="comments" item="comment"> 
+      <li class="media"> <a class="pull-left" href="{$comment.user_profile_url}"> <img class="media-object" src="{$comment.avatar}" href="{$comment.user_profile_url}" height="32px" width="32px" /></a> 
+       <div class="media-body"> 
+        <h5> <a href="{$comment.user_profile_url}">{$comment.user_name}</a> <small> 发表于 {$comment.pub_time}</small> </h5> 
+        <p>{$comment.comment}</p> 
+       </div> </li> 
+     </foreach> 
+    </ul> 
+   </div> 
+  </div> 
+  <div class="row"> 
+   <div class="col-md-12"> 
+   </div> 
+  </div>  
+  
+   <include file="Public/footer"/>
+
+ </body>
+</html>

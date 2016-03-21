@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [[ $1 == "start" ]]; then
+    /home/w/bin/nspiosvr start
+    /home/w/bin/nspiocli start
+elif [[ $1 == "stop" ]]; then
+    /home/w/bin/nspiosvr stop
+    /home/w/bin/nspiocli stop
+elif [[ $1 == "restart" ]]; then
+    /home/w/bin/nspiosvr restart
+    /home/w/bin/nspiocli restart
+elif [[ $1 == "status" ]]; then
+    /home/w/bin/nspiosvr status
+    /home/w/bin/nspiocli status
+fi
+
+sleep 0.2

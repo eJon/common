@@ -1,0 +1,11 @@
+HOW TO BUILD A PACKAGE
+---
+
+export CC=gcc44;
+export CXX=g++44
+3. run
+    >> ./configure
+4. remove -Werror  in makefile
+5. make
+5. build the package;
+    >> ./package.sh

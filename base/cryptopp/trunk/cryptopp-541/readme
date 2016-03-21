@@ -1,0 +1,4 @@
+Usage: ./build.sh cryptopp.spec version buildno [prefix]
+
+example: ./build.sh cryptopp.spec 1.0.0 1
+

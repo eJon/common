@@ -1,0 +1,13 @@
+#-mode python-
+Import('env')
+env = env.Clone()
+
+libsname=['nspio_common']
+api_src = Glob('*.cc')
+api_sources = [api_src]
+
+env.aLibrary(target = 'nspio_api', source = api_sources, LIBS = libsname)	  
+
+cpps=[api_sources]
+Return(['cpps'] )
+

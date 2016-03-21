@@ -1,0 +1,14 @@
+package sharelib;
+
+message PluginConf {
+  repeated string name = 1;
+  required string so_home_path= 2;
+  required string so_name = 3;
+  required string conf_path = 4;
+  repeated string key_val_list=5;
+};
+
+message PluginManagerConf
+{
+  repeated PluginConf plugin_conf_list = 1;
+};

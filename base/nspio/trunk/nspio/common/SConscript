@@ -1,0 +1,27 @@
+#-mode python-
+Import('env')
+env = env.Clone()
+
+libsname=['bidfeed-sharelib', 'uuid', 'log4cpp']
+base_src = Glob('base/*.cc')
+dsl_src = Glob('dsl/*.cc')
+hash_src = Glob('hash/*.cc')
+net_src = Glob('net/*.cc')
+os_src = Glob('os/*.cc')
+proto_src = Glob('proto/*.cc')
+stats_src = Glob('stats/*.cc')
+path_src = Glob('path/*.cc')
+sync_src = Glob('sync/*.cc')
+runner_src = Glob('runner/*.cc')
+common_all_sources = [base_src, dsl_src, hash_src, net_src, os_src, proto_src
+		   , stats_src, path_src, sync_src, runner_src]
+
+env.aLibrary(target = 'nspio_common',
+             source = common_all_sources,
+	     LIBS = libsname
+             )	  
+
+commontest = env.aDirs('test')
+cpps=[common_all_sources]
+Return(['cpps'] )
+

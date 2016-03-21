@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/test.run.dir/gtest_main.cpp.o CMakeFiles/test.run.dir/TKeywordExtractor.cpp.o CMakeFiles/test.run.dir/TTrie.cpp.o CMakeFiles/test.run.dir/TSegments.cpp.o CMakeFiles/test.run.dir/TPosTagger.cpp.o  -o ../test.run -rdynamic ../../lib/libgtest.a -lpthread 

@@ -1,0 +1,3 @@
+10.210.208.39 group=reserver1 inport=4655 outport=4656
+10.210.208.39 group=reserver2 inport=4657 outport=4658
+10.210.208.39 group=reserver3 inport=4659 outport=4660

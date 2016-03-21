@@ -1,0 +1,226 @@
+#edit-mode: -*- python -*-
+#coding:gbk
+
+#工作目录
+WORKROOT('../../../../../../')
+#C++编译参数
+CXXFLAGS('-pipe -Wall -W -g -O2 -DNDEBUG -fPIC -Wno-invalid-offsetof -fstrict-aliasing')
+
+#头文件路径
+INCPATHS('../')
+#依赖模块
+ImportConfigsFrom('../')
+CONFIGS('public/odict@odict_1-1-2-1_PD_BL')
+CONFIGS('com/btest/gtest@gtest_1-0-6-0_PD_BL')
+LDFLAGS('-lpthread')
+
+CopyUsingHardLink(True)
+
+# commonly depending files
+user_sources=GLOB('../detail/*.cpp')
+
+# cowbass4
+Application('test_cowbass4',
+            Sources(user_sources, 'test_cowbass4.cpp',
+                    Prefixes('../cowbass4.hpp',
+                             '../array_op.hpp',
+                             '../array_op.h',
+                             '../base_cowbass4.h')))
+
+# cow_hash_map
+Application('test_cow_hash_map',
+            Sources(user_sources, 'test_cow_hash_map.cpp',
+                    Prefixes('../base_cow_hash_map.h', '../cow_hash_map.hpp')))
+
+# bitwise_map
+Application('test_bitwise_map',
+            Sources(user_sources, 'test_bitwise_map.cpp','../detail/bitmap.c',
+                    Prefixes('../bitwise_map.hpp','../bitmap.h','../detail/bitop.h')))
+
+# cow_bitmap_index
+Application('test_bitmap_index',
+            Sources(user_sources, 'test_bitmap_index.cpp','../detail/bitmap.c',
+                   Prefixes('../bitmap_index.hpp','../bitmap.h','../detail/bitop.h')))
+
+# hd_map
+Application('test_hd_map',
+            Sources(user_sources, 'test_hd_map.cpp',
+                    Prefixes('../hd_map.hpp')))
+
+# dodge_hash_map
+Application('test_dodge_hash_map',
+            Sources(user_sources, 'test_dodge_hash_map.cpp',
+                    Prefixes('../dodge_hash_map.hpp')))
+
+# bit_tree
+Application('test_bit_tree',Sources('test_bit_tree.cpp', Prefixes('../bit_tree.h')))
+Application('test_bit_tree',
+            Sources('test_bit_tree.cpp', Prefixes('../bit_tree.h')))
+
+# version_manager
+Application('test_version_manager',
+            Sources(user_sources, 'test_version_manager.cpp',
+                    Prefixes('../version_manager.hpp', '../cow_hash_map.hpp')))
+
+# array_op
+Application('test_array_op', Sources('test_array_op.cpp', Prefixes('../array_op.hpp')))
+
+# void_array_op
+Application('test_void_array_op',
+            Sources('test_void_array_op.cpp', '../detail/array_op.cpp',
+                    Prefixes('../array_op.h')))
+
+# shared_ptr
+Application('test_shared_ptr', Sources('test_shared_ptr.cpp'))
+
+            #hash_map
+Application('test_hash_map',
+            Sources(user_sources, 'test_hash_map.cpp',
+                    Prefixes(GLOB('../*_hash_map.hpp'))))
+
+            #cow_hash_cluster
+Application('test_hash_cluster',
+            Sources(user_sources, 'test_hash_cluster.cpp',
+                    Prefixes('../cow_hash_cluster_map.hpp')))
+
+            #cow_table
+Application('test_cow_table',
+            Sources(user_sources, 'test_cow_table.cpp',
+                    Prefixes('../c_selector.hpp',
+                             '../cow_table.hpp',
+                             '../detail/cow_table_inl.hpp',
+                             '../cow_hash_map.hpp',
+                             '../cow_hash_cluster_map.hpp',
+                             '../cowbass4.hpp',
+                             '../named_tuple.hpp')))
+
+            #group_view
+Application('test_group_view',
+            Sources(user_sources, 'test_group_view.cpp',
+                    Prefixes('../c_selector.hpp',
+                             '../cow_table.hpp',
+                             '../group_view.hpp',
+                             '../cow_hash_map.hpp',
+                             '../cow_hash_cluster_map.hpp',
+                             '../cowbass4.hpp',
+                             '../named_tuple.hpp')))
+
+            #fun
+Application('test_fun',
+            Sources('test_fun.cpp', Prefixes(
+                    '../c_common.hpp', 
+                    '../c_math.hpp', 
+                    '../c_list.hpp',
+                    '../detail/c_list_inl.hpp',
+                    '../c_map.hpp',
+                    '../common_function_objects.hpp',
+                    '../st_hash.h',
+                    '../compare.hpp')))
+
+            #c_selector
+Application('test_selector',
+            Sources(user_sources, 'test_selector.cpp',
+                    Prefixes('../c_selector.hpp',
+                             '../detail/c_selector_inl.hpp',
+                             '../c_connector.hpp',
+                             '../detail/c_connector_inl.hpp',
+                             '../c_predicate.hpp')))
+
+            #named_tuple
+Application('test_named_tuple',
+            Sources(user_sources, 'test_named_tuple.cpp',
+                    Prefixes('../named_tuple.hpp', '../basic_tuple.hpp')))
+
+Application('test_perf',
+            Sources('test_perf.cpp', '../detail/get_proc_stat.cpp',
+                    Prefixes('../get_proc_stat.h')))
+
+            #pool
+Application('test_pool',
+            Sources(user_sources, 'test_pool.cpp',
+                    Prefixes('../object_pool.hpp',
+                             '../rc_memory_pool.h',
+                             '../unused/memory_pool.h')))
+            #StringWriter
+Application('test_string_writer',
+            Sources(user_sources, 'test_string_writer.cpp',
+                    Prefixes('../string_writer.hpp')))
+
+Application('test_string_reader',
+            Sources('test_string_reader.cpp', '../detail/string_reader.cpp',
+                    Prefixes('../string_reader.hpp', '../detail/string_reader_inl.hpp')))
+
+Application('test_graph',
+            Sources(user_sources, 'test_graph.cpp'))
+
+# fixed_deque
+Application('test_fixed_deque',
+            Sources(user_sources, 'test_fixed_deque.cpp',
+                    Prefixes('../fixed_deque.hpp')))
+
+# test template folding
+Application('test_template_folding',
+            Libraries(''),
+            Sources('test_template_folding.cpp'))
+
+Application('test_stack',
+            Sources(user_sources, 'test_stack.cpp'))
+
+Application('test_dyn_tuple',
+            Sources('test_dyn_tuple.cpp', 
+                    '../detail/dyn_tuple.cpp',
+                    '../detail/string_reader.cpp',
+                    Prefixes('../dyn_tuple.h', '../detail/dyn_tuple_inl.h')))
+
+Application('test_memory_ref', Sources('test_memory_ref.cpp'))
+Application('test_offset_list', Sources('test_offset_list.cpp'))
+Application('test_adt', Sources('test_adt.cpp'))
+Application('test_override_and_specialize',
+            Sources('test_override_and_specialize.cpp'))
+
+Application('test_dyn_unique_index', 
+            Sources('test_dyn_unique_index.cpp',
+                    '../detail/dyn_tuple.cpp',
+                    '../detail/dyn_unique_index.cpp',
+                    '../detail/base_cow_hash_map.cpp',
+                    '../detail/string_reader.cpp',
+                    Prefixes('../base_cow_hash_map.h',
+                             '../dyn_unique_index.h',
+                             '../dyn_index.h',
+                             '../dyn_tuple.h',
+                             '../detail/dyn_tuple_inl.h',
+                             '../string_reader.hpp',
+                             '../detail/string_reader_inl.hpp')))
+Application('test_dyn_table', 
+            Sources('test_dyn_table.cpp',
+                    '../detail/dyn_table.cpp',
+                    '../detail/dyn_tuple.cpp',
+                    '../detail/dyn_unique_index.cpp',
+                    '../detail/base_cow_hash_map.cpp',
+                    '../detail/string_reader.cpp',
+                    Prefixes('../base_cow_hash_map.h',
+                             '../dyn_unique_index.h',
+                             '../dyn_index.h',
+                             '../dyn_tuple.h',
+                             '../detail/dyn_tuple_inl.h',
+                             '../dyn_table.h',
+                             '../string_reader.hpp',
+                             '../detail/string_reader_inl.hpp')))
+
+Application('test_load_dump_fn',
+            Sources(user_sources, 'test_load_dump_fn.cpp',
+                    Prefixes('../c_selector.hpp',
+                             '../cow_table.hpp',
+                             '../detail/cow_table_inl.hpp',
+                             '../cow_hash_map.hpp',
+                             '../cow_hash_cluster_map.hpp',
+                             '../cowbass4.hpp',
+                             '../named_tuple.hpp',
+                             '../detail/binary_file_reader.h',
+                             '../detail/meta_reader.hpp')))
+
+# These tests complete very slowly, uncomment by yourself on demand
+            #Application('test_shared_shm_wr', Sources('test_shared_shm_wr.cpp'))
+            #Application('test_shared_mmap_wr', Sources('test_shared_mmap_wr.cpp'))
+            #Application('test_shared_memory_client', Sources('test_shared_memory_client.cpp'))
+            #Application('test_shared_memory_server', Sources('test_shared_memory_server.cpp'))

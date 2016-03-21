@@ -1,0 +1,7 @@
+
+使用指南
+
+1. 在../conf/data_import_check.conf中对memcached服务器群进行配置, 并配置备份的gz
+   数据文件目录(或具体文件)
+2. cd ../src/; make
+3. 运行data_import_check.sh

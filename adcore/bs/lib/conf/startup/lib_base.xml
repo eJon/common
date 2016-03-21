@@ -1,0 +1,85 @@
+<InputObject name="DasBase">
+    <Reader name="BaseReader" type="LiteralFileLine">
+        <SourceFileDir> </SourceFileDir>
+        <SourceFilePattern>dsp.info</SourceFilePattern>
+        <Encoding>utf-8</Encoding>
+    </Reader>
+    <Records>  
+        <GlobalFilter name="GlobalFilter" type="Literal" sep="\t">
+            <GlobalCondition name="GlobalCondition" type="ColumnCompare">
+                <Values>
+                    <Value name="op_type">
+                        <Index>2</Index>
+                        <DataType>uint32</DataType>
+                    </Value>
+                    <Value name="level">
+                        <Index>3</Index>
+                        <DataType>uint32</DataType>
+                    </Value>
+                </Values>
+                <Switch>
+                    <Case value1="0" value2="1" return="1" />
+                    <Case value1="0" value2="2" return="2" />
+                    <Case value1="0" value2="3" return="3" />
+                    <Case value1="0" value2="4" return="4" />
+                    <Case value1="0" value2="5" return="5" />
+                    <Case value1="0" value2="6" return="6" />
+                    <Case value1="0" value2="7" return="7" />
+                    <Case value1="0" value2="8" return="8" />
+                    <Case value1="0" value2="9" return="9" />
+                    <Case value1="0" value2="10" return="10" />
+                    <Case value1="0" value2="11" return="11" />
+                    <Case value1="0" value2="12" return="12" />
+                    <Case value1="0" value2="13" return="13" />
+                    <Case value1="0" value2="14" return="14" />
+                    <Case value1="0" value2="15" return="15" />
+                    <Case value1="0" value2="16" return="16" />
+                    <Case value1="0" value2="17" return="17" />
+                    <Case value1="0" value2="18" return="18" />
+                    <Case value1="0" value2="19" return="19" />
+                </Switch>
+            </GlobalCondition>
+        </GlobalFilter>
+        <Record name="DasSentry" index="1" sep="\t" strict_match="0" level="1">
+            <Element name="eventid" index="1" data_type="uint64" label="required" />
+            <Element name="optype" index="2" data_type="uint32" label="required" />
+            <Element name="level" index="3" data_type="uint32" label="required" />
+            <Element name="updatetime" index="4" data_type="uint64" label="required" />
+            <Element name="sentryid" index="5" data_type="uint32" label="required" />
+            <Element name="time" index="6" data_type="uint64" label="required" />
+        </Record>
+        <Record name="DasUser" index="1" sep="\t" strict_match="0" level="2">
+            <Element name="eventid" index="1" data_type="uint64" label="required" />
+            <Element name="optype" index="2" data_type="uint32" label="required" />
+            <Element name="level" index="3" data_type="uint32" label="required" />
+            <Element name="updatetime" index="4" data_type="uint32" label="required" />
+            <Element name="userid" index="5" data_type="uint32" label="required" />
+            <Element name="isvalid" index="6" data_type="uint32" label="required" />
+        </Record>
+        <Record name="DasPlan" index="1" sep="\t" strict_match="0" level="3">
+            <Element name="eventid" index="1" data_type="uint64" label="required" />
+            <Element name="optype" index="2" data_type="uint32" label="required" />
+            <Element name="level" index="3" data_type="uint32" label="required" />
+            <Element name="updatetime" index="4" data_type="uint32" label="required" />
+            <Element name="planid" index="5" data_type="uint32" label="required" />
+            <Element name="userid" index="6" data_type="uint32" label="required" />
+            <Element name="isvalid" index="7" data_type="uint32" label="required" />
+            <Element name="plantype" index="8" data_type="uint32" label="required" />
+            <Element name="chargingtype" index="9" data_type="uint32" label="required" />
+            <Element name="adverstarget" index="10" data_type="uint32" label="required" />
+            <Element name="appdevicetype" index="11" data_type="uint32" label="required" />
+            <Element name="appdiscount" index="12" data_type="uint32" label="required" />
+            <Element name="isvalid" index="13" data_type="uint32" label="required" />
+        </Record>
+        <Record name="DasUnit" index="1" sep="\t" strict_match="0" level="4">
+            <Element name="eventid" index="1" data_type="uint64" label="required" />
+            <Element name="optype" index="2" data_type="uint32" label="required" />
+            <Element name="level" index="3" data_type="uint32" label="required" />
+            <Element name="updatetime" index="4" data_type="uint32" label="required" />
+            <Element name="unitid" index="5" data_type="uint32" label="required" />
+            <Element name="planid" index="6" data_type="uint32" label="required" />
+            <Element name="status" index="7" data_type="uint32" label="required" />
+            <Element name="bid" index="8" data_type="uint32" label="required" />
+        </Record>
+    </Records>
+</InputObject>

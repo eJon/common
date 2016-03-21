@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/segment.demo.dir/segment_demo.cpp.o  -o ../segment.demo -rdynamic 

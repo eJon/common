@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+ <head>
+  <include file="Public/head"/>
+
+  <meta name="description" content={$description} /> 
+  <meta name="keywords" content={$keywords} /> 
+  <title>{$title}</title> 
+
+ </head> 
+ <body> 
+
+  <include file="Public/header"/>
+  <include file="Public/page_header"/>
+
+  <section class="job-list"> 
+   <div class="container"> 
+    <div class="row"> 
+     <foreach name="hot_job_list" item="items"> 
+      <div class="col-sm-6 col-md-4"> 
+       <a href="{$items.redirect}" class="job-item-wrap" title="{$items.title}" target="_blank"> 
+        <div class="job-item"> 
+         <div class="job-source light-green"> 
+          <img class="img-responsive" src="{$items.logo}" /> 
+         </div> 
+         <div class="job-company">
+          {$items.company}
+         </div> 
+         <div class="job-title">
+          {$items.title}
+         </div> 
+         <div class="job-salary">
+          {$items.salary}
+         </div> 
+         <div class="job-comments"> 
+          <p> 
+           <foreach name="items['label']" item="v"> 
+            <span class="label label-default">{$v}</span> 
+           </foreach> </p> 
+         </div> 
+         <div class="job-meta"> 
+          <span class="job-location">{$items.location}</span> 
+          <span class="job-publish-time">{$items.pub_time}</span> 
+         </div> 
+        </div> </a> 
+      </div> 
+     </foreach> 
+    </div>
+    <!-- .row --> 
+    <div class="col-sm-6 col-sm-push-3 col-md-4 col-md-push-4"> 
+     <p> <a class="btn btn-primary btn-lg btn-block" href="#"><i class="fa fa-th"></i> 查看全部职位</a> </p> 
+     
+    </div> 
+   </div>
+   <!-- .container --> 
+  </section> 
+  
+  <include file="Public/footer"/>
+
+ </body>
+</html>

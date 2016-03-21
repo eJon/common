@@ -1,0 +1,8 @@
+[aaa]
+#a=b
+a= c
+
+c =d
+int=1
+string=str
+invalidint=ggg

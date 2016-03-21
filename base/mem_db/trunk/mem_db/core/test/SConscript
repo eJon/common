@@ -1,0 +1,24 @@
+# -*- mode: python -*-
+
+# Inherit the environment from my parent.
+Import('env')
+
+# Make a copy of the environment, so my changes are limited in this directory and sub-directories.
+env = env.Clone()
+
+############################################################
+
+
+test_cpps = [str(fn) for fn in Glob('*.c[cp]*') ]
+
+core_test_sources=  [
+    '#mem_db/test/dotest.cpp',
+    test_cpps
+                     ]
+
+
+libsname = [ 'gtest',   'pthread', 'mem_db_core', 'memcached', 'mem_db_common']
+core_test = env.aTest(target = 'core_test',
+                     source = core_test_sources,
+                     LIBS = libsname
+                     );
